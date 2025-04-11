@@ -1,0 +1,454 @@
+2025-04-11 23:26:38,289 - Model_Fold_5 - INFO - Starting training for fold 5/5
+2025-04-11 23:26:38,289 - Model_Fold_5 - INFO - Train size: 166, Validation size: 41
+2025-04-11 23:26:38,293 - Model_Fold_5 - INFO - Training set composition: 128 tables, 38 non-tables
+2025-04-11 23:26:38,293 - Model_Fold_5 - INFO - Original class ratio (non-table:table): 0.297
+2025-04-11 23:26:38,295 - Model_Fold_5 - INFO - Calculated soft class weights: [1.2946137189865112, 0.7053862810134888]
+2025-04-11 23:26:38,296 - Model_Fold_5 - INFO - Using calculated class weights for loss function
+2025-04-11 23:26:38,459 - Model_Fold_5 - INFO - Using learning rate scheduler: cosine
+2025-04-11 23:26:38,460 - Model_Fold_5 - INFO - Initial learning rate: 0.0003
+2025-04-11 23:26:38,462 - Model_Fold_5 - INFO - Start training...
+2025-04-11 23:26:38,462 - Model_Fold_5 - INFO - Epoch 1 (1/40):
+2025-04-11 23:27:04,354 - Model_Fold_5 - INFO - Train Loss: 0.2538
+2025-04-11 23:27:04,356 - Model_Fold_5 - INFO - Train Accuracy: 0.5783
+2025-04-11 23:27:04,357 - Model_Fold_5 - INFO - Train Table Accuracy: 0.5752
+2025-04-11 23:27:04,357 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.6803
+2025-04-11 23:27:04,358 - Model_Fold_5 - INFO - Train F1 Score: 0.6692
+2025-04-11 23:27:10,831 - Model_Fold_5 - INFO - Validation Loss: 0.2413
+2025-04-11 23:27:10,833 - Model_Fold_5 - INFO - Validation Accuracy: 0.2195
+2025-04-11 23:27:10,834 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.0000
+2025-04-11 23:27:10,835 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 1.0000
+2025-04-11 23:27:10,835 - Model_Fold_5 - INFO - Validation F1 Score: 0.0000
+2025-04-11 23:27:10,835 - Model_Fold_5 - INFO - Epoch 2 (2/40):
+2025-04-11 23:27:36,735 - Model_Fold_5 - INFO - Train Loss: 0.1814
+2025-04-11 23:27:36,736 - Model_Fold_5 - INFO - Train Accuracy: 0.7530
+2025-04-11 23:27:36,738 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8411
+2025-04-11 23:27:36,739 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.4743
+2025-04-11 23:27:36,741 - Model_Fold_5 - INFO - Train F1 Score: 0.8366
+2025-04-11 23:27:43,222 - Model_Fold_5 - INFO - Validation Loss: 0.6046
+2025-04-11 23:27:43,223 - Model_Fold_5 - INFO - Validation Accuracy: 0.2195
+2025-04-11 23:27:43,223 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.0000
+2025-04-11 23:27:43,316 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 1.0000
+2025-04-11 23:27:43,319 - Model_Fold_5 - INFO - Validation F1 Score: 0.0000
+2025-04-11 23:27:43,323 - Model_Fold_5 - INFO - Epoch 3 (3/40):
+2025-04-11 23:28:09,217 - Model_Fold_5 - INFO - Train Loss: 0.2142
+2025-04-11 23:28:09,219 - Model_Fold_5 - INFO - Train Accuracy: 0.7651
+2025-04-11 23:28:09,220 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8954
+2025-04-11 23:28:09,221 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.2635
+2025-04-11 23:28:09,221 - Model_Fold_5 - INFO - Train F1 Score: 0.8508
+2025-04-11 23:28:16,081 - Model_Fold_5 - INFO - Validation Loss: 0.4899
+2025-04-11 23:28:16,082 - Model_Fold_5 - INFO - Validation Accuracy: 0.2195
+2025-04-11 23:28:16,083 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.0000
+2025-04-11 23:28:16,084 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 1.0000
+2025-04-11 23:28:16,084 - Model_Fold_5 - INFO - Validation F1 Score: 0.0000
+2025-04-11 23:28:16,085 - Model_Fold_5 - INFO - Epoch 4 (4/40):
+2025-04-11 23:28:40,955 - Model_Fold_5 - INFO - Train Loss: 0.1903
+2025-04-11 23:28:40,956 - Model_Fold_5 - INFO - Train Accuracy: 0.7108
+2025-04-11 23:28:40,956 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8031
+2025-04-11 23:28:40,957 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.3566
+2025-04-11 23:28:40,958 - Model_Fold_5 - INFO - Train F1 Score: 0.8071
+2025-04-11 23:28:48,851 - Model_Fold_5 - INFO - Validation Loss: 1.0451
+2025-04-11 23:28:48,853 - Model_Fold_5 - INFO - Validation Accuracy: 0.2195
+2025-04-11 23:28:48,853 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.0000
+2025-04-11 23:28:48,853 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 1.0000
+2025-04-11 23:28:48,854 - Model_Fold_5 - INFO - Validation F1 Score: 0.0000
+2025-04-11 23:28:48,856 - Model_Fold_5 - INFO - Epoch 5 (5/40):
+2025-04-11 23:29:14,602 - Model_Fold_5 - INFO - Train Loss: 0.1392
+2025-04-11 23:29:14,603 - Model_Fold_5 - INFO - Train Accuracy: 0.8133
+2025-04-11 23:29:14,604 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8833
+2025-04-11 23:29:14,605 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.6666
+2025-04-11 23:29:14,605 - Model_Fold_5 - INFO - Train F1 Score: 0.8777
+2025-04-11 23:29:22,804 - Model_Fold_5 - INFO - Validation Loss: 0.5213
+2025-04-11 23:29:22,805 - Model_Fold_5 - INFO - Validation Accuracy: 0.2195
+2025-04-11 23:29:22,805 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.0000
+2025-04-11 23:29:22,805 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 1.0000
+2025-04-11 23:29:22,805 - Model_Fold_5 - INFO - Validation F1 Score: 0.0000
+2025-04-11 23:29:22,805 - Model_Fold_5 - INFO - Epoch 6 (6/40):
+2025-04-11 23:29:48,577 - Model_Fold_5 - INFO - Train Loss: 0.1659
+2025-04-11 23:29:48,578 - Model_Fold_5 - INFO - Train Accuracy: 0.8012
+2025-04-11 23:29:48,578 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8665
+2025-04-11 23:29:48,578 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.5098
+2025-04-11 23:29:48,578 - Model_Fold_5 - INFO - Train F1 Score: 0.8618
+2025-04-11 23:29:56,752 - Model_Fold_5 - INFO - Validation Loss: 0.1329
+2025-04-11 23:29:56,754 - Model_Fold_5 - INFO - Validation Accuracy: 0.8293
+2025-04-11 23:29:56,758 - Model_Fold_5 - INFO - Validation Table Accuracy: 1.0000
+2025-04-11 23:29:56,760 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.2081
+2025-04-11 23:29:56,761 - Model_Fold_5 - INFO - Validation F1 Score: 0.8992
+2025-04-11 23:29:56,762 - Model_Fold_5 - INFO - Epoch 7 (7/40):
+2025-04-11 23:30:23,168 - Model_Fold_5 - INFO - Train Loss: 0.1502
+2025-04-11 23:30:23,169 - Model_Fold_5 - INFO - Train Accuracy: 0.8253
+2025-04-11 23:30:23,171 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8679
+2025-04-11 23:30:23,173 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7133
+2025-04-11 23:30:23,174 - Model_Fold_5 - INFO - Train F1 Score: 0.8816
+2025-04-11 23:30:30,744 - Model_Fold_5 - INFO - Validation Loss: 0.1520
+2025-04-11 23:30:30,745 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:30:30,746 - Model_Fold_5 - INFO - Validation Table Accuracy: 1.0000
+2025-04-11 23:30:30,747 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.3642
+2025-04-11 23:30:30,748 - Model_Fold_5 - INFO - Validation F1 Score: 0.9267
+2025-04-11 23:30:30,749 - Model_Fold_5 - INFO - Epoch 8 (8/40):
+2025-04-11 23:30:41,278 - Model_Fold_5 - INFO - Train Loss: 0.1391
+2025-04-11 23:30:41,279 - Model_Fold_5 - INFO - Train Accuracy: 0.8434
+2025-04-11 23:30:41,280 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8921
+2025-04-11 23:30:41,280 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7113
+2025-04-11 23:30:41,280 - Model_Fold_5 - INFO - Train F1 Score: 0.8947
+2025-04-11 23:30:48,724 - Model_Fold_5 - INFO - Validation Loss: 0.1312
+2025-04-11 23:30:48,725 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:30:48,725 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9045
+2025-04-11 23:30:48,725 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.5724
+2025-04-11 23:30:48,725 - Model_Fold_5 - INFO - Validation F1 Score: 0.9048
+2025-04-11 23:30:48,725 - Model_Fold_5 - INFO - Epoch 9 (9/40):
+2025-04-11 23:31:14,881 - Model_Fold_5 - INFO - Train Loss: 0.1170
+2025-04-11 23:31:14,883 - Model_Fold_5 - INFO - Train Accuracy: 0.8675
+2025-04-11 23:31:14,884 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9027
+2025-04-11 23:31:14,885 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8249
+2025-04-11 23:31:14,885 - Model_Fold_5 - INFO - Train F1 Score: 0.9068
+2025-04-11 23:31:21,869 - Model_Fold_5 - INFO - Validation Loss: 0.0929
+2025-04-11 23:31:21,870 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:31:21,872 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:31:21,872 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:31:21,873 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:31:21,874 - Model_Fold_5 - INFO - Epoch 10 (10/40):
+2025-04-11 23:31:48,216 - Model_Fold_5 - INFO - Train Loss: 0.1068
+2025-04-11 23:31:48,217 - Model_Fold_5 - INFO - Train Accuracy: 0.8855
+2025-04-11 23:31:48,217 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9437
+2025-04-11 23:31:48,217 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7566
+2025-04-11 23:31:48,219 - Model_Fold_5 - INFO - Train F1 Score: 0.9230
+2025-04-11 23:31:55,284 - Model_Fold_5 - INFO - Validation Loss: 0.1537
+2025-04-11 23:31:55,285 - Model_Fold_5 - INFO - Validation Accuracy: 0.7805
+2025-04-11 23:31:55,285 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.7844
+2025-04-11 23:31:55,609 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:31:55,610 - Model_Fold_5 - INFO - Validation F1 Score: 0.8384
+2025-04-11 23:31:55,611 - Model_Fold_5 - INFO - Epoch 11 (11/40):
+2025-04-11 23:32:20,524 - Model_Fold_5 - INFO - Train Loss: 0.1026
+2025-04-11 23:32:20,525 - Model_Fold_5 - INFO - Train Accuracy: 0.8795
+2025-04-11 23:32:20,525 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9194
+2025-04-11 23:32:20,525 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7763
+2025-04-11 23:32:20,525 - Model_Fold_5 - INFO - Train F1 Score: 0.9227
+2025-04-11 23:32:28,050 - Model_Fold_5 - INFO - Validation Loss: 0.1415
+2025-04-11 23:32:28,051 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:32:28,052 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8745
+2025-04-11 23:32:28,052 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:32:28,052 - Model_Fold_5 - INFO - Validation F1 Score: 0.9035
+2025-04-11 23:32:28,052 - Model_Fold_5 - INFO - Epoch 12 (12/40):
+2025-04-11 23:32:52,082 - Model_Fold_5 - INFO - Train Loss: 0.0778
+2025-04-11 23:32:52,082 - Model_Fold_5 - INFO - Train Accuracy: 0.9096
+2025-04-11 23:32:52,083 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9480
+2025-04-11 23:32:52,083 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8289
+2025-04-11 23:32:52,084 - Model_Fold_5 - INFO - Train F1 Score: 0.9378
+2025-04-11 23:32:58,824 - Model_Fold_5 - INFO - Validation Loss: 0.1076
+2025-04-11 23:32:58,825 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:32:58,827 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9345
+2025-04-11 23:32:58,827 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.5724
+2025-04-11 23:32:58,827 - Model_Fold_5 - INFO - Validation F1 Score: 0.9216
+2025-04-11 23:32:58,828 - Model_Fold_5 - INFO - Epoch 13 (13/40):
+2025-04-11 23:33:23,589 - Model_Fold_5 - INFO - Train Loss: 0.0900
+2025-04-11 23:33:23,590 - Model_Fold_5 - INFO - Train Accuracy: 0.8735
+2025-04-11 23:33:23,590 - Model_Fold_5 - INFO - Train Table Accuracy: 0.8793
+2025-04-11 23:33:23,592 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7896
+2025-04-11 23:33:23,592 - Model_Fold_5 - INFO - Train F1 Score: 0.9146
+2025-04-11 23:33:30,222 - Model_Fold_5 - INFO - Validation Loss: 0.0930
+2025-04-11 23:33:30,223 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:33:30,224 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:33:30,225 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.7805
+2025-04-11 23:33:30,225 - Model_Fold_5 - INFO - Validation F1 Score: 0.9362
+2025-04-11 23:33:30,225 - Model_Fold_5 - INFO - Epoch 14 (14/40):
+2025-04-11 23:33:55,317 - Model_Fold_5 - INFO - Train Loss: 0.0745
+2025-04-11 23:33:55,318 - Model_Fold_5 - INFO - Train Accuracy: 0.9217
+2025-04-11 23:33:55,319 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9368
+2025-04-11 23:33:55,319 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8530
+2025-04-11 23:33:55,319 - Model_Fold_5 - INFO - Train F1 Score: 0.9467
+2025-04-11 23:34:01,869 - Model_Fold_5 - INFO - Validation Loss: 0.0786
+2025-04-11 23:34:01,871 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:34:01,872 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:34:01,872 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:34:01,872 - Model_Fold_5 - INFO - Validation F1 Score: 0.9023
+2025-04-11 23:34:01,873 - Model_Fold_5 - INFO - Epoch 15 (15/40):
+2025-04-11 23:34:25,990 - Model_Fold_5 - INFO - Train Loss: 0.0840
+2025-04-11 23:34:25,991 - Model_Fold_5 - INFO - Train Accuracy: 0.9157
+2025-04-11 23:34:25,991 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9415
+2025-04-11 23:34:25,991 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8250
+2025-04-11 23:34:25,991 - Model_Fold_5 - INFO - Train F1 Score: 0.9437
+2025-04-11 23:34:32,736 - Model_Fold_5 - INFO - Validation Loss: 0.0928
+2025-04-11 23:34:32,738 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:34:32,738 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:34:32,738 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:34:32,739 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:34:32,739 - Model_Fold_5 - INFO - Epoch 16 (16/40):
+2025-04-11 23:34:58,186 - Model_Fold_5 - INFO - Train Loss: 0.0699
+2025-04-11 23:34:58,187 - Model_Fold_5 - INFO - Train Accuracy: 0.9096
+2025-04-11 23:34:58,188 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9261
+2025-04-11 23:34:58,188 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8775
+2025-04-11 23:34:58,188 - Model_Fold_5 - INFO - Train F1 Score: 0.9364
+2025-04-11 23:35:05,522 - Model_Fold_5 - INFO - Validation Loss: 0.1180
+2025-04-11 23:35:05,525 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:35:05,526 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:35:05,527 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:35:05,528 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:35:05,529 - Model_Fold_5 - INFO - Epoch 17 (17/40):
+2025-04-11 23:35:30,320 - Model_Fold_5 - INFO - Train Loss: 0.0517
+2025-04-11 23:35:30,321 - Model_Fold_5 - INFO - Train Accuracy: 0.9518
+2025-04-11 23:35:30,321 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9703
+2025-04-11 23:35:30,322 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8691
+2025-04-11 23:35:30,322 - Model_Fold_5 - INFO - Train F1 Score: 0.9687
+2025-04-11 23:35:37,378 - Model_Fold_5 - INFO - Validation Loss: 0.0981
+2025-04-11 23:35:37,379 - Model_Fold_5 - INFO - Validation Accuracy: 0.8293
+2025-04-11 23:35:37,379 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8745
+2025-04-11 23:35:37,381 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.5724
+2025-04-11 23:35:37,381 - Model_Fold_5 - INFO - Validation F1 Score: 0.8866
+2025-04-11 23:35:37,382 - Model_Fold_5 - INFO - Epoch 18 (18/40):
+2025-04-11 23:36:02,823 - Model_Fold_5 - INFO - Train Loss: 0.1103
+2025-04-11 23:36:02,824 - Model_Fold_5 - INFO - Train Accuracy: 0.8916
+2025-04-11 23:36:02,824 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9164
+2025-04-11 23:36:02,824 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8795
+2025-04-11 23:36:02,824 - Model_Fold_5 - INFO - Train F1 Score: 0.9255
+2025-04-11 23:36:10,260 - Model_Fold_5 - INFO - Validation Loss: 0.0894
+2025-04-11 23:36:10,261 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:36:10,261 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:36:10,261 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:36:10,261 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:36:10,262 - Model_Fold_5 - INFO - Epoch 19 (19/40):
+2025-04-11 23:36:34,583 - Model_Fold_5 - INFO - Train Loss: 0.0734
+2025-04-11 23:36:34,583 - Model_Fold_5 - INFO - Train Accuracy: 0.8976
+2025-04-11 23:36:34,584 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9181
+2025-04-11 23:36:34,584 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7639
+2025-04-11 23:36:34,584 - Model_Fold_5 - INFO - Train F1 Score: 0.9327
+2025-04-11 23:36:41,478 - Model_Fold_5 - INFO - Validation Loss: 0.1111
+2025-04-11 23:36:41,480 - Model_Fold_5 - INFO - Validation Accuracy: 0.8049
+2025-04-11 23:36:41,480 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.7790
+2025-04-11 23:36:41,482 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.7805
+2025-04-11 23:36:41,482 - Model_Fold_5 - INFO - Validation F1 Score: 0.8551
+2025-04-11 23:36:41,484 - Model_Fold_5 - INFO - Epoch 20 (20/40):
+2025-04-11 23:37:06,804 - Model_Fold_5 - INFO - Train Loss: 0.1107
+2025-04-11 23:37:06,805 - Model_Fold_5 - INFO - Train Accuracy: 0.9398
+2025-04-11 23:37:06,806 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9620
+2025-04-11 23:37:06,806 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9398
+2025-04-11 23:37:06,806 - Model_Fold_5 - INFO - Train F1 Score: 0.9505
+2025-04-11 23:37:13,928 - Model_Fold_5 - INFO - Validation Loss: 0.0760
+2025-04-11 23:37:13,929 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:37:13,930 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:37:13,931 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.5724
+2025-04-11 23:37:13,932 - Model_Fold_5 - INFO - Validation F1 Score: 0.9233
+2025-04-11 23:37:13,933 - Model_Fold_5 - INFO - Epoch 21 (21/40):
+2025-04-11 23:37:39,117 - Model_Fold_5 - INFO - Train Loss: 0.0823
+2025-04-11 23:37:39,118 - Model_Fold_5 - INFO - Train Accuracy: 0.9277
+2025-04-11 23:37:39,118 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9725
+2025-04-11 23:37:39,118 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8496
+2025-04-11 23:37:39,118 - Model_Fold_5 - INFO - Train F1 Score: 0.9492
+2025-04-11 23:37:45,769 - Model_Fold_5 - INFO - Validation Loss: 0.0754
+2025-04-11 23:37:45,771 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:37:45,773 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:37:45,773 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:37:45,774 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:37:46,217 - Model_Fold_5 - INFO - Saved new best model
+2025-04-11 23:37:46,220 - Model_Fold_5 - INFO - Epoch 22 (22/40):
+2025-04-11 23:38:10,994 - Model_Fold_5 - INFO - Train Loss: 0.0840
+2025-04-11 23:38:10,996 - Model_Fold_5 - INFO - Train Accuracy: 0.9157
+2025-04-11 23:38:10,996 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9452
+2025-04-11 23:38:10,996 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8530
+2025-04-11 23:38:10,996 - Model_Fold_5 - INFO - Train F1 Score: 0.9445
+2025-04-11 23:38:18,024 - Model_Fold_5 - INFO - Validation Loss: 0.0950
+2025-04-11 23:38:18,026 - Model_Fold_5 - INFO - Validation Accuracy: 0.8049
+2025-04-11 23:38:18,027 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8390
+2025-04-11 23:38:18,028 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.5724
+2025-04-11 23:38:18,028 - Model_Fold_5 - INFO - Validation F1 Score: 0.8663
+2025-04-11 23:38:18,028 - Model_Fold_5 - INFO - Epoch 23 (23/40):
+2025-04-11 23:38:43,336 - Model_Fold_5 - INFO - Train Loss: 0.0722
+2025-04-11 23:38:43,337 - Model_Fold_5 - INFO - Train Accuracy: 0.9217
+2025-04-11 23:38:43,337 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9391
+2025-04-11 23:38:43,340 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9165
+2025-04-11 23:38:43,341 - Model_Fold_5 - INFO - Train F1 Score: 0.9457
+2025-04-11 23:38:50,870 - Model_Fold_5 - INFO - Validation Loss: 0.1135
+2025-04-11 23:38:50,871 - Model_Fold_5 - INFO - Validation Accuracy: 0.8293
+2025-04-11 23:38:50,871 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8444
+2025-04-11 23:38:50,871 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:38:50,871 - Model_Fold_5 - INFO - Validation F1 Score: 0.8837
+2025-04-11 23:38:50,872 - Model_Fold_5 - INFO - Epoch 24 (24/40):
+2025-04-11 23:39:16,656 - Model_Fold_5 - INFO - Train Loss: 0.0547
+2025-04-11 23:39:16,657 - Model_Fold_5 - INFO - Train Accuracy: 0.9398
+2025-04-11 23:39:16,659 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9525
+2025-04-11 23:39:16,659 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9541
+2025-04-11 23:39:16,661 - Model_Fold_5 - INFO - Train F1 Score: 0.9608
+2025-04-11 23:39:23,874 - Model_Fold_5 - INFO - Validation Loss: 0.1165
+2025-04-11 23:39:23,875 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:39:23,878 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:39:23,878 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:39:23,878 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:39:23,879 - Model_Fold_5 - INFO - Epoch 25 (25/40):
+2025-04-11 23:39:49,932 - Model_Fold_5 - INFO - Train Loss: 0.0485
+2025-04-11 23:39:49,934 - Model_Fold_5 - INFO - Train Accuracy: 0.9518
+2025-04-11 23:39:49,936 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9857
+2025-04-11 23:39:49,937 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8807
+2025-04-11 23:39:49,937 - Model_Fold_5 - INFO - Train F1 Score: 0.9686
+2025-04-11 23:39:57,177 - Model_Fold_5 - INFO - Validation Loss: 0.1022
+2025-04-11 23:39:57,178 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:39:57,178 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:39:57,178 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:39:57,178 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:39:57,179 - Model_Fold_5 - INFO - Epoch 26 (26/40):
+2025-04-11 23:40:22,693 - Model_Fold_5 - INFO - Train Loss: 0.0465
+2025-04-11 23:40:22,694 - Model_Fold_5 - INFO - Train Accuracy: 0.9518
+2025-04-11 23:40:22,694 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9634
+2025-04-11 23:40:22,694 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9639
+2025-04-11 23:40:22,694 - Model_Fold_5 - INFO - Train F1 Score: 0.9651
+2025-04-11 23:40:30,225 - Model_Fold_5 - INFO - Validation Loss: 0.0919
+2025-04-11 23:40:30,226 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:40:30,230 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:40:30,231 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:40:30,231 - Model_Fold_5 - INFO - Validation F1 Score: 0.9023
+2025-04-11 23:40:30,232 - Model_Fold_5 - INFO - Epoch 27 (27/40):
+2025-04-11 23:40:53,898 - Model_Fold_5 - INFO - Train Loss: 0.0691
+2025-04-11 23:40:53,899 - Model_Fold_5 - INFO - Train Accuracy: 0.9217
+2025-04-11 23:40:53,899 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9245
+2025-04-11 23:40:53,899 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9157
+2025-04-11 23:40:53,899 - Model_Fold_5 - INFO - Train F1 Score: 0.9501
+2025-04-11 23:41:00,989 - Model_Fold_5 - INFO - Validation Loss: 0.1008
+2025-04-11 23:41:00,990 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:41:00,991 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:41:00,991 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:41:00,992 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:41:00,992 - Model_Fold_5 - INFO - Epoch 28 (28/40):
+2025-04-11 23:41:25,370 - Model_Fold_5 - INFO - Train Loss: 0.0607
+2025-04-11 23:41:25,371 - Model_Fold_5 - INFO - Train Accuracy: 0.9096
+2025-04-11 23:41:25,372 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9082
+2025-04-11 23:41:25,372 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9012
+2025-04-11 23:41:25,372 - Model_Fold_5 - INFO - Train F1 Score: 0.9378
+2025-04-11 23:41:32,120 - Model_Fold_5 - INFO - Validation Loss: 0.0998
+2025-04-11 23:41:32,122 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:41:32,123 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:41:32,124 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:41:32,126 - Model_Fold_5 - INFO - Validation F1 Score: 0.9023
+2025-04-11 23:41:32,127 - Model_Fold_5 - INFO - Epoch 29 (29/40):
+2025-04-11 23:41:54,195 - Model_Fold_5 - INFO - Train Loss: 0.0747
+2025-04-11 23:41:54,198 - Model_Fold_5 - INFO - Train Accuracy: 0.9398
+2025-04-11 23:41:54,198 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9575
+2025-04-11 23:41:54,199 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9241
+2025-04-11 23:41:54,199 - Model_Fold_5 - INFO - Train F1 Score: 0.9613
+2025-04-11 23:41:56,211 - Model_Fold_5 - INFO - Validation Loss: 0.1047
+2025-04-11 23:41:56,212 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:41:56,214 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:41:56,215 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:41:56,219 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:41:56,220 - Model_Fold_5 - INFO - Epoch 30 (30/40):
+2025-04-11 23:42:20,030 - Model_Fold_5 - INFO - Train Loss: 0.0353
+2025-04-11 23:42:20,031 - Model_Fold_5 - INFO - Train Accuracy: 0.9578
+2025-04-11 23:42:20,033 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9632
+2025-04-11 23:42:20,034 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9566
+2025-04-11 23:42:20,034 - Model_Fold_5 - INFO - Train F1 Score: 0.9725
+2025-04-11 23:42:27,346 - Model_Fold_5 - INFO - Validation Loss: 0.1133
+2025-04-11 23:42:27,347 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:42:27,347 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:42:27,347 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:42:27,347 - Model_Fold_5 - INFO - Validation F1 Score: 0.9023
+2025-04-11 23:42:27,347 - Model_Fold_5 - INFO - Epoch 31 (31/40):
+2025-04-11 23:42:51,575 - Model_Fold_5 - INFO - Train Loss: 0.0522
+2025-04-11 23:42:51,576 - Model_Fold_5 - INFO - Train Accuracy: 0.9398
+2025-04-11 23:42:51,579 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9507
+2025-04-11 23:42:51,580 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9494
+2025-04-11 23:42:51,581 - Model_Fold_5 - INFO - Train F1 Score: 0.9600
+2025-04-11 23:42:59,265 - Model_Fold_5 - INFO - Validation Loss: 0.1036
+2025-04-11 23:42:59,267 - Model_Fold_5 - INFO - Validation Accuracy: 0.9268
+2025-04-11 23:42:59,269 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9700
+2025-04-11 23:42:59,269 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:42:59,269 - Model_Fold_5 - INFO - Validation F1 Score: 0.9571
+2025-04-11 23:42:59,592 - Model_Fold_5 - INFO - Saved new best model
+2025-04-11 23:42:59,595 - Model_Fold_5 - INFO - Epoch 32 (32/40):
+2025-04-11 23:43:23,474 - Model_Fold_5 - INFO - Train Loss: 0.0399
+2025-04-11 23:43:23,475 - Model_Fold_5 - INFO - Train Accuracy: 0.9518
+2025-04-11 23:43:23,475 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9653
+2025-04-11 23:43:23,475 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9357
+2025-04-11 23:43:23,475 - Model_Fold_5 - INFO - Train F1 Score: 0.9692
+2025-04-11 23:43:30,060 - Model_Fold_5 - INFO - Validation Loss: 0.0966
+2025-04-11 23:43:30,061 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:43:30,061 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:43:30,061 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:43:30,061 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:43:30,062 - Model_Fold_5 - INFO - Epoch 33 (33/40):
+2025-04-11 23:43:54,678 - Model_Fold_5 - INFO - Train Loss: 0.0452
+2025-04-11 23:43:54,679 - Model_Fold_5 - INFO - Train Accuracy: 0.9337
+2025-04-11 23:43:54,679 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9491
+2025-04-11 23:43:54,679 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9277
+2025-04-11 23:43:54,679 - Model_Fold_5 - INFO - Train F1 Score: 0.9555
+2025-04-11 23:44:00,954 - Model_Fold_5 - INFO - Validation Loss: 0.1031
+2025-04-11 23:44:00,956 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:44:00,956 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:44:00,956 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:44:00,957 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:44:00,958 - Model_Fold_5 - INFO - Epoch 34 (34/40):
+2025-04-11 23:44:26,014 - Model_Fold_5 - INFO - Train Loss: 0.1015
+2025-04-11 23:44:26,015 - Model_Fold_5 - INFO - Train Accuracy: 0.9639
+2025-04-11 23:44:26,017 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9862
+2025-04-11 23:44:26,017 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9301
+2025-04-11 23:44:26,018 - Model_Fold_5 - INFO - Train F1 Score: 0.9676
+2025-04-11 23:44:32,410 - Model_Fold_5 - INFO - Validation Loss: 0.1086
+2025-04-11 23:44:32,412 - Model_Fold_5 - INFO - Validation Accuracy: 0.9268
+2025-04-11 23:44:32,413 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9700
+2025-04-11 23:44:32,414 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:44:32,414 - Model_Fold_5 - INFO - Validation F1 Score: 0.9571
+2025-04-11 23:44:32,415 - Model_Fold_5 - INFO - Epoch 35 (35/40):
+2025-04-11 23:44:57,524 - Model_Fold_5 - INFO - Train Loss: 0.0354
+2025-04-11 23:44:57,526 - Model_Fold_5 - INFO - Train Accuracy: 0.9578
+2025-04-11 23:44:57,526 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9769
+2025-04-11 23:44:57,526 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9052
+2025-04-11 23:44:57,526 - Model_Fold_5 - INFO - Train F1 Score: 0.9722
+2025-04-11 23:45:04,489 - Model_Fold_5 - INFO - Validation Loss: 0.0961
+2025-04-11 23:45:04,491 - Model_Fold_5 - INFO - Validation Accuracy: 0.9268
+2025-04-11 23:45:04,492 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9700
+2025-04-11 23:45:04,493 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:45:04,493 - Model_Fold_5 - INFO - Validation F1 Score: 0.9571
+2025-04-11 23:45:04,495 - Model_Fold_5 - INFO - Epoch 36 (36/40):
+2025-04-11 23:45:30,977 - Model_Fold_5 - INFO - Train Loss: 0.0455
+2025-04-11 23:45:30,979 - Model_Fold_5 - INFO - Train Accuracy: 0.9639
+2025-04-11 23:45:30,979 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9723
+2025-04-11 23:45:30,979 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9647
+2025-04-11 23:45:30,979 - Model_Fold_5 - INFO - Train F1 Score: 0.9766
+2025-04-11 23:45:37,764 - Model_Fold_5 - INFO - Validation Loss: 0.0991
+2025-04-11 23:45:37,766 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:45:37,767 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:45:37,768 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:45:37,768 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:45:37,770 - Model_Fold_5 - INFO - Epoch 37 (37/40):
+2025-04-11 23:46:03,630 - Model_Fold_5 - INFO - Train Loss: 0.0689
+2025-04-11 23:46:03,631 - Model_Fold_5 - INFO - Train Accuracy: 0.9398
+2025-04-11 23:46:03,633 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9701
+2025-04-11 23:46:03,634 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.8739
+2025-04-11 23:46:03,634 - Model_Fold_5 - INFO - Train F1 Score: 0.9619
+2025-04-11 23:46:11,536 - Model_Fold_5 - INFO - Validation Loss: 0.0934
+2025-04-11 23:46:11,537 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:46:11,537 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:46:11,537 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:46:11,537 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:46:11,537 - Model_Fold_5 - INFO - Epoch 38 (38/40):
+2025-04-11 23:46:37,515 - Model_Fold_5 - INFO - Train Loss: 0.0694
+2025-04-11 23:46:37,516 - Model_Fold_5 - INFO - Train Accuracy: 0.9458
+2025-04-11 23:46:37,518 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9662
+2025-04-11 23:46:37,518 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.7975
+2025-04-11 23:46:37,519 - Model_Fold_5 - INFO - Train F1 Score: 0.9639
+2025-04-11 23:46:44,789 - Model_Fold_5 - INFO - Validation Loss: 0.1107
+2025-04-11 23:46:44,790 - Model_Fold_5 - INFO - Validation Accuracy: 0.8780
+2025-04-11 23:46:44,790 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9099
+2025-04-11 23:46:44,790 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:46:44,790 - Model_Fold_5 - INFO - Validation F1 Score: 0.9220
+2025-04-11 23:46:44,791 - Model_Fold_5 - INFO - Epoch 39 (39/40):
+2025-04-11 23:47:10,431 - Model_Fold_5 - INFO - Train Loss: 0.0322
+2025-04-11 23:47:10,432 - Model_Fold_5 - INFO - Train Accuracy: 0.9699
+2025-04-11 23:47:10,432 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9769
+2025-04-11 23:47:10,433 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9614
+2025-04-11 23:47:10,433 - Model_Fold_5 - INFO - Train F1 Score: 0.9796
+2025-04-11 23:47:17,716 - Model_Fold_5 - INFO - Validation Loss: 0.0952
+2025-04-11 23:47:17,718 - Model_Fold_5 - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:47:17,721 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.9400
+2025-04-11 23:47:17,722 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:47:17,722 - Model_Fold_5 - INFO - Validation F1 Score: 0.9403
+2025-04-11 23:47:17,723 - Model_Fold_5 - INFO - Epoch 40 (40/40):
+2025-04-11 23:47:43,813 - Model_Fold_5 - INFO - Train Loss: 0.0321
+2025-04-11 23:47:43,815 - Model_Fold_5 - INFO - Train Accuracy: 0.9759
+2025-04-11 23:47:43,816 - Model_Fold_5 - INFO - Train Table Accuracy: 0.9857
+2025-04-11 23:47:43,817 - Model_Fold_5 - INFO - Train Non-Table Accuracy: 0.9438
+2025-04-11 23:47:43,817 - Model_Fold_5 - INFO - Train F1 Score: 0.9851
+2025-04-11 23:47:51,391 - Model_Fold_5 - INFO - Validation Loss: 0.0952
+2025-04-11 23:47:51,392 - Model_Fold_5 - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:47:51,394 - Model_Fold_5 - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:47:51,396 - Model_Fold_5 - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:47:51,397 - Model_Fold_5 - INFO - Validation F1 Score: 0.9023
+2025-04-11 23:47:51,398 - Model_Fold_5 - INFO - Generating training curves plot...
+2025-04-11 23:47:55,311 - Model_Fold_5 - INFO - Training curves saved to log/table_classification/kfold_tune_final/fold_5/training_curves.png
+2025-04-11 23:47:55,312 - Model_Fold_5 - INFO - Learning rate curve saved to log/table_classification/kfold_tune_final/fold_5/lr_curve.png

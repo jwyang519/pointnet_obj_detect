@@ -1,0 +1,8 @@
+2025-04-11 21:46:33,172 - KFold_CV - INFO - PARAMETER ...
+2025-04-11 21:46:33,173 - KFold_CV - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, model='pointnet2_cls_ssg', epoch=30, learning_rate=0.0003, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='tune1', decay_rate=0.0001, train_file='CW2-Dataset/sun3d_train_fixed.h5', test_file='CW2-Dataset/sun3d_test_fixed.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, n_folds=3, random_state=42)
+2025-04-11 21:46:33,174 - KFold_CV - INFO - Loading dataset ...
+2025-04-11 21:46:33,535 - KFold_CV - INFO - Full dataset size: 207 samples
+2025-04-11 21:46:33,536 - KFold_CV - INFO - Table samples: 160
+2025-04-11 21:46:33,541 - KFold_CV - INFO - Non-table samples: 47
+2025-04-11 21:46:33,541 - KFold_CV - INFO - Performing 3-fold cross-validation
+2025-04-11 21:46:33,549 - KFold_CV - INFO - Starting fold 1/3

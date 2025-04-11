@@ -1,0 +1,50 @@
+2025-04-11 22:02:06,472 - KFold_CV - INFO - PARAMETER ...
+2025-04-11 22:02:06,473 - KFold_CV - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, model='pointnet2_cls_ssg', epoch=40, learning_rate=0.0003, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='tune_final', decay_rate=0.0001, train_file='CW2-Dataset/sun3d_train_fixed.h5', test_file='CW2-Dataset/sun3d_test_fixed.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, n_folds=5, random_state=42)
+2025-04-11 22:02:06,477 - KFold_CV - INFO - Loading dataset ...
+2025-04-11 22:02:07,024 - KFold_CV - INFO - Full dataset size: 207 samples
+2025-04-11 22:02:07,025 - KFold_CV - INFO - Table samples: 160
+2025-04-11 22:02:07,026 - KFold_CV - INFO - Non-table samples: 47
+2025-04-11 22:02:07,026 - KFold_CV - INFO - Performing 5-fold cross-validation
+2025-04-11 22:02:07,034 - KFold_CV - INFO - Starting fold 1/5
+2025-04-11 22:22:18,473 - KFold_CV - INFO - Completed fold 1/5
+2025-04-11 22:22:18,481 - KFold_CV - INFO - Best validation F1: 0.9277 at epoch 26
+2025-04-11 22:22:18,483 - KFold_CV - INFO - Validation Accuracy: 0.8333
+2025-04-11 22:22:18,483 - KFold_CV - INFO - Validation Table Accuracy: 0.9048
+2025-04-11 22:22:18,483 - KFold_CV - INFO - Validation Non-Table Accuracy: 0.5714
+2025-04-11 22:22:18,484 - KFold_CV - INFO - ----------------------------------------
+2025-04-11 22:22:18,484 - KFold_CV - INFO - Starting fold 2/5
+2025-04-11 22:43:20,837 - KFold_CV - INFO - Completed fold 2/5
+2025-04-11 22:43:20,841 - KFold_CV - INFO - Best validation F1: 0.9420 at epoch 20
+2025-04-11 22:43:20,843 - KFold_CV - INFO - Validation Accuracy: 0.8333
+2025-04-11 22:43:20,845 - KFold_CV - INFO - Validation Table Accuracy: 0.8760
+2025-04-11 22:43:20,847 - KFold_CV - INFO - Validation Non-Table Accuracy: 0.5170
+2025-04-11 22:43:20,849 - KFold_CV - INFO - ----------------------------------------
+2025-04-11 22:43:20,851 - KFold_CV - INFO - Starting fold 3/5
+2025-04-11 23:04:38,443 - KFold_CV - INFO - Completed fold 3/5
+2025-04-11 23:04:38,446 - KFold_CV - INFO - Best validation F1: 0.9610 at epoch 34
+2025-04-11 23:04:38,447 - KFold_CV - INFO - Validation Accuracy: 0.9024
+2025-04-11 23:04:38,447 - KFold_CV - INFO - Validation Table Accuracy: 0.9366
+2025-04-11 23:04:38,448 - KFold_CV - INFO - Validation Non-Table Accuracy: 0.4715
+2025-04-11 23:04:38,448 - KFold_CV - INFO - ----------------------------------------
+2025-04-11 23:04:38,449 - KFold_CV - INFO - Starting fold 4/5
+2025-04-11 23:26:38,277 - KFold_CV - INFO - Completed fold 4/5
+2025-04-11 23:26:38,280 - KFold_CV - INFO - Best validation F1: 0.9814 at epoch 20
+2025-04-11 23:26:38,281 - KFold_CV - INFO - Validation Accuracy: 0.9268
+2025-04-11 23:26:38,281 - KFold_CV - INFO - Validation Table Accuracy: 0.9740
+2025-04-11 23:26:38,282 - KFold_CV - INFO - Validation Non-Table Accuracy: 0.8252
+2025-04-11 23:26:38,282 - KFold_CV - INFO - ----------------------------------------
+2025-04-11 23:26:38,283 - KFold_CV - INFO - Starting fold 5/5
+2025-04-11 23:47:55,320 - KFold_CV - INFO - Completed fold 5/5
+2025-04-11 23:47:55,327 - KFold_CV - INFO - Best validation F1: 0.9571 at epoch 30
+2025-04-11 23:47:55,328 - KFold_CV - INFO - Validation Accuracy: 0.8537
+2025-04-11 23:47:55,328 - KFold_CV - INFO - Validation Table Accuracy: 0.8799
+2025-04-11 23:47:55,329 - KFold_CV - INFO - Validation Non-Table Accuracy: 0.6504
+2025-04-11 23:47:55,329 - KFold_CV - INFO - ----------------------------------------
+2025-04-11 23:47:55,330 - KFold_CV - INFO - 
+Cross-Validation Results Summary:
+2025-04-11 23:47:55,333 - KFold_CV - INFO - F1 Score: 0.9538 ± 0.0181
+2025-04-11 23:47:55,334 - KFold_CV - INFO - Accuracy: 0.8699 ± 0.0380
+2025-04-11 23:47:55,334 - KFold_CV - INFO - Table Accuracy: 0.9143 ± 0.0369
+2025-04-11 23:47:55,334 - KFold_CV - INFO - Non-Table Accuracy: 0.6071 ± 0.1243
+2025-04-11 23:47:57,480 - KFold_CV - INFO - Fold comparison plot saved to log/table_classification/kfold_tune_final/fold_comparison.png
+2025-04-11 23:47:57,481 - KFold_CV - INFO - K-fold cross-validation completed.

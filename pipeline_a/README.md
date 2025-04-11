@@ -1,73 +1,77 @@
-# Pipeline A: Binary Point Cloud Classification
+# Pipeline A: K-fold Cross-Validation for Table Classification
 
-This pipeline implements a binary classifier for point clouds to determine whether a scene contains a table (label 1) or not (label 0).
+This directory contains scripts for training and evaluating a binary classification model for table detection in point clouds using K-fold cross-validation.
 
-## Overview
+## K-fold Cross-Validation
 
-- Uses PointNet++ (SSG version) for classification
-- Takes point clouds of shape (B, N, 3) as input
-- Outputs a binary label (0 or 1) per point cloud
-- Uses cross-entropy loss for training
+The `kfold_train.py` script implements K-fold cross-validation for model training and evaluation. It splits the dataset into K folds and trains a separate model on each fold, then reports the average performance and variance across folds.
 
-## Dataset Format
+### Usage
 
-The pipeline uses .h5 files with the following structure:
-- 'data': Point cloud data of shape (num_samples, num_points, 3)
-- 'label': Binary labels of shape (num_samples,) where:
-  - 0: No table in the scene
-  - 1: Table present in the scene
-
-## Files
-
-- `data_loader.py`: Custom data loader for .h5 files
-- `train.py`: Script for training the binary classifier
-- `test.py`: Script for testing the trained model
-- `README.md`: Documentation (this file)
-
-## Usage
-
-### Training
-
-```bash
-cd Pointnet2_pytorch
-python pipeline_a/train.py --train_file path/to/sun3d_train.h5 --test_file path/to/sun3d_test.h5 --log_dir binary_cls
+Basic usage:
+```
+python kfold_train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir my_kfold_experiment
 ```
 
-Optional arguments:
+Full usage with all parameters:
+```
+python kfold_train.py \
+  --train_file CW2-Dataset/sun3d_train_fixed.h5 \
+  --log_dir my_kfold_experiment \
+  --n_folds 5 \
+  --epoch 100 \
+  --batch_size 24 \
+  --learning_rate 0.0001 \
+  --scheduler step \
+  --lr_decay 0.7 \
+  --step_size 20 \
+  --num_point 1024 \
+  --use_weights
+```
+
+### Parameters
+
+- `--train_file`: Path to the H5 file containing training data
+- `--log_dir`: Directory name for saving logs and models
+- `--n_folds`: Number of folds for cross-validation (default: 5)
+- `--epoch`: Number of training epochs per fold (default: 100)
 - `--batch_size`: Batch size for training (default: 24)
-- `--num_point`: Number of points per point cloud (default: 1024)
-- `--epoch`: Number of training epochs (default: 100)
-- `--learning_rate`: Learning rate (default: 0.001)
-- `--optimizer`: Optimizer (default: 'Adam')
-- `--model`: Model to use (default: 'pointnet2_cls_ssg')
-- `--gpu`: GPU to use (default: '0')
-- `--use_cpu`: Use CPU instead of GPU
+- `--learning_rate`: Initial learning rate (default: 0.0001)
+- `--scheduler`: Learning rate scheduler, options: 'step', 'cosine', 'plateau', 'none' (default: 'step')
+- `--lr_decay`: Decay rate for the learning rate scheduler (default: 0.7)
+- `--step_size`: Step size for the StepLR scheduler (default: 20)
+- `--min_lr`: Minimum learning rate for schedulers (default: 1e-6)
+- `--num_point`: Number of points in each point cloud (default: 1024)
+- `--use_weights`: Whether to use class weights to handle class imbalance (default: True)
+- `--random_state`: Random seed for reproducibility (default: 42)
 
-### Testing
+### Output
 
-```bash
-cd Pointnet2_pytorch
-python pipeline_a/test.py --log_dir binary_cls --test_file path/to/sun3d_test.h5 --ucl_file path/to/ucl_data.h5
+The script outputs:
+- A summary of each fold's performance 
+- Average metrics across all folds with standard deviation
+- Learning curves for each fold
+- Comparison plots of metrics across folds
+- Trained model checkpoints for each fold
+
+### Logs and Model Checkpoints
+
+All logs and models are saved under:
+```
+log/table_classification/kfold_<log_dir>
 ```
 
-Optional arguments:
-- `--batch_size`: Batch size for testing (default: 24)
-- `--num_point`: Number of points per point cloud (default: 1024)
-- `--model`: Model to use (default: 'pointnet2_cls_ssg')
-- `--gpu`: GPU to use (default: '0')
-- `--use_cpu`: Use CPU instead of GPU
+For each fold, there is a separate subdirectory:
+```
+log/table_classification/kfold_<log_dir>/fold_<n>/
+```
 
-## Expected Output
+Each fold directory contains:
+- `checkpoints/best_model.pth`: Best model weights for that fold
+- `logs/<model>.txt`: Training logs
+- `training_curves.png`: Plot of metrics during training
+- `lr_curve.png`: Plot of learning rate schedule
 
-The training script will save the model with the best accuracy in `./log/table_classification/[log_dir]/checkpoints/best_model.pth`.
-
-The testing script will evaluate the model on both the test dataset and the UCL dataset, providing:
-- Overall accuracy
-- Per-class accuracy (table vs. no table)
-- Confusion matrix
-
-## Notes
-
-- The UCL dataset is assumed to contain only scenes with tables (label 1)
-- The model uses only XYZ coordinates (not normals)
-- Data augmentation is applied during training 
+The root directory also contains:
+- `kfold_cv.txt`: Full cross-validation logs
+- `fold_comparison.png`: Comparison of metrics across all folds 
