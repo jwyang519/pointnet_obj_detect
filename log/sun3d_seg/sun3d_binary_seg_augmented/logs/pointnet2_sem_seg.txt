@@ -1,0 +1,227 @@
+2025-04-05 15:58:47,634 - Model - INFO - PARAMETER ...
+2025-04-05 15:58:47,634 - Model - INFO - Namespace(model='pointnet2_sem_seg', h5_file='CW2-Dataset/sun3d_train.h5', batch_size=4, epoch=10, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='sun3d_binary_seg_augmented', decay_rate=0.0001, npoint=1024, step_size=10, lr_decay=0.7)
+2025-04-05 15:58:48,017 - Model - INFO - The number of training samples is: 165
+2025-04-05 15:58:48,017 - Model - INFO - The number of testing samples is: 42
+2025-04-05 15:58:48,280 - Model - INFO - Class weights: [0.23280869 0.76719131]
+2025-04-05 15:58:48,299 - Model - INFO - No existing model, starting training from scratch...
+2025-04-05 15:58:49,536 - Model - INFO - **** Epoch 1 (1/10) ****
+2025-04-05 15:58:49,537 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:58:49,563 - Model - INFO - Augmentation stats | Avg table ratio: 0.095 | Jitter: 0.0110 | Scale range: 0.474 | Shift: 0.110 | Dropout chance: 0.338 | Dropout ratio: 0.110
+2025-04-05 15:58:55,845 - Model - INFO - Training mean loss: 0.541068
+2025-04-05 15:58:55,845 - Model - INFO - Training accuracy: 0.829915
+2025-04-05 15:58:55,845 - Model - INFO - Save model...
+2025-04-05 15:58:55,845 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/model.pth
+2025-04-05 15:58:55,963 - Model - INFO - Saving model....
+2025-04-05 15:58:55,964 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2025-04-05 15:58:57,515 - Model - INFO - eval mean loss: 1.734882
+2025-04-05 15:58:57,516 - Model - INFO - eval point accuracy: 0.875533
+2025-04-05 15:58:57,516 - Model - INFO - eval point avg class IoU: 0.458612
+2025-04-05 15:58:57,516 - Model - INFO - eval point avg class acc: 0.500000
+2025-04-05 15:58:57,516 - Model - INFO - ------- IoU --------
+class background     IoU: 0.917 
+class table          IoU: 0.000 
+
+2025-04-05 15:58:57,516 - Model - INFO - ------- Acc --------
+class background     Acc: 1.000 
+class table          Acc: 0.000 
+
+2025-04-05 16:00:59,353 - Model - INFO - PARAMETER ...
+2025-04-05 16:00:59,353 - Model - INFO - Namespace(model='pointnet2_sem_seg', h5_file='CW2-Dataset/sun3d_train.h5', batch_size=4, epoch=10, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='sun3d_binary_seg_augmented', decay_rate=0.0001, npoint=1024, step_size=10, lr_decay=0.7)
+2025-04-05 16:00:59,599 - Model - INFO - The number of training samples is: 165
+2025-04-05 16:00:59,599 - Model - INFO - The number of testing samples is: 42
+2025-04-05 16:00:59,866 - Model - INFO - Class weights: [0.23556394 0.76443606]
+2025-04-05 16:00:59,885 - Model - INFO - No existing model, starting training from scratch...
+2025-04-05 16:01:00,949 - Model - INFO - **** Epoch 1 (1/10) ****
+2025-04-05 16:01:00,949 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:00,974 - Model - INFO - Augmentation stats | Avg table ratio: 0.102 | Jitter: 0.0110 | Scale range: 0.476 | Shift: 0.110 | Dropout chance: 0.341 | Dropout ratio: 0.110
+2025-04-05 16:01:06,595 - Model - INFO - Training mean loss: 0.554851
+2025-04-05 16:01:06,595 - Model - INFO - Training accuracy: 0.809123
+2025-04-05 16:01:06,595 - Model - INFO - Save model...
+2025-04-05 16:01:06,596 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/model.pth
+2025-04-05 16:01:06,709 - Model - INFO - Saving model....
+2025-04-05 16:01:06,709 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2025-04-05 16:01:08,233 - Model - INFO - eval mean loss: 1.955104
+2025-04-05 16:01:08,233 - Model - INFO - eval point accuracy: 0.879417
+2025-04-05 16:01:08,233 - Model - INFO - eval point avg class IoU: 0.460647
+2025-04-05 16:01:08,233 - Model - INFO - eval point avg class acc: 0.500000
+2025-04-05 16:01:08,234 - Model - INFO - ------- IoU --------
+class background     IoU: 0.921 
+class table          IoU: 0.000 
+
+2025-04-05 16:01:08,234 - Model - INFO - ------- Acc --------
+class background     Acc: 1.000 
+class table          Acc: 0.000 
+
+2025-04-05 16:01:09,439 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/best_model_2025-04-05_16-01-09.pth
+2025-04-05 16:01:09,668 - Model - INFO - Best model saved!
+2025-04-05 16:01:09,668 - Model - INFO - **** Epoch 2 (2/10) ****
+2025-04-05 16:01:09,669 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:09,701 - Model - INFO - Augmentation stats | Avg table ratio: 0.014 | Jitter: 0.0101 | Scale range: 0.454 | Shift: 0.101 | Dropout chance: 0.306 | Dropout ratio: 0.101
+2025-04-05 16:01:15,587 - Model - INFO - Training mean loss: 0.502568
+2025-04-05 16:01:15,587 - Model - INFO - Training accuracy: 0.859887
+2025-04-05 16:01:15,587 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2025-04-05 16:01:16,971 - Model - INFO - eval mean loss: 0.593223
+2025-04-05 16:01:16,971 - Model - INFO - eval point accuracy: 0.783780
+2025-04-05 16:01:16,971 - Model - INFO - eval point avg class IoU: 0.445618
+2025-04-05 16:01:16,971 - Model - INFO - eval point avg class acc: 0.527085
+2025-04-05 16:01:16,971 - Model - INFO - ------- IoU --------
+class background     IoU: 0.819 
+class table          IoU: 0.073 
+
+2025-04-05 16:01:16,972 - Model - INFO - ------- Acc --------
+class background     Acc: 0.876 
+class table          Acc: 0.178 
+
+2025-04-05 16:01:18,212 - Model - INFO - **** Epoch 3 (3/10) ****
+2025-04-05 16:01:18,212 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:18,252 - Model - INFO - Augmentation stats | Avg table ratio: 0.069 | Jitter: 0.0107 | Scale range: 0.467 | Shift: 0.107 | Dropout chance: 0.328 | Dropout ratio: 0.107
+2025-04-05 16:01:26,304 - Model - INFO - Training mean loss: 0.470865
+2025-04-05 16:01:26,304 - Model - INFO - Training accuracy: 0.884446
+2025-04-05 16:01:26,305 - Model - INFO - ---- EPOCH 003 EVALUATION ----
+2025-04-05 16:01:27,828 - Model - INFO - eval mean loss: 0.487159
+2025-04-05 16:01:27,828 - Model - INFO - eval point accuracy: 0.829656
+2025-04-05 16:01:27,828 - Model - INFO - eval point avg class IoU: 0.499403
+2025-04-05 16:01:27,828 - Model - INFO - eval point avg class acc: 0.587617
+2025-04-05 16:01:27,828 - Model - INFO - ------- IoU --------
+class background     IoU: 0.867 
+class table          IoU: 0.132 
+
+2025-04-05 16:01:27,828 - Model - INFO - ------- Acc --------
+class background     Acc: 0.922 
+class table          Acc: 0.253 
+
+2025-04-05 16:01:29,044 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/best_model_2025-04-05_16-01-29.pth
+2025-04-05 16:01:29,557 - Model - INFO - Best model saved!
+2025-04-05 16:01:29,557 - Model - INFO - **** Epoch 4 (4/10) ****
+2025-04-05 16:01:29,558 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:29,593 - Model - INFO - Augmentation stats | Avg table ratio: 0.071 | Jitter: 0.0107 | Scale range: 0.468 | Shift: 0.107 | Dropout chance: 0.329 | Dropout ratio: 0.107
+2025-04-05 16:01:35,465 - Model - INFO - Training mean loss: 0.476689
+2025-04-05 16:01:35,465 - Model - INFO - Training accuracy: 0.859253
+2025-04-05 16:01:35,465 - Model - INFO - ---- EPOCH 004 EVALUATION ----
+2025-04-05 16:01:36,977 - Model - INFO - eval mean loss: 0.592931
+2025-04-05 16:01:36,977 - Model - INFO - eval point accuracy: 0.851585
+2025-04-05 16:01:36,977 - Model - INFO - eval point avg class IoU: 0.479597
+2025-04-05 16:01:36,977 - Model - INFO - eval point avg class acc: 0.529837
+2025-04-05 16:01:36,979 - Model - INFO - ------- IoU --------
+class background     IoU: 0.891 
+class table          IoU: 0.068 
+
+2025-04-05 16:01:36,979 - Model - INFO - ------- Acc --------
+class background     Acc: 0.960 
+class table          Acc: 0.100 
+
+2025-04-05 16:01:38,227 - Model - INFO - **** Epoch 5 (5/10) ****
+2025-04-05 16:01:38,227 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:38,263 - Model - INFO - Augmentation stats | Avg table ratio: 0.014 | Jitter: 0.0101 | Scale range: 0.454 | Shift: 0.101 | Dropout chance: 0.306 | Dropout ratio: 0.101
+2025-04-05 16:01:44,121 - Model - INFO - Training mean loss: 0.476245
+2025-04-05 16:01:44,121 - Model - INFO - Training accuracy: 0.849976
+2025-04-05 16:01:44,121 - Model - INFO - ---- EPOCH 005 EVALUATION ----
+2025-04-05 16:01:45,638 - Model - INFO - eval mean loss: 0.437105
+2025-04-05 16:01:45,638 - Model - INFO - eval point accuracy: 0.871316
+2025-04-05 16:01:45,638 - Model - INFO - eval point avg class IoU: 0.494940
+2025-04-05 16:01:45,638 - Model - INFO - eval point avg class acc: 0.538083
+2025-04-05 16:01:45,645 - Model - INFO - ------- IoU --------
+class background     IoU: 0.912 
+class table          IoU: 0.078 
+
+2025-04-05 16:01:45,645 - Model - INFO - ------- Acc --------
+class background     Acc: 0.983 
+class table          Acc: 0.093 
+
+2025-04-05 16:01:46,872 - Model - INFO - **** Epoch 6 (6/10) ****
+2025-04-05 16:01:46,872 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:46,908 - Model - INFO - Augmentation stats | Avg table ratio: 0.061 | Jitter: 0.0106 | Scale range: 0.465 | Shift: 0.106 | Dropout chance: 0.325 | Dropout ratio: 0.106
+2025-04-05 16:01:52,758 - Model - INFO - Training mean loss: 0.458343
+2025-04-05 16:01:52,758 - Model - INFO - Training accuracy: 0.860793
+2025-04-05 16:01:52,758 - Model - INFO - Save model...
+2025-04-05 16:01:52,758 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/model.pth
+2025-04-05 16:01:52,871 - Model - INFO - Saving model....
+2025-04-05 16:01:52,871 - Model - INFO - ---- EPOCH 006 EVALUATION ----
+2025-04-05 16:01:54,393 - Model - INFO - eval mean loss: 0.469894
+2025-04-05 16:01:54,393 - Model - INFO - eval point accuracy: 0.871915
+2025-04-05 16:01:54,393 - Model - INFO - eval point avg class IoU: 0.496080
+2025-04-05 16:01:54,393 - Model - INFO - eval point avg class acc: 0.539099
+2025-04-05 16:01:54,394 - Model - INFO - ------- IoU --------
+class background     IoU: 0.913 
+class table          IoU: 0.079 
+
+2025-04-05 16:01:54,394 - Model - INFO - ------- Acc --------
+class background     Acc: 0.983 
+class table          Acc: 0.095 
+
+2025-04-05 16:01:55,620 - Model - INFO - **** Epoch 7 (7/10) ****
+2025-04-05 16:01:55,621 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:01:55,657 - Model - INFO - Augmentation stats | Avg table ratio: 0.250 | Jitter: 0.0125 | Scale range: 0.513 | Shift: 0.125 | Dropout chance: 0.400 | Dropout ratio: 0.125
+2025-04-05 16:02:01,759 - Model - INFO - Training mean loss: 0.438124
+2025-04-05 16:02:01,759 - Model - INFO - Training accuracy: 0.862938
+2025-04-05 16:02:01,760 - Model - INFO - ---- EPOCH 007 EVALUATION ----
+2025-04-05 16:02:05,578 - Model - INFO - eval mean loss: 0.423887
+2025-04-05 16:02:05,578 - Model - INFO - eval point accuracy: 0.871027
+2025-04-05 16:02:05,578 - Model - INFO - eval point avg class IoU: 0.483762
+2025-04-05 16:02:05,578 - Model - INFO - eval point avg class acc: 0.525085
+2025-04-05 16:02:05,580 - Model - INFO - ------- IoU --------
+class background     IoU: 0.912 
+class table          IoU: 0.055 
+
+2025-04-05 16:02:05,580 - Model - INFO - ------- Acc --------
+class background     Acc: 0.985 
+class table          Acc: 0.065 
+
+2025-04-05 16:02:06,683 - Model - INFO - **** Epoch 8 (8/10) ****
+2025-04-05 16:02:06,683 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:02:06,719 - Model - INFO - Augmentation stats | Avg table ratio: 0.050 | Jitter: 0.0105 | Scale range: 0.462 | Shift: 0.105 | Dropout chance: 0.320 | Dropout ratio: 0.105
+2025-04-05 16:02:12,579 - Model - INFO - Training mean loss: 0.445224
+2025-04-05 16:02:12,579 - Model - INFO - Training accuracy: 0.869629
+2025-04-05 16:02:12,580 - Model - INFO - ---- EPOCH 008 EVALUATION ----
+2025-04-05 16:02:14,099 - Model - INFO - eval mean loss: 0.474537
+2025-04-05 16:02:14,099 - Model - INFO - eval point accuracy: 0.879816
+2025-04-05 16:02:14,099 - Model - INFO - eval point avg class IoU: 0.518240
+2025-04-05 16:02:14,099 - Model - INFO - eval point avg class acc: 0.559667
+2025-04-05 16:02:14,099 - Model - INFO - ------- IoU --------
+class background     IoU: 0.921 
+class table          IoU: 0.116 
+
+2025-04-05 16:02:14,100 - Model - INFO - ------- Acc --------
+class background     Acc: 0.989 
+class table          Acc: 0.130 
+
+2025-04-05 16:02:15,325 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/best_model_2025-04-05_16-02-15.pth
+2025-04-05 16:02:15,550 - Model - INFO - Best model saved!
+2025-04-05 16:02:15,550 - Model - INFO - **** Epoch 9 (9/10) ****
+2025-04-05 16:02:15,551 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:02:15,588 - Model - INFO - Augmentation stats | Avg table ratio: 0.043 | Jitter: 0.0104 | Scale range: 0.461 | Shift: 0.104 | Dropout chance: 0.317 | Dropout ratio: 0.104
+2025-04-05 16:02:22,489 - Model - INFO - Training mean loss: 0.429812
+2025-04-05 16:02:22,489 - Model - INFO - Training accuracy: 0.868513
+2025-04-05 16:02:22,489 - Model - INFO - ---- EPOCH 009 EVALUATION ----
+2025-04-05 16:02:24,008 - Model - INFO - eval mean loss: 0.720286
+2025-04-05 16:02:24,008 - Model - INFO - eval point accuracy: 0.857511
+2025-04-05 16:02:24,008 - Model - INFO - eval point avg class IoU: 0.526592
+2025-04-05 16:02:24,008 - Model - INFO - eval point avg class acc: 0.597375
+2025-04-05 16:02:24,008 - Model - INFO - ------- IoU --------
+class background     IoU: 0.896 
+class table          IoU: 0.157 
+
+2025-04-05 16:02:24,009 - Model - INFO - ------- Acc --------
+class background     Acc: 0.955 
+class table          Acc: 0.240 
+
+2025-04-05 16:02:25,183 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_augmented/checkpoints/best_model_2025-04-05_16-02-25.pth
+2025-04-05 16:02:25,470 - Model - INFO - Best model saved!
+2025-04-05 16:02:25,470 - Model - INFO - **** Epoch 10 (10/10) ****
+2025-04-05 16:02:25,470 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:02:25,506 - Model - INFO - Augmentation stats | Avg table ratio: 0.133 | Jitter: 0.0113 | Scale range: 0.483 | Shift: 0.113 | Dropout chance: 0.353 | Dropout ratio: 0.113
+2025-04-05 16:02:31,375 - Model - INFO - Training mean loss: 0.457930
+2025-04-05 16:02:31,375 - Model - INFO - Training accuracy: 0.882127
+2025-04-05 16:02:31,375 - Model - INFO - ---- EPOCH 010 EVALUATION ----
+2025-04-05 16:02:32,888 - Model - INFO - eval mean loss: 0.790305
+2025-04-05 16:02:32,888 - Model - INFO - eval point accuracy: 0.878351
+2025-04-05 16:02:32,888 - Model - INFO - eval point avg class IoU: 0.460378
+2025-04-05 16:02:32,888 - Model - INFO - eval point avg class acc: 0.499664
+2025-04-05 16:02:32,888 - Model - INFO - ------- IoU --------
+class background     IoU: 0.920 
+class table          IoU: 0.001 
+
+2025-04-05 16:02:32,889 - Model - INFO - ------- Acc --------
+class background     Acc: 0.999 
+class table          Acc: 0.001 
+

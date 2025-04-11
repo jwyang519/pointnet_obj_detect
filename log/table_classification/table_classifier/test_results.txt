@@ -1,0 +1,40 @@
+2025-04-09 15:52:37,622 - Model - INFO - PARAMETER ...
+2025-04-09 15:52:37,622 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, num_point=1024, log_dir='table_classifier', model='pointnet2_cls_ssg', test_file='dataset/sun3d_test.h5', ucl_file='dataset/ucl_data.h5')
+2025-04-09 15:52:37,622 - Model - INFO - Load dataset ...
+2025-04-09 15:52:39,417 - Model - INFO - Model loaded from ./log/table_classification/table_classifier/checkpoints/best_model.pth
+2025-04-09 15:52:39,418 - Model - INFO - Test instance accuracy reported during training: 0.9688
+2025-04-09 15:52:39,418 - Model - INFO - Model from epoch: 5
+2025-04-09 15:52:39,418 - Model - INFO - Testing on sun3d_test...
+2025-04-09 15:52:46,158 - Model - INFO - Test Instance Accuracy on sun3d_test: 0.9688
+2025-04-09 15:52:46,158 - Model - INFO - Class accuracy on sun3d_test - No Table: 1.0000, Table: 0.0000
+2025-04-09 15:52:46,158 - Model - INFO - Confusion Matrix:
+2025-04-09 15:52:46,158 - Model - INFO - Pred\True | No Table | Table
+2025-04-09 15:52:46,158 - Model - INFO - No Table  |       71 |     3
+2025-04-09 15:52:46,158 - Model - INFO - Table     |        0 |     0
+2025-04-09 15:52:46,159 - Model - INFO - Testing on ucl_data...
+2025-04-09 15:52:49,813 - Model - INFO - Test Instance Accuracy on ucl_data: 1.0000
+2025-04-09 15:52:49,813 - Model - INFO - Class accuracy on ucl_data - No Table: 1.0000, Table: nan
+2025-04-09 15:52:49,813 - Model - INFO - Confusion Matrix:
+2025-04-09 15:52:49,813 - Model - INFO - Pred\True | No Table | Table
+2025-04-09 15:52:49,813 - Model - INFO - No Table  |       33 |     0
+2025-04-09 15:52:49,813 - Model - INFO - Table     |        0 |     0
+2025-04-09 15:53:24,689 - Model - INFO - PARAMETER ...
+2025-04-09 15:53:24,689 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, num_point=1024, log_dir='table_classifier', model='pointnet2_cls_ssg', test_file='dataset/sun3d_test.h5', ucl_file='dataset/ucl_data.h5')
+2025-04-09 15:53:24,690 - Model - INFO - Load dataset ...
+2025-04-09 15:53:25,336 - Model - INFO - Model loaded from ./log/table_classification/table_classifier/checkpoints/best_model.pth
+2025-04-09 15:53:25,336 - Model - INFO - Test instance accuracy reported during training: 0.9688
+2025-04-09 15:53:25,336 - Model - INFO - Model from epoch: 5
+2025-04-09 15:53:25,336 - Model - INFO - Testing on sun3d_test...
+2025-04-09 15:53:32,945 - Model - INFO - Test Instance Accuracy on sun3d_test: 0.9688
+2025-04-09 15:53:32,945 - Model - INFO - Class accuracy on sun3d_test - No Table: 1.0000, Table: 0.0000
+2025-04-09 15:53:32,945 - Model - INFO - Confusion Matrix:
+2025-04-09 15:53:32,945 - Model - INFO - Pred\True | No Table | Table
+2025-04-09 15:53:32,945 - Model - INFO - No Table  |       71 |     3
+2025-04-09 15:53:32,945 - Model - INFO - Table     |        0 |     0
+2025-04-09 15:53:32,945 - Model - INFO - Testing on ucl_data...
+2025-04-09 15:53:36,490 - Model - INFO - Test Instance Accuracy on ucl_data: 0.0000
+2025-04-09 15:53:36,491 - Model - INFO - Class accuracy on ucl_data - No Table: nan, Table: 0.0000
+2025-04-09 15:53:36,491 - Model - INFO - Confusion Matrix:
+2025-04-09 15:53:36,491 - Model - INFO - Pred\True | No Table | Table
+2025-04-09 15:53:36,491 - Model - INFO - No Table  |        0 |    33
+2025-04-09 15:53:36,491 - Model - INFO - Table     |        0 |     0

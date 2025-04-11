@@ -1,0 +1,852 @@
+Dataset regeneration started at 2025-04-09 23:46:23
+
+=== SUN3D Training Dataset (MIT) ===
+Command: python data_utils/prepare_sun3d_dataset.py --data_dir dataset/sun3d_data --prefix mit --output CW2-Dataset/sun3d_train_fixed.h5 --max_points 1024
+
+Found 4 scenes with prefix 'mit'
+Processing 4 MIT scenes as training data
+Processing scenes:   0%|          | 0/4 [00:00<?, ?it/s]Processing scene: mit_32_d507/d507_2
+Using depthTSDF for scene mit_32_d507/d507_2
+
+Processing mit_32_d507/d507_2: 0it [00:00, ?it/s][A
+Processing mit_32_d507/d507_2: 1it [00:00,  2.00it/s][A
+Processing mit_32_d507/d507_2: 4it [00:00,  7.80it/s][A
+Processing mit_32_d507/d507_2: 7it [00:00, 12.31it/s][A
+Processing mit_32_d507/d507_2: 10it [00:00, 16.13it/s][A
+Processing mit_32_d507/d507_2: 13it [00:00, 19.13it/s][A
+Processing mit_32_d507/d507_2: 16it [00:01, 21.35it/s][A
+Processing mit_32_d507/d507_2: 19it [00:01, 23.09it/s][A
+Processing mit_32_d507/d507_2: 22it [00:01, 24.34it/s][A
+Processing mit_32_d507/d507_2: 25it [00:01, 24.70it/s][A
+Processing mit_32_d507/d507_2: 28it [00:01, 24.68it/s][A
+Processing mit_32_d507/d507_2: 31it [00:01, 25.11it/s][A
+Processing mit_32_d507/d507_2: 34it [00:01, 25.49it/s][A
+Processing mit_32_d507/d507_2: 37it [00:01, 25.90it/s][A
+Processing mit_32_d507/d507_2: 40it [00:01, 26.23it/s][A
+Processing mit_32_d507/d507_2: 43it [00:02, 26.43it/s][A
+Processing mit_32_d507/d507_2: 46it [00:02, 26.62it/s][A
+Processing mit_32_d507/d507_2: 49it [00:02, 26.74it/s][A
+Processing mit_32_d507/d507_2: 52it [00:02, 26.63it/s][A
+Processing mit_32_d507/d507_2: 55it [00:02, 26.32it/s][A
+Processing mit_32_d507/d507_2: 58it [00:02, 26.12it/s][A
+Processing mit_32_d507/d507_2: 61it [00:02, 25.95it/s][A
+Processing mit_32_d507/d507_2: 64it [00:02, 25.51it/s][A
+Processing mit_32_d507/d507_2: 67it [00:03, 25.37it/s][A
+Processing mit_32_d507/d507_2: 70it [00:03, 25.47it/s][A
+Processing mit_32_d507/d507_2: 73it [00:03, 21.23it/s][A
+Processing mit_32_d507/d507_2: 76it [00:03, 22.24it/s][A
+Processing mit_32_d507/d507_2: 79it [00:03, 23.26it/s][AProcessed 3 polygons
+Frame stats: 35055/286105 points labeled as table (12.25%)
+Frame 0000002-000000033369.png: Table ratio before sampling: 12.25%, after: 19.92%
+Processed 3 polygons
+Frame stats: 38222/306568 points labeled as table (12.47%)
+Frame 0000052-000001701832.png: Table ratio before sampling: 12.47%, after: 19.92%
+Processed 3 polygons
+Frame stats: 40787/298893 points labeled as table (13.65%)
+Frame 0000102-000003370294.png: Table ratio before sampling: 13.65%, after: 19.92%
+Processed 3 polygons
+Frame stats: 46273/307171 points labeled as table (15.06%)
+Frame 0000153-000005072126.png: Table ratio before sampling: 15.06%, after: 19.92%
+Processed 4 polygons
+Frame stats: 42865/307108 points labeled as table (13.96%)
+Frame 0000203-000006740588.png: Table ratio before sampling: 13.96%, after: 19.92%
+Processed 4 polygons
+Frame stats: 48044/306164 points labeled as table (15.69%)
+Frame 0000253-000008409051.png: Table ratio before sampling: 15.69%, after: 19.92%
+Processed 2 polygons
+Frame stats: 10654/307200 points labeled as table (3.47%)
+Frame 0000303-000010077513.png: Table ratio before sampling: 3.47%, after: 19.92%
+Processed 1 polygons
+Frame stats: 2389/305010 points labeled as table (0.78%)
+Frame 0000353-000011745976.png: Table ratio before sampling: 0.78%, after: 19.92%
+Processed 1 polygons
+Frame stats: 1353/303259 points labeled as table (0.45%)
+Frame 0001057-000035237928.png: Table ratio before sampling: 0.45%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7965/304257 points labeled as table (2.62%)
+Frame 0001107-000036906390.png: Table ratio before sampling: 2.62%, after: 19.92%
+Processed 2 polygons
+Frame stats: 8066/307164 points labeled as table (2.63%)
+Frame 0001157-000038574853.png: Table ratio before sampling: 2.63%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7218/297917 points labeled as table (2.42%)
+Frame 0001207-000040243315.png: Table ratio before sampling: 2.42%, after: 19.92%
+Processed 2 polygons
+Frame stats: 15813/295366 points labeled as table (5.35%)
+Frame 0001257-000041911778.png: Table ratio before sampling: 5.35%, after: 19.92%
+Processed 1 polygons
+Frame stats: 29396/305645 points labeled as table (9.62%)
+Frame 0001358-000045282072.png: Table ratio before sampling: 9.62%, after: 19.92%
+Processed 2 polygons
+Frame stats: 55247/305310 points labeled as table (18.10%)
+Frame 0001408-000046950535.png: Table ratio before sampling: 18.10%, after: 19.92%
+Processed 1 polygons
+Frame stats: 5101/306566 points labeled as table (1.66%)
+Frame 0001458-000048618997.png: Table ratio before sampling: 1.66%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7906/306252 points labeled as table (2.58%)
+Frame 0001509-000050320829.png: Table ratio before sampling: 2.58%, after: 19.92%
+Processed 2 polygons
+Frame stats: 12500/288881 points labeled as table (4.33%)
+Frame 0001559-000051989291.png: Table ratio before sampling: 4.33%, after: 19.92%
+Processed 2 polygons
+Frame stats: 16976/305721 points labeled as table (5.55%)
+Frame 0001609-000053657754.png: Table ratio before sampling: 5.55%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7320/307009 points labeled as table (2.38%)
+Frame 0001659-000055326216.png: Table ratio before sampling: 2.38%, after: 19.92%
+WARNING: Frame 0001709-000056994679.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 7110/307200 points labeled as table (2.31%)
+Frame 0002412-000080453262.png: Table ratio before sampling: 2.31%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7931/305272 points labeled as table (2.60%)
+Frame 0002463-000082155093.png: Table ratio before sampling: 2.60%, after: 19.92%
+Processed 1 polygons
+Frame stats: 9049/298109 points labeled as table (3.04%)
+Frame 0002513-000083823556.png: Table ratio before sampling: 3.04%, after: 19.92%
+Processed 1 polygons
+Frame stats: 10807/306418 points labeled as table (3.53%)
+Frame 0002563-000085492018.png: Table ratio before sampling: 3.53%, after: 19.92%
+Processed 1 polygons
+Frame stats: 12110/305770 points labeled as table (3.96%)
+Frame 0002613-000087160481.png: Table ratio before sampling: 3.96%, after: 19.92%
+Processed 1 polygons
+Frame stats: 12666/306292 points labeled as table (4.14%)
+Frame 0002664-000088862313.png: Table ratio before sampling: 4.14%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3079/305596 points labeled as table (1.01%)
+Frame 0002714-000090530775.png: Table ratio before sampling: 1.01%, after: 19.92%
+Processed 1 polygons
+Frame stats: 40578/305734 points labeled as table (13.27%)
+Frame 0002764-000092199238.png: Table ratio before sampling: 13.27%, after: 19.92%
+Processed 1 polygons
+Frame stats: 23380/305461 points labeled as table (7.65%)
+Frame 0002814-000093867700.png: Table ratio before sampling: 7.65%, after: 19.92%
+Processed 1 polygons
+Frame stats: 9544/305717 points labeled as table (3.12%)
+Frame 0002864-000095536163.png: Table ratio before sampling: 3.12%, after: 19.92%
+Processed 1 polygons
+Frame stats: 6085/307173 points labeled as table (1.98%)
+Frame 0002915-000097237994.png: Table ratio before sampling: 1.98%, after: 19.92%
+Processed 2 polygons
+Frame stats: 14094/295168 points labeled as table (4.77%)
+Frame 0002965-000098906457.png: Table ratio before sampling: 4.77%, after: 19.92%
+Processed 2 polygons
+Frame stats: 13572/300456 points labeled as table (4.52%)
+Frame 0003015-000100574919.png: Table ratio before sampling: 4.52%, after: 19.92%
+Processed 2 polygons
+Frame stats: 17299/294888 points labeled as table (5.87%)
+Frame 0003066-000102276751.png: Table ratio before sampling: 5.87%, after: 19.92%
+Processed 2 polygons
+Frame stats: 25335/306393 points labeled as table (8.27%)
+Frame 0003117-000103978583.png: Table ratio before sampling: 8.27%, after: 19.92%
+Processed 2 polygons
+Frame stats: 37380/303279 points labeled as table (12.33%)
+Frame 0003167-000105647045.png: Table ratio before sampling: 12.33%, after: 19.92%
+Processed 2 polygons
+Frame stats: 33059/300686 points labeled as table (10.99%)
+Frame 0003217-000107315508.png: Table ratio before sampling: 10.99%, after: 19.92%
+Processed 2 polygons
+Frame stats: 26545/307018 points labeled as table (8.65%)
+Frame 0003267-000108983970.png: Table ratio before sampling: 8.65%, after: 19.92%
+Processed 2 polygons
+Frame stats: 20604/307200 points labeled as table (6.71%)
+Frame 0003317-000110652433.png: Table ratio before sampling: 6.71%, after: 19.92%
+Processed 2 polygons
+Frame stats: 18841/307185 points labeled as table (6.13%)
+Frame 0003368-000112354265.png: Table ratio before sampling: 6.13%, after: 19.92%
+Processed 1 polygons
+Frame stats: 12300/307200 points labeled as table (4.00%)
+Frame 0003418-000114022727.png: Table ratio before sampling: 4.00%, after: 19.92%
+Processed 1 polygons
+Frame stats: 6692/280616 points labeled as table (2.38%)
+Frame 0003468-000115691190.png: Table ratio before sampling: 2.38%, after: 19.92%
+Processed 1 polygons
+Frame stats: 14743/307124 points labeled as table (4.80%)
+Frame 0003518-000117359652.png: Table ratio before sampling: 4.80%, after: 19.92%
+Processed 2 polygons
+Frame stats: 20115/307026 points labeled as table (6.55%)
+Frame 0003543-000118193883.png: Table ratio before sampling: 6.55%, after: 19.92%
+Processed 2 polygons
+Frame stats: 40971/304659 points labeled as table (13.45%)
+Frame 0003594-000119895715.png: Table ratio before sampling: 13.45%, after: 19.92%
+Processed 2 polygons
+Frame stats: 60143/305623 points labeled as table (19.68%)
+Frame 0003649-000121731024.png: Table ratio before sampling: 19.68%, after: 19.92%
+Processed 1 polygons
+Frame stats: 47790/305810 points labeled as table (15.63%)
+Frame 0003704-000123566333.png: Table ratio before sampling: 15.63%, after: 19.92%
+Processed 1 polygons
+Frame stats: 22770/307028 points labeled as table (7.42%)
+Frame 0003759-000125401641.png: Table ratio before sampling: 7.42%, after: 19.92%
+Processed 1 polygons
+Frame stats: 9028/306204 points labeled as table (2.95%)
+Frame 0003915-000130607244.png: Table ratio before sampling: 2.95%, after: 19.92%
+Processed 1 polygons
+Frame stats: 25932/304089 points labeled as table (8.53%)
+Frame 0003965-000132275707.png: Table ratio before sampling: 8.53%, after: 19.92%
+
+Processing mit_32_d507/d507_2: 82it [00:03, 22.49it/s][A
+Processing mit_32_d507/d507_2: 85it [00:03, 23.52it/s][A
+Processing mit_32_d507/d507_2: 88it [00:03, 23.97it/s][A
+Processing mit_32_d507/d507_2: 91it [00:04, 24.92it/s][A
+Processing mit_32_d507/d507_2: 94it [00:04, 25.32it/s][A
+Processing mit_32_d507/d507_2: 97it [00:04, 25.73it/s][A
+Processing mit_32_d507/d507_2: 100it [00:04, 25.99it/s][A
+Processing mit_32_d507/d507_2: 103it [00:04, 25.21it/s][A
+Processing mit_32_d507/d507_2: 106it [00:04, 24.10it/s][A
+Processing mit_32_d507/d507_2: 109it [00:04, 23.98it/s][AProcessing mit_32_d507/d507_2: 109it [00:04, 22.75it/s]
+Processing scenes:  25%|██▌       | 1/4 [00:04<00:14,  4.81s/it]Processed 1 polygons
+Frame stats: 73596/304744 points labeled as table (24.15%)
+Frame 0004015-000133944169.png: Table ratio before sampling: 24.15%, after: 19.92%
+Processed 1 polygons
+Frame stats: 102773/307181 points labeled as table (33.46%)
+Frame 0004066-000135646001.png: Table ratio before sampling: 33.46%, after: 19.92%
+Processed 1 polygons
+Frame stats: 118796/306121 points labeled as table (38.81%)
+Frame 0004116-000137314464.png: Table ratio before sampling: 38.81%, after: 19.92%
+WARNING: Frame 0004166-000138982926.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0004216-000140651389.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 11722/304961 points labeled as table (3.84%)
+Frame 0004267-000142353220.png: Table ratio before sampling: 3.84%, after: 19.92%
+Processed 2 polygons
+Frame stats: 53415/307200 points labeled as table (17.39%)
+Frame 0004317-000144021683.png: Table ratio before sampling: 17.39%, after: 19.92%
+Processed 1 polygons
+Frame stats: 27227/306555 points labeled as table (8.88%)
+Frame 0004362-000145523299.png: Table ratio before sampling: 8.88%, after: 19.92%
+WARNING: Frame 0004417-000147358608.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0004467-000149027070.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0004518-000150728902.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0004568-000152397365.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0004618-000154065827.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 22642/305015 points labeled as table (7.42%)
+Frame 0004724-000157602968.png: Table ratio before sampling: 7.42%, after: 19.92%
+WARNING: Frame 0004769-000159104584.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 16592/305033 points labeled as table (5.44%)
+Frame 0004819-000160773046.png: Table ratio before sampling: 5.44%, after: 19.92%
+WARNING: Frame 0004869-000162441509.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 2979/305452 points labeled as table (0.98%)
+Frame 0005115-000170650344.png: Table ratio before sampling: 0.98%, after: 19.92%
+Processed 1 polygons
+Frame stats: 118426/306188 points labeled as table (38.68%)
+Frame 0005166-000172352176.png: Table ratio before sampling: 38.68%, after: 19.92%
+Processed 1 polygons
+Frame stats: 148938/297216 points labeled as table (50.11%)
+Frame 0005221-000174187485.png: Table ratio before sampling: 50.11%, after: 19.92%
+WARNING: Frame 0005271-000175855947.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 2 polygons
+Frame stats: 83203/305983 points labeled as table (27.19%)
+Frame 0005321-000177524410.png: Table ratio before sampling: 27.19%, after: 19.92%
+Processed 1 polygons
+Frame stats: 28614/306173 points labeled as table (9.35%)
+Frame 0005371-000179192872.png: Table ratio before sampling: 9.35%, after: 19.92%
+Processed 2 polygons
+Frame stats: 52958/306136 points labeled as table (17.30%)
+Frame 0005417-000180727858.png: Table ratio before sampling: 17.30%, after: 19.92%
+Processed 2 polygons
+Frame stats: 52427/301468 points labeled as table (17.39%)
+Frame 0005467-000182396320.png: Table ratio before sampling: 17.39%, after: 19.92%
+Processing scene: mit_76_studyroom/76-1studyroom2
+Using depthTSDF for scene mit_76_studyroom/76-1studyroom2
+
+Processing mit_76_studyroom/76-1studyroom2: 0it [00:00, ?it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 3it [00:00, 25.17it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 6it [00:00, 25.99it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 9it [00:00, 25.98it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 12it [00:00, 26.08it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 15it [00:00, 25.17it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 18it [00:00, 24.88it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 21it [00:00, 25.07it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 24it [00:00, 24.93it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 27it [00:01, 24.78it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 30it [00:01, 24.66it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 33it [00:01, 24.97it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 36it [00:01, 25.24it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 39it [00:01, 25.59it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 42it [00:01, 25.68it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 45it [00:01, 24.50it/s][A
+Processing mit_76_studyroom/76-1studyroom2: 48it [00:01, 25.08it/s][AProcessing mit_76_studyroom/76-1studyroom2: 49it [00:01, 25.16it/s]
+Processing scenes:  50%|█████     | 2/4 [00:06<00:06,  3.14s/it]Processed 4 polygons
+Frame stats: 12647/282161 points labeled as table (4.48%)
+Frame 0000001-000000000000.png: Table ratio before sampling: 4.48%, after: 19.92%
+Processed 3 polygons
+Frame stats: 18533/298813 points labeled as table (6.20%)
+Frame 0000142-000004705064.png: Table ratio before sampling: 6.20%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3562/290192 points labeled as table (1.23%)
+Frame 0000187-000006206681.png: Table ratio before sampling: 1.23%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3880/286877 points labeled as table (1.35%)
+Frame 0000192-000006373527.png: Table ratio before sampling: 1.35%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3712/289791 points labeled as table (1.28%)
+Frame 0000197-000006540373.png: Table ratio before sampling: 1.28%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3653/279957 points labeled as table (1.30%)
+Frame 0000202-000006707219.png: Table ratio before sampling: 1.30%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3578/299641 points labeled as table (1.19%)
+Frame 0000207-000006874066.png: Table ratio before sampling: 1.19%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3690/273833 points labeled as table (1.35%)
+Frame 0000212-000007040912.png: Table ratio before sampling: 1.35%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3411/298480 points labeled as table (1.14%)
+Frame 0000217-000007207758.png: Table ratio before sampling: 1.14%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3653/284209 points labeled as table (1.29%)
+Frame 0000222-000007374604.png: Table ratio before sampling: 1.29%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3578/287486 points labeled as table (1.24%)
+Frame 0000227-000007541451.png: Table ratio before sampling: 1.24%, after: 19.92%
+Processed 1 polygons
+Frame stats: 3316/279593 points labeled as table (1.19%)
+Frame 0000237-000007875143.png: Table ratio before sampling: 1.19%, after: 19.92%
+Processed 4 polygons
+Frame stats: 7346/305699 points labeled as table (2.40%)
+Frame 0000339-000011278807.png: Table ratio before sampling: 2.40%, after: 19.92%
+Processed 2 polygons
+Frame stats: 13453/300740 points labeled as table (4.47%)
+Frame 0000459-000015283117.png: Table ratio before sampling: 4.47%, after: 19.92%
+Processed 1 polygons
+Frame stats: 58022/297238 points labeled as table (19.52%)
+Frame 0000620-000020655566.png: Table ratio before sampling: 19.52%, after: 19.92%
+Processed 1 polygons
+Frame stats: 29669/299417 points labeled as table (9.91%)
+Frame 0000766-000025527476.png: Table ratio before sampling: 9.91%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7801/285772 points labeled as table (2.73%)
+Frame 0000916-000030532864.png: Table ratio before sampling: 2.73%, after: 19.92%
+Processed 4 polygons
+Frame stats: 22605/304927 points labeled as table (7.41%)
+Frame 0001067-000035571621.png: Table ratio before sampling: 7.41%, after: 19.92%
+Processed 5 polygons
+Frame stats: 10554/307200 points labeled as table (3.44%)
+Frame 0001208-000040276685.png: Table ratio before sampling: 3.44%, after: 19.92%
+Processed 3 polygons
+Frame stats: 10995/298381 points labeled as table (3.68%)
+Frame 0001228-000040944070.png: Table ratio before sampling: 3.68%, after: 19.92%
+Processed 2 polygons
+Frame stats: 5318/266377 points labeled as table (2.00%)
+Frame 0001323-000044114149.png: Table ratio before sampling: 2.00%, after: 19.92%
+Processed 2 polygons
+Frame stats: 9338/306974 points labeled as table (3.04%)
+Frame 0001373-000045782611.png: Table ratio before sampling: 3.04%, after: 19.92%
+Processed 2 polygons
+Frame stats: 25909/305410 points labeled as table (8.48%)
+Frame 0001449-000048318674.png: Table ratio before sampling: 8.48%, after: 19.92%
+Processed 1 polygons
+Frame stats: 17366/296850 points labeled as table (5.85%)
+Frame 0001534-000051155060.png: Table ratio before sampling: 5.85%, after: 19.92%
+Processed 2 polygons
+Frame stats: 26958/301137 points labeled as table (8.95%)
+Frame 0001579-000052656677.png: Table ratio before sampling: 8.95%, after: 19.92%
+Processed 5 polygons
+Frame stats: 13808/294394 points labeled as table (4.69%)
+Frame 0001629-000054325139.png: Table ratio before sampling: 4.69%, after: 19.92%
+Processed 3 polygons
+Frame stats: 6964/307199 points labeled as table (2.27%)
+Frame 0001715-000057194895.png: Table ratio before sampling: 2.27%, after: 19.92%
+Processed 3 polygons
+Frame stats: 20879/285407 points labeled as table (7.32%)
+Frame 0001886-000062901036.png: Table ratio before sampling: 7.32%, after: 19.92%
+Processed 1 polygons
+Frame stats: 9200/305919 points labeled as table (3.01%)
+Frame 0002026-000067572731.png: Table ratio before sampling: 3.01%, after: 19.92%
+Processed 1 polygons
+Frame stats: 8271/306664 points labeled as table (2.70%)
+Frame 0002046-000068240116.png: Table ratio before sampling: 2.70%, after: 19.92%
+Processed 1 polygons
+Frame stats: 8064/280991 points labeled as table (2.87%)
+Frame 0002051-000068406963.png: Table ratio before sampling: 2.87%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7949/280860 points labeled as table (2.83%)
+Frame 0002056-000068573809.png: Table ratio before sampling: 2.83%, after: 19.92%
+Processed 1 polygons
+Frame stats: 8049/285675 points labeled as table (2.82%)
+Frame 0002061-000068740655.png: Table ratio before sampling: 2.82%, after: 19.92%
+Processed 1 polygons
+Frame stats: 8234/286312 points labeled as table (2.88%)
+Frame 0002066-000068907501.png: Table ratio before sampling: 2.88%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7647/286844 points labeled as table (2.67%)
+Frame 0002071-000069074348.png: Table ratio before sampling: 2.67%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7980/291710 points labeled as table (2.74%)
+Frame 0002076-000069241194.png: Table ratio before sampling: 2.74%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7362/307200 points labeled as table (2.40%)
+Frame 0002097-000069941948.png: Table ratio before sampling: 2.40%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7348/307026 points labeled as table (2.39%)
+Frame 0002102-000070108794.png: Table ratio before sampling: 2.39%, after: 19.92%
+Processed 1 polygons
+Frame stats: 7733/277233 points labeled as table (2.79%)
+Frame 0002142-000071443564.png: Table ratio before sampling: 2.79%, after: 19.92%
+Processed 1 polygons
+Frame stats: 8198/295063 points labeled as table (2.78%)
+Frame 0002147-000071610411.png: Table ratio before sampling: 2.78%, after: 19.92%
+Processed 2 polygons
+Frame stats: 7476/285737 points labeled as table (2.62%)
+Frame 0002207-000073612566.png: Table ratio before sampling: 2.62%, after: 19.92%
+Processed 2 polygons
+Frame stats: 80129/303089 points labeled as table (26.44%)
+Frame 0002393-000079819246.png: Table ratio before sampling: 26.44%, after: 19.92%
+Processed 2 polygons
+Frame stats: 16576/302629 points labeled as table (5.48%)
+Frame 0002604-000086860158.png: Table ratio before sampling: 5.48%, after: 19.92%
+Processed 1 polygons
+Frame stats: 45524/291149 points labeled as table (15.64%)
+Frame 0002744-000091531853.png: Table ratio before sampling: 15.64%, after: 19.92%
+WARNING: Frame 0002870-000095736378.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 2 polygons
+Frame stats: 22248/307200 points labeled as table (7.24%)
+Frame 0003337-000111319818.png: Table ratio before sampling: 7.24%, after: 19.92%
+Processing scene: mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika
+Using depthTSDF for scene mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika
+
+Processing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 0it [00:00, ?it/s][A
+Processing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 3it [00:00, 25.76it/s][A
+Processing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 6it [00:00, 26.09it/s][A
+Processing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 9it [00:00, 25.66it/s][A
+Processing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 12it [00:00, 14.14it/s][AProcessing mit_lab_hj/lab_hj_tea_nov_2_2012_scan1_erika: 14it [00:00, 17.88it/s]
+Processing scenes:  75%|███████▌  | 3/4 [00:07<00:02,  2.08s/it]Processed 1 polygons
+Frame stats: 19575/278819 points labeled as table (7.02%)
+Frame 0000001-000000010163.png: Table ratio before sampling: 7.02%, after: 19.92%
+Processed 1 polygons
+Frame stats: 5067/301614 points labeled as table (1.68%)
+Frame 0001066-000043023126.png: Table ratio before sampling: 1.68%, after: 19.92%
+Processed 1 polygons
+Frame stats: 19476/296839 points labeled as table (6.56%)
+Frame 0001186-000048095252.png: Table ratio before sampling: 6.56%, after: 19.92%
+Processing scene: mit_76_459/76-459b
+Using depthTSDF for scene mit_76_459/76-459b
+
+Processing mit_76_459/76-459b: 0it [00:00, ?it/s][A
+Processing mit_76_459/76-459b: 3it [00:00, 25.35it/s][A
+Processing mit_76_459/76-459b: 6it [00:00, 25.21it/s][A
+Processing mit_76_459/76-459b: 9it [00:00, 24.39it/s][A
+Processing mit_76_459/76-459b: 12it [00:00, 23.27it/s][A
+Processing mit_76_459/76-459b: 15it [00:00, 23.80it/s][A
+Processing mit_76_459/76-459b: 18it [00:00, 23.21it/s][A
+Processing mit_76_459/76-459b: 21it [00:00, 23.27it/s][A
+Processing mit_76_459/76-459b: 24it [00:01, 23.21it/s][A
+Processing mit_76_459/76-459b: 27it [00:01, 22.48it/s][A
+Processing mit_76_459/76-459b: 30it [00:01, 22.59it/s][A
+Processing mit_76_459/76-459b: 33it [00:01, 23.16it/s][AProcessing mit_76_459/76-459b: 35it [00:01, 23.25it/s]
+Processing scenes: 100%|██████████| 4/4 [00:09<00:00,  1.86s/it]Processing scenes: 100%|██████████| 4/4 [00:09<00:00,  2.28s/it]
+Processed 1 polygons
+Frame stats: 39074/238555 points labeled as table (16.38%)
+Frame 0000001-000000028949.png: Table ratio before sampling: 16.38%, after: 19.92%
+Processed 1 polygons
+Frame stats: 9712/244057 points labeled as table (3.98%)
+Frame 0000116-000003999889.png: Table ratio before sampling: 3.98%, after: 19.92%
+Processed 1 polygons
+Frame stats: 12153/281190 points labeled as table (4.32%)
+Frame 0000206-000007003122.png: Table ratio before sampling: 4.32%, after: 19.92%
+Processed 1 polygons
+Frame stats: 2246/292557 points labeled as table (0.77%)
+Frame 0000296-000010006354.png: Table ratio before sampling: 0.77%, after: 19.92%
+Processed 1 polygons
+Frame stats: 5986/300753 points labeled as table (1.99%)
+Frame 0000407-000013710341.png: Table ratio before sampling: 1.99%, after: 19.92%
+Processed 1 polygons
+Frame stats: 22695/284901 points labeled as table (7.97%)
+Frame 0000497-000016713574.png: Table ratio before sampling: 7.97%, after: 19.92%
+Processed 1 polygons
+Frame stats: 40429/283370 points labeled as table (14.27%)
+Frame 0000532-000017881497.png: Table ratio before sampling: 14.27%, after: 19.92%
+Processed 1 polygons
+Frame stats: 74997/296540 points labeled as table (25.29%)
+Frame 0000573-000019249637.png: Table ratio before sampling: 25.29%, after: 19.92%
+WARNING: Frame 0000633-000021251792.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 73407/304519 points labeled as table (24.11%)
+Frame 0000713-000023921332.png: Table ratio before sampling: 24.11%, after: 19.92%
+Processed 1 polygons
+Frame stats: 59847/299998 points labeled as table (19.95%)
+Frame 0000814-000027291626.png: Table ratio before sampling: 19.95%, after: 19.92%
+Processed 1 polygons
+Frame stats: 72747/304655 points labeled as table (23.88%)
+Frame 0000949-000031796475.png: Table ratio before sampling: 23.88%, after: 19.92%
+Processed 1 polygons
+Frame stats: 46018/292792 points labeled as table (15.72%)
+Frame 0001090-000036501539.png: Table ratio before sampling: 15.72%, after: 19.92%
+WARNING: Frame 0001271-000042541373.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 42316/211861 points labeled as table (19.97%)
+Frame 0001331-000044543528.png: Table ratio before sampling: 19.97%, after: 19.92%
+Processed 1 polygons
+Frame stats: 28987/292018 points labeled as table (9.93%)
+Frame 0001436-000048047299.png: Table ratio before sampling: 9.93%, after: 19.92%
+Processed 1 polygons
+Frame stats: 40661/249622 points labeled as table (16.29%)
+Frame 0001602-000053586595.png: Table ratio before sampling: 16.29%, after: 19.92%
+Processed 1 polygons
+Frame stats: 118971/286198 points labeled as table (41.57%)
+Frame 0001698-000056790043.png: Table ratio before sampling: 41.57%, after: 19.92%
+Processed 1 polygons
+Frame stats: 41851/269835 points labeled as table (15.51%)
+Frame 0001818-000060794353.png: Table ratio before sampling: 15.51%, after: 19.92%
+Processed 1 polygons
+Frame stats: 17004/284386 points labeled as table (5.98%)
+Frame 0001999-000066834187.png: Table ratio before sampling: 5.98%, after: 19.92%
+Processed 1 polygons
+Frame stats: 67474/276549 points labeled as table (24.40%)
+Frame 0002109-000070504805.png: Table ratio before sampling: 24.40%, after: 19.92%
+Processed 1 polygons
+Frame stats: 89988/292640 points labeled as table (30.75%)
+Frame 0002190-000073207714.png: Table ratio before sampling: 30.75%, after: 19.92%
+Processed 1 polygons
+Frame stats: 35149/290127 points labeled as table (12.12%)
+Frame 0002285-000076377793.png: Table ratio before sampling: 12.12%, after: 19.92%
+WARNING: Frame 0002381-000079581241.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 89523/284888 points labeled as table (31.42%)
+Frame 0002441-000081583396.png: Table ratio before sampling: 31.42%, after: 19.92%
+Processed 1 polygons
+Frame stats: 82973/283596 points labeled as table (29.26%)
+Frame 0002471-000082584473.png: Table ratio before sampling: 29.26%, after: 19.92%
+Processed 1 polygons
+Frame stats: 79295/304712 points labeled as table (26.02%)
+Frame 0002491-000083251858.png: Table ratio before sampling: 26.02%, after: 19.92%
+Processed 1 polygons
+Frame stats: 79697/285079 points labeled as table (27.96%)
+Frame 0002496-000083418704.png: Table ratio before sampling: 27.96%, after: 19.92%
+WARNING: Frame 0002536-000084753474.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 3168/282218 points labeled as table (1.12%)
+Frame 0002576-000086088244.png: Table ratio before sampling: 1.12%, after: 19.92%
+Processed 1 polygons
+Frame stats: 30462/289891 points labeled as table (10.51%)
+Frame 0002692-000089959077.png: Table ratio before sampling: 10.51%, after: 19.92%
+WARNING: Frame 0002833-000094664142.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 45097/208049 points labeled as table (21.68%)
+Frame 0003023-000101004299.png: Table ratio before sampling: 21.68%, after: 19.92%
+Processed 1 polygons
+Frame stats: 65091/284867 points labeled as table (22.85%)
+Frame 0003169-000105876210.png: Table ratio before sampling: 22.85%, after: 19.92%
+Processed 1 polygons
+Frame stats: 74893/274829 points labeled as table (27.25%)
+Frame 0003320-000110914966.png: Table ratio before sampling: 27.25%, after: 19.92%
+
+=== PROCESSING STATISTICS ===
+Total frames processed: 207
+Frames with table polygons: 160 (77.29%)
+Frames where points were labeled as tables: 143 (69.08%)
+Total points: 61301994
+Points labeled as tables: 4121225 (6.72%)
+Points in final dataset: 211968
+Table points in final dataset: 29172 (13.76%)
+Dataset saved to CW2-Dataset/sun3d_train_fixed.h5
+
+
+=== SUN3D Test Dataset (Harvard) ===
+Command: python data_utils/prepare_sun3d_dataset.py --data_dir dataset/sun3d_data --prefix harvard --output CW2-Dataset/sun3d_test_fixed.h5 --max_points 1024
+
+Found 4 scenes with prefix 'harvard'
+Processing 4 Harvard scenes as testing data
+Processing scenes:   0%|          | 0/4 [00:00<?, ?it/s]Processing scene: harvard_c11/hv_c11_2
+Using depthTSDF for scene harvard_c11/hv_c11_2
+
+Processing harvard_c11/hv_c11_2: 0it [00:00, ?it/s][A
+Processing harvard_c11/hv_c11_2: 1it [00:00,  4.39it/s][A
+Processing harvard_c11/hv_c11_2: 4it [00:00, 12.53it/s][A
+Processing harvard_c11/hv_c11_2: 7it [00:00, 16.80it/s][A
+Processing harvard_c11/hv_c11_2: 10it [00:00, 19.21it/s][A
+Processing harvard_c11/hv_c11_2: 13it [00:00, 19.38it/s][AProcessing harvard_c11/hv_c11_2: 14it [00:00, 17.08it/s]
+Processing scenes:  25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]Processed 1 polygons
+Frame stats: 110535/286000 points labeled as table (38.65%)
+Frame 0000002-000000033369.png: Table ratio before sampling: 38.65%, after: 19.92%
+Processed 1 polygons
+Frame stats: 71727/285709 points labeled as table (25.10%)
+Frame 0000051-000001701832.png: Table ratio before sampling: 25.10%, after: 19.92%
+Processed 1 polygons
+Frame stats: 86237/301441 points labeled as table (28.61%)
+Frame 0000101-000003370294.png: Table ratio before sampling: 28.61%, after: 19.92%
+WARNING: Frame 0000171-000005706142.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0000232-000007741666.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 64759/297346 points labeled as table (21.78%)
+Frame 0000317-000010578052.png: Table ratio before sampling: 21.78%, after: 19.92%
+WARNING: Frame 0000402-000013414439.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 98666/279099 points labeled as table (35.35%)
+Frame 0000473-000015783655.png: Table ratio before sampling: 35.35%, after: 19.92%
+WARNING: Frame 0000528-000017618964.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 30644/300667 points labeled as table (10.19%)
+Frame 0000603-000020121658.png: Table ratio before sampling: 10.19%, after: 19.92%
+Processed 1 polygons
+Frame stats: 14122/305683 points labeled as table (4.62%)
+Frame 0000759-000025327261.png: Table ratio before sampling: 4.62%, after: 19.92%
+WARNING: Frame 0000874-000029164725.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processing scene: harvard_c6/hv_c6_1
+Using depthTSDF for scene harvard_c6/hv_c6_1
+
+Processing harvard_c6/hv_c6_1: 0it [00:00, ?it/s][A
+Processing harvard_c6/hv_c6_1: 2it [00:00, 19.70it/s][A
+Processing harvard_c6/hv_c6_1: 4it [00:00, 19.82it/s][A
+Processing harvard_c6/hv_c6_1: 6it [00:00, 19.15it/s][A
+Processing harvard_c6/hv_c6_1: 8it [00:00, 16.69it/s][A
+Processing harvard_c6/hv_c6_1: 10it [00:00, 14.84it/s][A
+Processing harvard_c6/hv_c6_1: 13it [00:00, 17.79it/s][A
+Processing harvard_c6/hv_c6_1: 15it [00:00, 17.66it/s][A
+Processing harvard_c6/hv_c6_1: 18it [00:01, 17.88it/s][A
+Processing harvard_c6/hv_c6_1: 20it [00:01, 17.74it/s][A
+Processing harvard_c6/hv_c6_1: 22it [00:01, 17.47it/s][A
+Processing harvard_c6/hv_c6_1: 24it [00:01, 18.10it/s][A
+Processing harvard_c6/hv_c6_1: 26it [00:01, 12.28it/s][A
+Processing harvard_c6/hv_c6_1: 28it [00:01, 13.56it/s][A
+Processing harvard_c6/hv_c6_1: 30it [00:01, 14.95it/s][A
+Processing harvard_c6/hv_c6_1: 32it [00:01, 15.92it/s][A
+Processing harvard_c6/hv_c6_1: 34it [00:02, 16.60it/s][AProcessing harvard_c6/hv_c6_1: 36it [00:02, 16.65it/s]
+Processing scenes:  50%|█████     | 2/4 [00:03<00:03,  1.63s/it]Processed 1 polygons
+Frame stats: 67417/267840 points labeled as table (25.17%)
+Frame 0000002-000000033370.png: Table ratio before sampling: 25.17%, after: 19.92%
+Processed 1 polygons
+Frame stats: 66467/264752 points labeled as table (25.11%)
+Frame 0000007-000000200216.png: Table ratio before sampling: 25.11%, after: 19.92%
+Processed 1 polygons
+Frame stats: 67051/281732 points labeled as table (23.80%)
+Frame 0000012-000000367062.png: Table ratio before sampling: 23.80%, after: 19.92%
+Processed 1 polygons
+Frame stats: 68163/288893 points labeled as table (23.59%)
+Frame 0000017-000000533908.png: Table ratio before sampling: 23.59%, after: 19.92%
+Processed 1 polygons
+Frame stats: 68914/279466 points labeled as table (24.66%)
+Frame 0000022-000000700755.png: Table ratio before sampling: 24.66%, after: 19.92%
+Processed 1 polygons
+Frame stats: 67078/303886 points labeled as table (22.07%)
+Frame 0000027-000000867601.png: Table ratio before sampling: 22.07%, after: 19.92%
+Processed 1 polygons
+Frame stats: 63220/306487 points labeled as table (20.63%)
+Frame 0000032-000001034447.png: Table ratio before sampling: 20.63%, after: 19.92%
+Processed 1 polygons
+Frame stats: 71327/271327 points labeled as table (26.29%)
+Frame 0000082-000002702910.png: Table ratio before sampling: 26.29%, after: 19.92%
+Processed 1 polygons
+Frame stats: 86294/298987 points labeled as table (28.86%)
+Frame 0000132-000004371372.png: Table ratio before sampling: 28.86%, after: 19.92%
+Processed 1 polygons
+Frame stats: 103043/295591 points labeled as table (34.86%)
+Frame 0000182-000006039835.png: Table ratio before sampling: 34.86%, after: 19.92%
+Processed 1 polygons
+Frame stats: 56025/295060 points labeled as table (18.99%)
+Frame 0000233-000007741666.png: Table ratio before sampling: 18.99%, after: 19.92%
+Processed 1 polygons
+Frame stats: 24970/304553 points labeled as table (8.20%)
+Frame 0000333-000011078591.png: Table ratio before sampling: 8.20%, after: 19.92%
+Processed 1 polygons
+Frame stats: 71049/273434 points labeled as table (25.98%)
+Frame 0000388-000012913900.png: Table ratio before sampling: 25.98%, after: 19.92%
+Processed 1 polygons
+Frame stats: 78960/261995 points labeled as table (30.14%)
+Frame 0000438-000014582363.png: Table ratio before sampling: 30.14%, after: 19.92%
+Processed 1 polygons
+Frame stats: 24157/289666 points labeled as table (8.34%)
+Frame 0000494-000016451041.png: Table ratio before sampling: 8.34%, after: 19.92%
+Processed 1 polygons
+Frame stats: 52467/302982 points labeled as table (17.32%)
+Frame 0000544-000018119503.png: Table ratio before sampling: 17.32%, after: 19.92%
+Processed 1 polygons
+Frame stats: 167355/307068 points labeled as table (54.50%)
+Frame 0000604-000020121658.png: Table ratio before sampling: 54.50%, after: 19.92%
+Processed 1 polygons
+Frame stats: 122961/301328 points labeled as table (40.81%)
+Frame 0000664-000022123813.png: Table ratio before sampling: 40.81%, after: 19.92%
+Processed 1 polygons
+Frame stats: 146945/306474 points labeled as table (47.95%)
+Frame 0000715-000023825645.png: Table ratio before sampling: 47.95%, after: 19.92%
+Processed 1 polygons
+Frame stats: 153327/303808 points labeled as table (50.47%)
+Frame 0000765-000025494107.png: Table ratio before sampling: 50.47%, after: 19.92%
+Processed 1 polygons
+Frame stats: 154053/307172 points labeled as table (50.15%)
+Frame 0000810-000026995724.png: Table ratio before sampling: 50.15%, after: 19.92%
+Processed 1 polygons
+Frame stats: 80488/306677 points labeled as table (26.25%)
+Frame 0000860-000028664186.png: Table ratio before sampling: 26.25%, after: 19.92%
+Processed 1 polygons
+Frame stats: 91418/294893 points labeled as table (31.00%)
+Frame 0000911-000030366018.png: Table ratio before sampling: 31.00%, after: 19.92%
+Processed 1 polygons
+Frame stats: 96652/300491 points labeled as table (32.16%)
+Frame 0000966-000032201327.png: Table ratio before sampling: 32.16%, after: 19.92%
+Processed 1 polygons
+Frame stats: 144345/307153 points labeled as table (46.99%)
+Frame 0001016-000033869789.png: Table ratio before sampling: 46.99%, after: 19.92%
+Processed 1 polygons
+Frame stats: 93421/307200 points labeled as table (30.41%)
+Frame 0001066-000035538252.png: Table ratio before sampling: 30.41%, after: 19.92%
+Processed 1 polygons
+Frame stats: 96088/304736 points labeled as table (31.53%)
+Frame 0001116-000037206714.png: Table ratio before sampling: 31.53%, after: 19.92%
+Processed 1 polygons
+Frame stats: 108637/307172 points labeled as table (35.37%)
+Frame 0001167-000038908546.png: Table ratio before sampling: 35.37%, after: 19.92%
+Processed 1 polygons
+Frame stats: 64303/306833 points labeled as table (20.96%)
+Frame 0001217-000040577008.png: Table ratio before sampling: 20.96%, after: 19.92%
+Processed 1 polygons
+Frame stats: 37139/276975 points labeled as table (13.41%)
+Frame 0001272-000042412317.png: Table ratio before sampling: 13.41%, after: 19.92%
+Processed 1 polygons
+Frame stats: 127554/281215 points labeled as table (45.36%)
+Frame 0001317-000043913933.png: Table ratio before sampling: 45.36%, after: 19.92%
+Processed 1 polygons
+Frame stats: 104443/300971 points labeled as table (34.70%)
+Frame 0001368-000045615765.png: Table ratio before sampling: 34.70%, after: 19.92%
+Processed 1 polygons
+Frame stats: 102587/305951 points labeled as table (33.53%)
+Frame 0001413-000047117381.png: Table ratio before sampling: 33.53%, after: 19.92%
+WARNING: Frame 0001473-000049119536.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 77628/296100 points labeled as table (26.22%)
+Frame 0001523-000050787999.png: Table ratio before sampling: 26.22%, after: 19.92%
+Processing scene: harvard_tea_2/hv_tea2_2
+Using depthTSDF for scene harvard_tea_2/hv_tea2_2
+
+Processing harvard_tea_2/hv_tea2_2: 0it [00:00, ?it/s][A
+Processing harvard_tea_2/hv_tea2_2: 3it [00:00, 26.80it/s][A
+Processing harvard_tea_2/hv_tea2_2: 6it [00:00, 26.58it/s][A
+Processing harvard_tea_2/hv_tea2_2: 9it [00:00, 26.40it/s][A
+Processing harvard_tea_2/hv_tea2_2: 12it [00:00, 25.70it/s][A
+Processing harvard_tea_2/hv_tea2_2: 15it [00:00, 22.95it/s][A
+Processing harvard_tea_2/hv_tea2_2: 18it [00:00, 22.83it/s][A
+Processing harvard_tea_2/hv_tea2_2: 21it [00:00, 23.86it/s][A
+Processing harvard_tea_2/hv_tea2_2: 24it [00:00, 24.47it/s][AProcessing harvard_tea_2/hv_tea2_2: 24it [00:00, 24.50it/s]
+Processing scenes:  75%|███████▌  | 3/4 [00:04<00:01,  1.35s/it]Processing scene: harvard_c5/hv_c5_1
+Using depthTSDF for scene harvard_c5/hv_c5_1
+
+Processing harvard_c5/hv_c5_1: 0it [00:00, ?it/s][A
+Processing harvard_c5/hv_c5_1: 2it [00:00, 19.62it/s][A
+Processing harvard_c5/hv_c5_1: 4it [00:00, 18.92it/s][A
+Processing harvard_c5/hv_c5_1: 7it [00:00, 21.10it/s][A
+Processing harvard_c5/hv_c5_1: 10it [00:00, 19.86it/s][A
+Processing harvard_c5/hv_c5_1: 12it [00:00, 18.95it/s][A
+Processing harvard_c5/hv_c5_1: 15it [00:00, 19.53it/s][A
+Processing harvard_c5/hv_c5_1: 18it [00:00, 20.07it/s][A
+Processing harvard_c5/hv_c5_1: 21it [00:01, 20.25it/s][A
+Processing harvard_c5/hv_c5_1: 24it [00:01, 19.27it/s][AProcessing harvard_c5/hv_c5_1: 24it [00:01, 19.61it/s]
+Processing scenes: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]Processing scenes: 100%|██████████| 4/4 [00:05<00:00,  1.32s/it]
+Processed 1 polygons
+Frame stats: 81747/306105 points labeled as table (26.71%)
+Frame 0000002-000000033369.png: Table ratio before sampling: 26.71%, after: 19.92%
+Processed 1 polygons
+Frame stats: 105322/290787 points labeled as table (36.22%)
+Frame 0000046-000001534985.png: Table ratio before sampling: 36.22%, after: 19.92%
+Processed 1 polygons
+Frame stats: 125715/288251 points labeled as table (43.61%)
+Frame 0000086-000002869755.png: Table ratio before sampling: 43.61%, after: 19.92%
+WARNING: Frame 0000207-000006907434.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0000227-000007574819.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+WARNING: Frame 0000252-000008409051.png has table polygons but NO points were labeled as tables!
+Number of polygons: 1
+Processed 1 polygons
+Frame stats: 31430/302390 points labeled as table (10.39%)
+Frame 0000307-000010244359.png: Table ratio before sampling: 10.39%, after: 19.92%
+Processed 1 polygons
+Frame stats: 74250/290371 points labeled as table (25.57%)
+Frame 0000397-000013247592.png: Table ratio before sampling: 25.57%, after: 19.92%
+Processed 1 polygons
+Frame stats: 84879/261496 points labeled as table (32.46%)
+Frame 0000483-000016117347.png: Table ratio before sampling: 32.46%, after: 19.92%
+Processed 1 polygons
+Frame stats: 132692/303627 points labeled as table (43.70%)
+Frame 0000593-000019787965.png: Table ratio before sampling: 43.70%, after: 19.92%
+Processed 1 polygons
+Frame stats: 161581/298411 points labeled as table (54.15%)
+Frame 0000759-000025327260.png: Table ratio before sampling: 54.15%, after: 19.92%
+Processed 2 polygons
+Frame stats: 93741/275788 points labeled as table (33.99%)
+Frame 0000829-000027663108.png: Table ratio before sampling: 33.99%, after: 19.92%
+Processed 1 polygons
+Frame stats: 67635/295867 points labeled as table (22.86%)
+Frame 0000955-000031867633.png: Table ratio before sampling: 22.86%, after: 19.92%
+Processed 1 polygons
+Frame stats: 114177/297333 points labeled as table (38.40%)
+Frame 0001181-000039409084.png: Table ratio before sampling: 38.40%, after: 19.92%
+Processed 1 polygons
+Frame stats: 114025/280598 points labeled as table (40.64%)
+Frame 0001251-000041744931.png: Table ratio before sampling: 40.64%, after: 19.92%
+Processed 1 polygons
+Frame stats: 5462/281391 points labeled as table (1.94%)
+Frame 0001342-000044781533.png: Table ratio before sampling: 1.94%, after: 19.92%
+Processed 1 polygons
+Frame stats: 49187/282618 points labeled as table (17.40%)
+Frame 0001452-000048452151.png: Table ratio before sampling: 17.40%, after: 19.92%
+Processed 1 polygons
+Frame stats: 70845/280572 points labeled as table (25.25%)
+Frame 0001633-000054491985.png: Table ratio before sampling: 25.25%, after: 19.92%
+Processed 1 polygons
+Frame stats: 24423/282574 points labeled as table (8.64%)
+Frame 0001733-000057828910.png: Table ratio before sampling: 8.64%, after: 19.92%
+Processed 1 polygons
+Frame stats: 51297/307181 points labeled as table (16.70%)
+Frame 0001804-000060198127.png: Table ratio before sampling: 16.70%, after: 19.92%
+Processed 1 polygons
+Frame stats: 133906/301928 points labeled as table (44.35%)
+Frame 0001894-000063201359.png: Table ratio before sampling: 44.35%, after: 19.92%
+Processed 1 polygons
+Frame stats: 92578/297799 points labeled as table (31.09%)
+Frame 0001929-000064369283.png: Table ratio before sampling: 31.09%, after: 19.92%
+Processed 1 polygons
+Frame stats: 82473/288970 points labeled as table (28.54%)
+Frame 0002070-000069074347.png: Table ratio before sampling: 28.54%, after: 19.92%
+
+=== PROCESSING STATISTICS ===
+Total frames processed: 98
+Frames with table polygons: 70 (71.43%)
+Frames where points were labeled as tables: 61 (62.24%)
+Total points: 28197784
+Points labeled as tables: 5180001 (18.37%)
+Points in final dataset: 100352
+Table points in final dataset: 12444 (12.40%)
+Dataset saved to CW2-Dataset/sun3d_test_fixed.h5
+
+
+=== UCL Dataset ===
+Processing UCL data from dataset/ucl_data
+Loaded camera intrinsics: {'fx': 390.7360534667969, 'fy': 390.7360534667969, 'cx': 320.08819580078125, 'cy': 244.1026153564453}
+Found 33 TSDF files
+Processed 33792 points in total
+All points are labeled as tables (1)
+Dataset saved to CW2-Dataset/ucl_data_fixed.h5
+
+
+
+Dataset regeneration completed at 2025-04-09 23:46:53
+Total time elapsed: 29.93 seconds

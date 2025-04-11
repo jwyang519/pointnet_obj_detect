@@ -1,0 +1,199 @@
+2025-04-05 16:08:32,715 - Model - INFO - PARAMETER ...
+2025-04-05 16:08:32,715 - Model - INFO - Namespace(model='pointnet2_sem_seg', h5_file='CW2-Dataset/sun3d_train.h5', batch_size=4, epoch=10, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='sun3d_binary_seg_no_aug', decay_rate=0.0001, npoint=1024, step_size=10, lr_decay=0.7, use_augmentation=False)
+2025-04-05 16:08:33,066 - Model - INFO - The number of training samples is: 165
+2025-04-05 16:08:33,066 - Model - INFO - The number of testing samples is: 42
+2025-04-05 16:08:33,319 - Model - INFO - Class weights: [0.23850399 0.76149601]
+2025-04-05 16:08:33,342 - Model - INFO - No existing model, starting training from scratch...
+2025-04-05 16:08:34,377 - Model - INFO - **** Epoch 1 (1/10) ****
+2025-04-05 16:08:34,377 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:08:40,829 - Model - INFO - Training mean loss: 0.514540
+2025-04-05 16:08:40,829 - Model - INFO - Training accuracy: 0.825393
+2025-04-05 16:08:40,829 - Model - INFO - Save model...
+2025-04-05 16:08:40,829 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/model.pth
+2025-04-05 16:08:40,941 - Model - INFO - Saving model....
+2025-04-05 16:08:40,941 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2025-04-05 16:08:42,516 - Model - INFO - eval mean loss: 1.294387
+2025-04-05 16:08:42,516 - Model - INFO - eval point accuracy: 0.891979
+2025-04-05 16:08:42,516 - Model - INFO - eval point avg class IoU: 0.467227
+2025-04-05 16:08:42,516 - Model - INFO - eval point avg class acc: 0.500000
+2025-04-05 16:08:42,521 - Model - INFO - ------- IoU --------
+class background     IoU: 0.934 
+class table          IoU: 0.000 
+
+2025-04-05 16:08:42,523 - Model - INFO - ------- Acc --------
+class background     Acc: 1.000 
+class table          Acc: 0.000 
+
+2025-04-05 16:08:42,523 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-08-42.pth
+2025-04-05 16:08:42,748 - Model - INFO - Best model saved!
+2025-04-05 16:08:42,748 - Model - INFO - **** Epoch 2 (2/10) ****
+2025-04-05 16:08:42,749 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:08:48,717 - Model - INFO - Training mean loss: 0.422576
+2025-04-05 16:08:48,717 - Model - INFO - Training accuracy: 0.861520
+2025-04-05 16:08:48,718 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2025-04-05 16:08:50,276 - Model - INFO - eval mean loss: 0.488253
+2025-04-05 16:08:50,276 - Model - INFO - eval point accuracy: 0.891979
+2025-04-05 16:08:50,276 - Model - INFO - eval point avg class IoU: 0.467227
+2025-04-05 16:08:50,276 - Model - INFO - eval point avg class acc: 0.500000
+2025-04-05 16:08:50,276 - Model - INFO - ------- IoU --------
+class background     IoU: 0.934 
+class table          IoU: 0.000 
+
+2025-04-05 16:08:50,277 - Model - INFO - ------- Acc --------
+class background     Acc: 1.000 
+class table          Acc: 0.000 
+
+2025-04-05 16:08:50,277 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-08-50.pth
+2025-04-05 16:08:50,500 - Model - INFO - Best model saved!
+2025-04-05 16:08:50,501 - Model - INFO - **** Epoch 3 (3/10) ****
+2025-04-05 16:08:50,501 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:08:56,473 - Model - INFO - Training mean loss: 0.402613
+2025-04-05 16:08:56,473 - Model - INFO - Training accuracy: 0.859869
+2025-04-05 16:08:56,474 - Model - INFO - ---- EPOCH 003 EVALUATION ----
+2025-04-05 16:08:58,018 - Model - INFO - eval mean loss: 0.372887
+2025-04-05 16:08:58,018 - Model - INFO - eval point accuracy: 0.854869
+2025-04-05 16:08:58,018 - Model - INFO - eval point avg class IoU: 0.555292
+2025-04-05 16:08:58,018 - Model - INFO - eval point avg class acc: 0.685851
+2025-04-05 16:08:58,019 - Model - INFO - ------- IoU --------
+class background     IoU: 0.892 
+class table          IoU: 0.218 
+
+2025-04-05 16:08:58,021 - Model - INFO - ------- Acc --------
+class background     Acc: 0.927 
+class table          Acc: 0.444 
+
+2025-04-05 16:08:58,021 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-08-58.pth
+2025-04-05 16:08:58,263 - Model - INFO - Best model saved!
+2025-04-05 16:08:58,263 - Model - INFO - **** Epoch 4 (4/10) ****
+2025-04-05 16:08:58,264 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:04,258 - Model - INFO - Training mean loss: 0.377021
+2025-04-05 16:09:04,258 - Model - INFO - Training accuracy: 0.873872
+2025-04-05 16:09:04,258 - Model - INFO - ---- EPOCH 004 EVALUATION ----
+2025-04-05 16:09:05,815 - Model - INFO - eval mean loss: 0.328605
+2025-04-05 16:09:05,815 - Model - INFO - eval point accuracy: 0.834295
+2025-04-05 16:09:05,817 - Model - INFO - eval point avg class IoU: 0.573674
+2025-04-05 16:09:05,818 - Model - INFO - eval point avg class acc: 0.814836
+2025-04-05 16:09:05,819 - Model - INFO - ------- IoU --------
+class background     IoU: 0.868 
+class table          IoU: 0.280 
+
+2025-04-05 16:09:05,819 - Model - INFO - ------- Acc --------
+class background     Acc: 0.883 
+class table          Acc: 0.747 
+
+2025-04-05 16:09:05,820 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-09-05.pth
+2025-04-05 16:09:06,051 - Model - INFO - Best model saved!
+2025-04-05 16:09:06,051 - Model - INFO - **** Epoch 5 (5/10) ****
+2025-04-05 16:09:06,052 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:12,049 - Model - INFO - Training mean loss: 0.353498
+2025-04-05 16:09:12,049 - Model - INFO - Training accuracy: 0.878337
+2025-04-05 16:09:12,049 - Model - INFO - ---- EPOCH 005 EVALUATION ----
+2025-04-05 16:09:13,602 - Model - INFO - eval mean loss: 0.314205
+2025-04-05 16:09:13,602 - Model - INFO - eval point accuracy: 0.858154
+2025-04-05 16:09:13,602 - Model - INFO - eval point avg class IoU: 0.604648
+2025-04-05 16:09:13,602 - Model - INFO - eval point avg class acc: 0.810728
+2025-04-05 16:09:13,603 - Model - INFO - ------- IoU --------
+class background     IoU: 0.894 
+class table          IoU: 0.315 
+
+2025-04-05 16:09:13,603 - Model - INFO - ------- Acc --------
+class background     Acc: 0.912 
+class table          Acc: 0.709 
+
+2025-04-05 16:09:13,603 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-09-13.pth
+2025-04-05 16:09:13,828 - Model - INFO - Best model saved!
+2025-04-05 16:09:13,828 - Model - INFO - **** Epoch 6 (6/10) ****
+2025-04-05 16:09:13,828 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:19,915 - Model - INFO - Training mean loss: 0.323923
+2025-04-05 16:09:19,915 - Model - INFO - Training accuracy: 0.896130
+2025-04-05 16:09:19,915 - Model - INFO - Save model...
+2025-04-05 16:09:19,915 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/model.pth
+2025-04-05 16:09:20,052 - Model - INFO - Saving model....
+2025-04-05 16:09:20,053 - Model - INFO - ---- EPOCH 006 EVALUATION ----
+2025-04-05 16:09:21,650 - Model - INFO - eval mean loss: 0.307406
+2025-04-05 16:09:21,650 - Model - INFO - eval point accuracy: 0.879417
+2025-04-05 16:09:21,650 - Model - INFO - eval point avg class IoU: 0.633494
+2025-04-05 16:09:21,650 - Model - INFO - eval point avg class acc: 0.792465
+2025-04-05 16:09:21,650 - Model - INFO - ------- IoU --------
+class background     IoU: 0.918 
+class table          IoU: 0.349 
+
+2025-04-05 16:09:21,651 - Model - INFO - ------- Acc --------
+class background     Acc: 0.941 
+class table          Acc: 0.644 
+
+2025-04-05 16:09:21,651 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-09-21.pth
+2025-04-05 16:09:21,880 - Model - INFO - Best model saved!
+2025-04-05 16:09:21,880 - Model - INFO - **** Epoch 7 (7/10) ****
+2025-04-05 16:09:21,880 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:28,004 - Model - INFO - Training mean loss: 0.294497
+2025-04-05 16:09:28,005 - Model - INFO - Training accuracy: 0.899478
+2025-04-05 16:09:28,005 - Model - INFO - ---- EPOCH 007 EVALUATION ----
+2025-04-05 16:09:29,556 - Model - INFO - eval mean loss: 0.344393
+2025-04-05 16:09:29,556 - Model - INFO - eval point accuracy: 0.868097
+2025-04-05 16:09:29,556 - Model - INFO - eval point avg class IoU: 0.603734
+2025-04-05 16:09:29,556 - Model - INFO - eval point avg class acc: 0.764185
+2025-04-05 16:09:29,556 - Model - INFO - ------- IoU --------
+class background     IoU: 0.906 
+class table          IoU: 0.302 
+
+2025-04-05 16:09:29,556 - Model - INFO - ------- Acc --------
+class background     Acc: 0.931 
+class table          Acc: 0.597 
+
+2025-04-05 16:09:29,557 - Model - INFO - **** Epoch 8 (8/10) ****
+2025-04-05 16:09:29,557 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:35,705 - Model - INFO - Training mean loss: 0.317325
+2025-04-05 16:09:35,705 - Model - INFO - Training accuracy: 0.887707
+2025-04-05 16:09:35,705 - Model - INFO - ---- EPOCH 008 EVALUATION ----
+2025-04-05 16:09:37,316 - Model - INFO - eval mean loss: 0.289336
+2025-04-05 16:09:37,316 - Model - INFO - eval point accuracy: 0.878529
+2025-04-05 16:09:37,316 - Model - INFO - eval point avg class IoU: 0.637692
+2025-04-05 16:09:37,316 - Model - INFO - eval point avg class acc: 0.808460
+2025-04-05 16:09:37,317 - Model - INFO - ------- IoU --------
+class background     IoU: 0.917 
+class table          IoU: 0.359 
+
+2025-04-05 16:09:37,317 - Model - INFO - ------- Acc --------
+class background     Acc: 0.937 
+class table          Acc: 0.680 
+
+2025-04-05 16:09:37,318 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-09-37.pth
+2025-04-05 16:09:37,550 - Model - INFO - Best model saved!
+2025-04-05 16:09:37,550 - Model - INFO - **** Epoch 9 (9/10) ****
+2025-04-05 16:09:37,550 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:44,123 - Model - INFO - Training mean loss: 0.291243
+2025-04-05 16:09:44,123 - Model - INFO - Training accuracy: 0.898443
+2025-04-05 16:09:44,123 - Model - INFO - ---- EPOCH 009 EVALUATION ----
+2025-04-05 16:09:45,677 - Model - INFO - eval mean loss: 0.256395
+2025-04-05 16:09:45,677 - Model - INFO - eval point accuracy: 0.905318
+2025-04-05 16:09:45,677 - Model - INFO - eval point avg class IoU: 0.687060
+2025-04-05 16:09:45,677 - Model - INFO - eval point avg class acc: 0.780926
+2025-04-05 16:09:45,678 - Model - INFO - ------- IoU --------
+class background     IoU: 0.946 
+class table          IoU: 0.428 
+
+2025-04-05 16:09:45,678 - Model - INFO - ------- Acc --------
+class background     Acc: 0.974 
+class table          Acc: 0.588 
+
+2025-04-05 16:09:45,678 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_no_aug/checkpoints/best_model_2025-04-05_16-09-45.pth
+2025-04-05 16:09:45,914 - Model - INFO - Best model saved!
+2025-04-05 16:09:45,914 - Model - INFO - **** Epoch 10 (10/10) ****
+2025-04-05 16:09:45,915 - Model - INFO - Learning rate:0.001000
+2025-04-05 16:09:52,042 - Model - INFO - Training mean loss: 0.318348
+2025-04-05 16:09:52,042 - Model - INFO - Training accuracy: 0.893805
+2025-04-05 16:09:52,042 - Model - INFO - ---- EPOCH 010 EVALUATION ----
+2025-04-05 16:09:53,666 - Model - INFO - eval mean loss: 0.258996
+2025-04-05 16:09:53,666 - Model - INFO - eval point accuracy: 0.871205
+2025-04-05 16:09:53,666 - Model - INFO - eval point avg class IoU: 0.632685
+2025-04-05 16:09:53,666 - Model - INFO - eval point avg class acc: 0.832392
+2025-04-05 16:09:53,668 - Model - INFO - ------- IoU --------
+class background     IoU: 0.908 
+class table          IoU: 0.357 
+
+2025-04-05 16:09:53,669 - Model - INFO - ------- Acc --------
+class background     Acc: 0.925 
+class table          Acc: 0.740 
+
+2025-04-05 16:09:53,669 - Model - INFO - Creating final plots...

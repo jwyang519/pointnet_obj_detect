@@ -1,0 +1,106 @@
+2025-04-05 15:14:46,704 - Model - INFO - PARAMETER ...
+2025-04-05 15:14:46,704 - Model - INFO - Namespace(model='pointnet2_sem_seg', h5_file='CW2-Dataset/sun3d_train.h5', batch_size=4, epoch=5, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='sun3d_binary_seg_fixed', decay_rate=0.0001, npoint=1024, step_size=10, lr_decay=0.7)
+2025-04-05 15:14:47,051 - Model - INFO - The number of training samples is: 165
+2025-04-05 15:14:47,051 - Model - INFO - The number of testing samples is: 42
+2025-04-05 15:14:47,326 - Model - INFO - Class weights: [0.23985271 0.76014729]
+2025-04-05 15:14:47,344 - Model - INFO - No existing model, starting training from scratch...
+2025-04-05 15:14:48,866 - Model - INFO - **** Epoch 1 (1/5) ****
+2025-04-05 15:14:48,866 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:14:57,770 - Model - INFO - Training mean loss: 0.550212
+2025-04-05 15:14:57,771 - Model - INFO - Training accuracy: 0.783930
+2025-04-05 15:14:57,771 - Model - INFO - Save model...
+2025-04-05 15:14:57,771 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_fixed/checkpoints/model.pth
+2025-04-05 15:14:57,911 - Model - INFO - Saving model....
+2025-04-05 15:14:57,913 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2025-04-05 15:14:59,721 - Model - INFO - eval mean loss: 1.926156
+2025-04-05 15:14:59,721 - Model - INFO - eval point accuracy: 0.888872
+2025-04-05 15:14:59,722 - Model - INFO - eval point avg class IoU: 0.465599
+2025-04-05 15:14:59,722 - Model - INFO - eval point avg class acc: 0.500000
+2025-04-05 15:14:59,722 - Model - INFO - ------- IoU --------
+class background IoU: 0.931 
+class table IoU: 0.000 
+
+2025-04-05 15:14:59,722 - Model - INFO - ------- Acc --------
+class background Acc: 1.000 
+class table Acc: 0.000 
+
+2025-04-05 15:14:59,722 - Model - INFO - Save model...
+2025-04-05 15:14:59,722 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_fixed/checkpoints/best_model.pth
+2025-04-05 15:14:59,846 - Model - INFO - Saving model....
+2025-04-05 15:14:59,846 - Model - INFO - **** Epoch 2 (2/5) ****
+2025-04-05 15:14:59,847 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:15:05,867 - Model - INFO - Training mean loss: 0.426741
+2025-04-05 15:15:05,867 - Model - INFO - Training accuracy: 0.865374
+2025-04-05 15:15:05,870 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2025-04-05 15:15:07,439 - Model - INFO - eval mean loss: 0.597263
+2025-04-05 15:15:07,440 - Model - INFO - eval point accuracy: 0.844838
+2025-04-05 15:15:07,440 - Model - INFO - eval point avg class IoU: 0.480277
+2025-04-05 15:15:07,440 - Model - INFO - eval point avg class acc: 0.539392
+2025-04-05 15:15:07,440 - Model - INFO - ------- IoU --------
+class background IoU: 0.884 
+class table IoU: 0.077 
+
+2025-04-05 15:15:07,440 - Model - INFO - ------- Acc --------
+class background Acc: 0.940 
+class table Acc: 0.139 
+
+2025-04-05 15:15:07,440 - Model - INFO - Save model...
+2025-04-05 15:15:07,441 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_fixed/checkpoints/best_model.pth
+2025-04-05 15:15:07,553 - Model - INFO - Saving model....
+2025-04-05 15:15:07,553 - Model - INFO - **** Epoch 3 (3/5) ****
+2025-04-05 15:15:07,554 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:15:13,597 - Model - INFO - Training mean loss: 0.388604
+2025-04-05 15:15:13,597 - Model - INFO - Training accuracy: 0.865362
+2025-04-05 15:15:13,599 - Model - INFO - ---- EPOCH 003 EVALUATION ----
+2025-04-05 15:15:16,831 - Model - INFO - eval mean loss: 0.460897
+2025-04-05 15:15:16,832 - Model - INFO - eval point accuracy: 0.798584
+2025-04-05 15:15:16,832 - Model - INFO - eval point avg class IoU: 0.497003
+2025-04-05 15:15:16,832 - Model - INFO - eval point avg class acc: 0.662979
+2025-04-05 15:15:16,832 - Model - INFO - ------- IoU --------
+class background IoU: 0.831 
+class table IoU: 0.163 
+
+2025-04-05 15:15:16,832 - Model - INFO - ------- Acc --------
+class background Acc: 0.864 
+class table Acc: 0.462 
+
+2025-04-05 15:15:16,833 - Model - INFO - Save model...
+2025-04-05 15:15:16,833 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_fixed/checkpoints/best_model.pth
+2025-04-05 15:15:16,944 - Model - INFO - Saving model....
+2025-04-05 15:15:16,944 - Model - INFO - **** Epoch 4 (4/5) ****
+2025-04-05 15:15:16,945 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:15:22,977 - Model - INFO - Training mean loss: 0.378684
+2025-04-05 15:15:22,977 - Model - INFO - Training accuracy: 0.868931
+2025-04-05 15:15:22,980 - Model - INFO - ---- EPOCH 004 EVALUATION ----
+2025-04-05 15:15:24,559 - Model - INFO - eval mean loss: 0.376114
+2025-04-05 15:15:24,559 - Model - INFO - eval point accuracy: 0.793235
+2025-04-05 15:15:24,559 - Model - INFO - eval point avg class IoU: 0.521713
+2025-04-05 15:15:24,559 - Model - INFO - eval point avg class acc: 0.768732
+2025-04-05 15:15:24,560 - Model - INFO - ------- IoU --------
+class background IoU: 0.823 
+class table IoU: 0.221 
+
+2025-04-05 15:15:24,560 - Model - INFO - ------- Acc --------
+class background Acc: 0.841 
+class table Acc: 0.697 
+
+2025-04-05 15:15:24,560 - Model - INFO - Save model...
+2025-04-05 15:15:24,560 - Model - INFO - Saving at log/sun3d_seg/sun3d_binary_seg_fixed/checkpoints/best_model.pth
+2025-04-05 15:15:24,673 - Model - INFO - Saving model....
+2025-04-05 15:15:24,673 - Model - INFO - **** Epoch 5 (5/5) ****
+2025-04-05 15:15:24,675 - Model - INFO - Learning rate:0.001000
+2025-04-05 15:15:30,753 - Model - INFO - Training mean loss: 0.342198
+2025-04-05 15:15:30,753 - Model - INFO - Training accuracy: 0.891718
+2025-04-05 15:15:30,755 - Model - INFO - ---- EPOCH 005 EVALUATION ----
+2025-04-05 15:15:32,339 - Model - INFO - eval mean loss: 0.513638
+2025-04-05 15:15:32,340 - Model - INFO - eval point accuracy: 0.685325
+2025-04-05 15:15:32,340 - Model - INFO - eval point avg class IoU: 0.438476
+2025-04-05 15:15:32,340 - Model - INFO - eval point avg class acc: 0.794415
+2025-04-05 15:15:32,341 - Model - INFO - ------- IoU --------
+class background IoU: 0.700 
+class table IoU: 0.177 
+
+2025-04-05 15:15:32,342 - Model - INFO - ------- Acc --------
+class background Acc: 0.706 
+class table Acc: 0.883 
+

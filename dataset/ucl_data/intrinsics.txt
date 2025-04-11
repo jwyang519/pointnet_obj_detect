@@ -1,0 +1,27 @@
+Color Intrinsics:
+  Width: 640
+  Height: 480
+  PPX: 319.51458740234375
+  PPY: 247.6481475830078
+  Fx: 386.40997314453125
+  Fy: 385.948486328125
+  Distortion model: distortion.inverse_brown_conrady
+  Distortion coefficients: [-0.05444151908159256, 0.062241483479738235, -0.00023681727179791778, 9.248066635336727e-05, -0.020524928346276283]
+
+Depth Intrinsics:
+  Width: 640
+  Height: 480
+  PPX: 320.08819580078125
+  PPY: 244.1026153564453
+  Fx: 390.7360534667969
+  Fy: 390.7360534667969
+  Distortion model: distortion.brown_conrady
+  Distortion coefficients: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+Extrinsics (Depth to Color):
+  Rotation matrix:
+    1.000000 -0.000269 0.000016
+    0.000269 1.000000 -0.000172
+    -0.000016 0.000172 1.000000
+  Translation vector:
+    -0.059154 -0.000053 0.000369

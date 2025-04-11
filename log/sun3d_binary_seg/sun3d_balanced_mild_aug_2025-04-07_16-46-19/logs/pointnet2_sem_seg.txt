@@ -1,0 +1,10 @@
+2025-04-07 16:46:19,219 - Model - INFO - PARAMETER ...
+2025-04-07 16:46:19,219 - Model - INFO - Namespace(model='pointnet2_sem_seg', h5_file='CW2-Dataset/sun3d_train.h5', batch_size=4, epoch=10, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='sun3d_balanced_mild_aug', decay_rate=0.0001, npoint=1024, step_size=10, lr_decay=0.7, use_augmentation=True)
+2025-04-07 16:46:19,596 - Model - INFO - The number of training samples is: 165
+2025-04-07 16:46:19,596 - Model - INFO - The number of testing samples is: 42
+2025-04-07 16:46:19,901 - Model - INFO - Class weights: [0.13307801 0.86692199]
+2025-04-07 16:46:20,292 - Model - INFO - No existing model, starting training from scratch...
+2025-04-07 16:46:21,673 - Model - INFO - Initial learning rate: 0.001
+2025-04-07 16:46:21,673 - Model - INFO - **** Epoch 1 (1/10) ****
+2025-04-07 16:46:21,673 - Model - INFO - Learning rate:0.001000
+2025-04-07 16:46:21,700 - Model - INFO - Augmentation stats | Avg table ratio: 0.036 | Jitter: 0.0052 | Scale range: 0.205 | Shift: 0.052 | Dropout chance: 0.207 | Dropout ratio: 0.052

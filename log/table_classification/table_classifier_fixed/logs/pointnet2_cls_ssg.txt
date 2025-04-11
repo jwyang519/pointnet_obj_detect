@@ -1,0 +1,236 @@
+2025-04-09 16:53:24,792 - Model - INFO - PARAMETER ...
+2025-04-09 16:53:24,792 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, model='pointnet2_cls_ssg', epoch=15, learning_rate=0.001, num_point=1024, optimizer='Adam', log_dir='table_classifier_fixed', decay_rate=0.0001, train_file='CW2-Dataset/sun3d_train_fixed.h5', test_file='CW2-Dataset/sun3d_test_fixed.h5', class_weight=20.0, use_weights=True)
+2025-04-09 16:53:24,792 - Model - INFO - Load dataset ...
+2025-04-09 16:53:24,883 - Model - INFO - Using class weights: tensor([ 1., 20.])
+2025-04-09 16:53:25,060 - Model - INFO - No existing model, starting training from scratch...
+2025-04-09 16:53:25,942 - Model - INFO - Start training...
+2025-04-09 16:53:25,942 - Model - INFO - Epoch 1 (1/15):
+2025-04-09 16:53:31,737 - Model - INFO - Train Instance Accuracy: 0.878704
+2025-04-09 16:53:31,737 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:53:31,737 - Model - INFO - Train Non-Table Accuracy: 0.8835 (206 samples)
+2025-04-09 16:53:34,707 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:53:34,707 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:53:34,707 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:53:34,707 - Model - INFO - Save model...
+2025-04-09 16:53:34,707 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:53:34,864 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:53:34,864 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:53:34,864 - Model - INFO - Epoch 2 (2/15):
+2025-04-09 16:53:40,354 - Model - INFO - Train Instance Accuracy: 0.976852
+2025-04-09 16:53:40,354 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:53:40,354 - Model - INFO - Train Non-Table Accuracy: 0.9806 (206 samples)
+2025-04-09 16:53:43,310 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:53:43,310 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:53:43,310 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:53:43,310 - Model - INFO - Save model...
+2025-04-09 16:53:43,310 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:53:43,469 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:53:43,469 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:53:43,469 - Model - INFO - Epoch 3 (3/15):
+2025-04-09 16:53:48,935 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:53:48,936 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:53:48,936 - Model - INFO - Train Non-Table Accuracy: 1.0000 (206 samples)
+2025-04-09 16:53:51,889 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:53:51,889 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:53:51,889 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:53:51,889 - Model - INFO - Save model...
+2025-04-09 16:53:51,889 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:53:52,049 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:53:52,049 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:53:52,049 - Model - INFO - Epoch 4 (4/15):
+2025-04-09 16:53:57,550 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:53:57,550 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:53:57,550 - Model - INFO - Train Non-Table Accuracy: 1.0000 (206 samples)
+2025-04-09 16:54:00,508 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:54:00,508 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:00,508 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:54:00,508 - Model - INFO - Save model...
+2025-04-09 16:54:00,508 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:54:00,669 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:54:00,669 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:54:00,669 - Model - INFO - Epoch 5 (5/15):
+2025-04-09 16:54:06,131 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:54:06,131 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:54:06,131 - Model - INFO - Train Non-Table Accuracy: 1.0000 (206 samples)
+2025-04-09 16:54:09,091 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:54:09,091 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:09,091 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:54:09,091 - Model - INFO - Save model...
+2025-04-09 16:54:09,091 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:54:09,250 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:54:09,250 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:54:09,250 - Model - INFO - Epoch 6 (6/15):
+2025-04-09 16:54:14,702 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:54:14,702 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:54:14,702 - Model - INFO - Train Non-Table Accuracy: 1.0000 (206 samples)
+2025-04-09 16:54:17,651 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:54:17,651 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:17,651 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:54:17,651 - Model - INFO - Save model...
+2025-04-09 16:54:17,651 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:54:17,812 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:54:17,812 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:54:17,812 - Model - INFO - Epoch 7 (7/15):
+2025-04-09 16:54:23,286 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:54:23,286 - Model - INFO - Train Table Accuracy: 1.0000 (1 samples)
+2025-04-09 16:54:23,286 - Model - INFO - Train Non-Table Accuracy: 0.9951 (206 samples)
+2025-04-09 16:54:26,239 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:54:26,239 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:26,239 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:54:26,239 - Model - INFO - Save model...
+2025-04-09 16:54:26,239 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:54:26,556 - Model - INFO - Best Instance Accuracy: 0.983333
+2025-04-09 16:54:26,556 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-09 16:54:26,556 - Model - INFO - Epoch 8 (8/15):
+2025-04-09 16:54:31,984 - Model - INFO - Train Instance Accuracy: 0.990741
+2025-04-09 16:54:31,984 - Model - INFO - Train Table Accuracy: 1.0000 (1 samples)
+2025-04-09 16:54:31,984 - Model - INFO - Train Non-Table Accuracy: 0.9903 (206 samples)
+2025-04-09 16:54:34,925 - Model - INFO - Test Instance Accuracy: 0.966667
+2025-04-09 16:54:34,925 - Model - INFO - Test Table Accuracy: 0.5000 (2 samples)
+2025-04-09 16:54:34,925 - Model - INFO - Test Non-Table Accuracy: 0.9688 (96 samples)
+2025-04-09 16:54:34,925 - Model - INFO - Save model...
+2025-04-09 16:54:34,925 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-09 16:54:35,083 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:54:35,083 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:54:35,083 - Model - INFO - Epoch 9 (9/15):
+2025-04-09 16:54:40,559 - Model - INFO - Train Instance Accuracy: 0.990741
+2025-04-09 16:54:40,559 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:54:40,559 - Model - INFO - Train Non-Table Accuracy: 0.9951 (206 samples)
+2025-04-09 16:54:43,522 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:54:43,522 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:43,522 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:54:43,522 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:54:43,522 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:54:43,522 - Model - INFO - Epoch 10 (10/15):
+2025-04-09 16:54:49,007 - Model - INFO - Train Instance Accuracy: 0.964815
+2025-04-09 16:54:49,007 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:54:49,007 - Model - INFO - Train Non-Table Accuracy: 0.9709 (206 samples)
+2025-04-09 16:54:51,990 - Model - INFO - Test Instance Accuracy: 0.958333
+2025-04-09 16:54:51,990 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:54:51,990 - Model - INFO - Test Non-Table Accuracy: 0.9688 (96 samples)
+2025-04-09 16:54:51,990 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:54:51,990 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:54:51,990 - Model - INFO - Epoch 11 (11/15):
+2025-04-09 16:54:57,474 - Model - INFO - Train Instance Accuracy: 0.983333
+2025-04-09 16:54:57,474 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:54:57,474 - Model - INFO - Train Non-Table Accuracy: 0.9903 (206 samples)
+2025-04-09 16:55:00,432 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:55:00,432 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:55:00,432 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:55:00,432 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:55:00,432 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:55:00,432 - Model - INFO - Epoch 12 (12/15):
+2025-04-09 16:55:05,923 - Model - INFO - Train Instance Accuracy: 0.962037
+2025-04-09 16:55:05,924 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:55:05,924 - Model - INFO - Train Non-Table Accuracy: 0.9709 (206 samples)
+2025-04-09 16:55:08,877 - Model - INFO - Test Instance Accuracy: 0.966667
+2025-04-09 16:55:08,877 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:55:08,877 - Model - INFO - Test Non-Table Accuracy: 0.9792 (96 samples)
+2025-04-09 16:55:08,877 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:55:08,877 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:55:08,877 - Model - INFO - Epoch 13 (13/15):
+2025-04-09 16:55:14,385 - Model - INFO - Train Instance Accuracy: 0.981481
+2025-04-09 16:55:14,385 - Model - INFO - Train Table Accuracy: 1.0000 (1 samples)
+2025-04-09 16:55:14,385 - Model - INFO - Train Non-Table Accuracy: 0.9806 (206 samples)
+2025-04-09 16:55:17,357 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:55:17,357 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:55:17,357 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:55:17,357 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:55:17,357 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:55:17,358 - Model - INFO - Epoch 14 (14/15):
+2025-04-09 16:55:22,822 - Model - INFO - Train Instance Accuracy: 0.995370
+2025-04-09 16:55:22,822 - Model - INFO - Train Table Accuracy: 0.0000 (1 samples)
+2025-04-09 16:55:22,822 - Model - INFO - Train Non-Table Accuracy: 1.0000 (206 samples)
+2025-04-09 16:55:25,790 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:55:25,790 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:55:25,790 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:55:25,790 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:55:25,790 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:55:25,790 - Model - INFO - Epoch 15 (15/15):
+2025-04-09 16:55:31,268 - Model - INFO - Train Instance Accuracy: 0.987963
+2025-04-09 16:55:31,268 - Model - INFO - Train Table Accuracy: 1.0000 (1 samples)
+2025-04-09 16:55:31,268 - Model - INFO - Train Non-Table Accuracy: 0.9903 (206 samples)
+2025-04-09 16:55:34,187 - Model - INFO - Test Instance Accuracy: 0.983333
+2025-04-09 16:55:34,187 - Model - INFO - Test Table Accuracy: 0.0000 (2 samples)
+2025-04-09 16:55:34,187 - Model - INFO - Test Non-Table Accuracy: 1.0000 (96 samples)
+2025-04-09 16:55:34,188 - Model - INFO - Best Instance Accuracy: 0.966667
+2025-04-09 16:55:34,188 - Model - INFO - Best Table Accuracy: 0.500000
+2025-04-09 16:55:34,188 - Model - INFO - End of training...
+2025-04-10 00:07:05,598 - Model - INFO - PARAMETER ...
+2025-04-10 00:07:05,598 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, model='pointnet2_cls_ssg', epoch=15, learning_rate=0.001, num_point=1024, optimizer='Adam', log_dir='table_classifier_fixed', decay_rate=0.0001, train_file='CW2-Dataset/sun3d_train_fixed.h5', test_file='CW2-Dataset/sun3d_test_fixed.h5', class_weight=20.0, use_weights=True)
+2025-04-10 00:07:05,598 - Model - INFO - Load dataset ...
+2025-04-10 00:07:06,652 - Model - INFO - Using class weights: tensor([ 1., 20.])
+2025-04-10 00:07:08,873 - Model - INFO - Use pretrain model
+2025-04-10 00:07:28,134 - Model - INFO - Start training...
+2025-04-10 00:07:28,134 - Model - INFO - Epoch 1 (9/15):
+2025-04-10 00:07:34,034 - Model - INFO - Train Instance Accuracy: 0.285185
+2025-04-10 00:07:34,034 - Model - INFO - Train Table Accuracy: 0.0750 (160 samples)
+2025-04-10 00:07:34,034 - Model - INFO - Train Non-Table Accuracy: 0.9787 (47 samples)
+2025-04-10 00:07:37,030 - Model - INFO - Test Instance Accuracy: 0.716667
+2025-04-10 00:07:37,031 - Model - INFO - Test Table Accuracy: 0.8857 (70 samples)
+2025-04-10 00:07:37,031 - Model - INFO - Test Non-Table Accuracy: 0.0714 (28 samples)
+2025-04-10 00:07:37,031 - Model - INFO - Save model...
+2025-04-10 00:07:37,031 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-10 00:07:37,757 - Model - INFO - Best Instance Accuracy: 0.716667
+2025-04-10 00:07:37,757 - Model - INFO - Best Table Accuracy: 0.885714
+2025-04-10 00:07:37,757 - Model - INFO - Epoch 2 (10/15):
+2025-04-10 00:07:43,203 - Model - INFO - Train Instance Accuracy: 0.658333
+2025-04-10 00:07:43,203 - Model - INFO - Train Table Accuracy: 0.5625 (160 samples)
+2025-04-10 00:07:43,203 - Model - INFO - Train Non-Table Accuracy: 0.9574 (47 samples)
+2025-04-10 00:07:46,214 - Model - INFO - Test Instance Accuracy: 0.783333
+2025-04-10 00:07:46,214 - Model - INFO - Test Table Accuracy: 1.0000 (70 samples)
+2025-04-10 00:07:46,214 - Model - INFO - Test Non-Table Accuracy: 0.0714 (28 samples)
+2025-04-10 00:07:46,214 - Model - INFO - Save model...
+2025-04-10 00:07:46,214 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-10 00:07:46,778 - Model - INFO - Best Instance Accuracy: 0.783333
+2025-04-10 00:07:46,778 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:07:46,778 - Model - INFO - Epoch 3 (11/15):
+2025-04-10 00:07:52,267 - Model - INFO - Train Instance Accuracy: 0.850000
+2025-04-10 00:07:52,268 - Model - INFO - Train Table Accuracy: 0.8875 (160 samples)
+2025-04-10 00:07:52,268 - Model - INFO - Train Non-Table Accuracy: 0.7447 (47 samples)
+2025-04-10 00:07:55,278 - Model - INFO - Test Instance Accuracy: 0.800000
+2025-04-10 00:07:55,278 - Model - INFO - Test Table Accuracy: 1.0000 (70 samples)
+2025-04-10 00:07:55,278 - Model - INFO - Test Non-Table Accuracy: 0.1429 (28 samples)
+2025-04-10 00:07:55,278 - Model - INFO - Save model...
+2025-04-10 00:07:55,278 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-10 00:07:55,927 - Model - INFO - Best Instance Accuracy: 0.800000
+2025-04-10 00:07:55,927 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:07:55,927 - Model - INFO - Epoch 4 (12/15):
+2025-04-10 00:08:01,415 - Model - INFO - Train Instance Accuracy: 0.911111
+2025-04-10 00:08:01,415 - Model - INFO - Train Table Accuracy: 0.9688 (160 samples)
+2025-04-10 00:08:01,415 - Model - INFO - Train Non-Table Accuracy: 0.7234 (47 samples)
+2025-04-10 00:08:04,429 - Model - INFO - Test Instance Accuracy: 0.791667
+2025-04-10 00:08:04,429 - Model - INFO - Test Table Accuracy: 1.0000 (70 samples)
+2025-04-10 00:08:04,429 - Model - INFO - Test Non-Table Accuracy: 0.1071 (28 samples)
+2025-04-10 00:08:04,429 - Model - INFO - Save model...
+2025-04-10 00:08:04,429 - Model - INFO - Saving at log/table_classification/table_classifier_fixed/checkpoints/best_model.pth
+2025-04-10 00:08:05,095 - Model - INFO - Best Instance Accuracy: 0.791667
+2025-04-10 00:08:05,096 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:08:05,096 - Model - INFO - Epoch 5 (13/15):
+2025-04-10 00:08:10,628 - Model - INFO - Train Instance Accuracy: 0.897222
+2025-04-10 00:08:10,628 - Model - INFO - Train Table Accuracy: 0.9938 (160 samples)
+2025-04-10 00:08:10,628 - Model - INFO - Train Non-Table Accuracy: 0.5745 (47 samples)
+2025-04-10 00:08:13,653 - Model - INFO - Test Instance Accuracy: 0.775000
+2025-04-10 00:08:13,654 - Model - INFO - Test Table Accuracy: 0.9714 (70 samples)
+2025-04-10 00:08:13,654 - Model - INFO - Test Non-Table Accuracy: 0.1071 (28 samples)
+2025-04-10 00:08:13,654 - Model - INFO - Best Instance Accuracy: 0.791667
+2025-04-10 00:08:13,654 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:08:13,654 - Model - INFO - Epoch 6 (14/15):
+2025-04-10 00:08:19,121 - Model - INFO - Train Instance Accuracy: 0.883333
+2025-04-10 00:08:19,121 - Model - INFO - Train Table Accuracy: 0.9875 (160 samples)
+2025-04-10 00:08:19,121 - Model - INFO - Train Non-Table Accuracy: 0.5319 (47 samples)
+2025-04-10 00:08:22,116 - Model - INFO - Test Instance Accuracy: 0.766667
+2025-04-10 00:08:22,116 - Model - INFO - Test Table Accuracy: 0.9857 (70 samples)
+2025-04-10 00:08:22,116 - Model - INFO - Test Non-Table Accuracy: 0.0357 (28 samples)
+2025-04-10 00:08:22,116 - Model - INFO - Best Instance Accuracy: 0.791667
+2025-04-10 00:08:22,116 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:08:22,126 - Model - INFO - Epoch 7 (15/15):
+2025-04-10 00:08:27,598 - Model - INFO - Train Instance Accuracy: 0.886111
+2025-04-10 00:08:27,598 - Model - INFO - Train Table Accuracy: 0.9938 (160 samples)
+2025-04-10 00:08:27,598 - Model - INFO - Train Non-Table Accuracy: 0.5106 (47 samples)
+2025-04-10 00:08:30,597 - Model - INFO - Test Instance Accuracy: 0.791667
+2025-04-10 00:08:30,597 - Model - INFO - Test Table Accuracy: 0.9714 (70 samples)
+2025-04-10 00:08:30,597 - Model - INFO - Test Non-Table Accuracy: 0.1786 (28 samples)
+2025-04-10 00:08:30,597 - Model - INFO - Best Instance Accuracy: 0.791667
+2025-04-10 00:08:30,597 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-10 00:08:30,597 - Model - INFO - End of training...
