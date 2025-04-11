@@ -50,8 +50,8 @@ def parse_args():
     parser.add_argument('--optimizer', type=str, default='Adam', help='optimizer for training')
     parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='weight decay rate')
-    parser.add_argument('--train_file', type=str, default='../dataset/sun3d_train.h5', help='path to training file')
-    parser.add_argument('--test_file', type=str, default='../dataset/sun3d_test.h5', help='path to separate test file (not used during training)')
+    parser.add_argument('--train_file', type=str, default='CW2-Dataset/sun3d_train_fixed.h5', help='path to training file')
+    parser.add_argument('--test_file', type=str, default='CW2-Dataset/sun3d_test_fixed.h5', help='path to separate test file (not used during training)')
     parser.add_argument('--table_weight', type=float, default=1.0, help='weight for table class (class 1)')
     parser.add_argument('--non_table_weight', type=float, default=1.0, help='weight for non-table class (class 0)')
     parser.add_argument('--use_weights', action='store_true', default=True, help='use class weights')
@@ -193,6 +193,48 @@ def get_lr_scheduler(optimizer, args):
     else:  # 'none'
         return torch.optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: 1.0)
 
+def calculate_class_weights(train_labels):
+    """Calculate balanced class weights with softer weighting."""
+    num_table = np.sum(train_labels == 1)
+    num_non_table = np.sum(train_labels == 0)
+    total = num_table + num_non_table
+    
+    # Calculate basic inverse frequency weights
+    raw_weights = np.array([total / (2 * num_non_table), total / (2 * num_table)])
+    
+    # Apply softening: bring weights closer to 1.0
+    softened_weights = np.sqrt(raw_weights)  # Square root to reduce extremes
+    
+    # Normalize weights to maintain relative proportions while being closer to 1
+    normalized_weights = softened_weights / softened_weights.mean()
+    
+    # Convert to tensor
+    weights = torch.FloatTensor(normalized_weights)
+    return weights
+
+def calculate_metrics(pred, target):
+    """Calculate per-class accuracy and F1 score."""
+    pred_choice = pred.data.max(1)[1]
+    correct = pred_choice.eq(target.long().data).cpu().sum()
+    
+    # Per-class accuracy
+    table_mask = target == 1
+    non_table_mask = target == 0
+    
+    table_acc = pred_choice[table_mask].eq(target[table_mask]).float().mean().item() if table_mask.any() else 0
+    non_table_acc = pred_choice[non_table_mask].eq(target[non_table_mask]).float().mean().item() if non_table_mask.any() else 0
+    
+    # Calculate F1 score
+    tp = pred_choice[table_mask].eq(target[table_mask]).float().sum().item()
+    fp = pred_choice[non_table_mask].ne(target[non_table_mask]).float().sum().item()
+    fn = pred_choice[table_mask].ne(target[table_mask]).float().sum().item()
+    
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
+    f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    
+    return correct.item(), table_acc, non_table_acc, f1
+
 def main(args):
     def log_string(str):
         logger.info(str)
@@ -262,50 +304,37 @@ def main(args):
         num_workers=4
     )
 
-    # Calculate class weights for loss function
-    # Since random_split doesn't provide access to attributes of the full dataset,
-    # we need to determine the class distribution using indices
+    # Calculate class weights with softer weighting
     train_labels = []
     for idx in train_dataset.indices:
         train_labels.append(full_dataset.cloud_labels[idx])
     
     train_labels = np.array(train_labels)
+    class_weights = calculate_class_weights(train_labels)
+    
+    # Log class distribution and weights
     num_table = np.sum(train_labels == 1)
     num_non_table = np.sum(train_labels == 0)
-    total = num_table + num_non_table
-    
     log_string(f'Training set composition: {num_table} tables, {num_non_table} non-tables')
-    
-    global class_weights
+    log_string(f'Original class ratio (non-table:table): {num_non_table/num_table:.3f}')
+    log_string(f'Calculated soft class weights: {class_weights.tolist()}')
+
     if args.use_weights:
-        # Use explicit weights provided via arguments
-        class_weights = torch.FloatTensor([args.non_table_weight, args.table_weight])
-        log_string(f'Using class weights: [non-table: {args.non_table_weight}, table: {args.table_weight}]')
+        class_weights = class_weights.cuda() if not args.use_cpu else class_weights
+        log_string('Using calculated class weights for loss function')
     else:
         class_weights = None
         log_string('Not using class weights')
 
     '''MODEL LOADING'''
-    num_class = 2  # Binary classification: table or no table
+    num_class = 2
     model = importlib.import_module(args.model)
+    classifier = model.get_model(num_class, normal_channel=False)
+    criterion = model.get_loss(alpha=class_weights)
     
-    # Copy model files for logging
-    try:
-        shutil.copy(os.path.join(ROOT_DIR, 'models', f'{args.model}.py'), str(exp_dir))
-        shutil.copy(os.path.join(ROOT_DIR, 'models', 'pointnet2_utils.py'), str(exp_dir))
-        shutil.copy(os.path.join(BASE_DIR, 'train.py'), str(exp_dir))
-    except Exception as e:
-        log_string(f'Error copying files: {e}')
-
-    classifier = model.get_model(num_class, normal_channel=False)  # Using only XYZ coordinates, no normals
-    criterion = model.get_loss()
-    classifier.apply(inplace_relu)
-
     if not args.use_cpu:
         classifier = classifier.cuda()
         criterion = criterion.cuda()
-        if class_weights is not None:
-            class_weights = class_weights.cuda()
 
     try:
         checkpoint = torch.load(str(exp_dir) + '/checkpoints/best_model.pth')
@@ -334,8 +363,11 @@ def main(args):
     
     global_epoch = 0
     global_step = 0
-    best_instance_acc = 0.0
-    best_table_acc = 0.0
+    best_val_f1 = 0.0
+    patience = 30  # Increased patience for early stopping
+    min_epochs = 20  # Minimum number of epochs before allowing early stopping
+    patience_counter = 0
+    best_epoch = 0
     
     # Lists to store metrics for plotting
     epoch_list = []
@@ -353,151 +385,105 @@ def main(args):
     logger.info('Start training...')
     for epoch in range(start_epoch, args.epoch):
         log_string('Epoch %d (%d/%s):' % (global_epoch + 1, epoch + 1, args.epoch))
-        mean_correct = []
-        table_correct = []
-        non_table_correct = []
-        total_tables = 0
-        total_non_tables = 0
-        total_loss = 0.0
         
+        # Training
+        train_total_loss = 0.0
         classifier = classifier.train()
-
-        # Step the scheduler at the beginning of each epoch
-        # For ReduceLROnPlateau, we'll step it after validation
-        if args.scheduler != 'plateau':
-            scheduler.step()
         
-        # Log current learning rate
-        current_lr = optimizer.param_groups[0]['lr']
-        log_string(f'Current learning rate: {current_lr}')
-        lr_list.append(current_lr)
-        
-        for batch_id, (points, target) in tqdm(enumerate(trainDataLoader, 0), total=len(trainDataLoader), smoothing=0.9):
+        for batch_id, (points, target) in tqdm(enumerate(trainDataLoader), total=len(trainDataLoader), smoothing=0.9):
             optimizer.zero_grad()
-
-            # Apply data augmentation
+            
             points = points.cpu().numpy()
             points = provider.random_point_dropout(points)
             points[:, :, 0:3] = provider.random_scale_point_cloud(points[:, :, 0:3])
             points[:, :, 0:3] = provider.shift_point_cloud(points[:, :, 0:3])
             points = torch.Tensor(points)
-            
-            # Transpose points for PointNet++ input format
             points = points.transpose(2, 1)
 
             if not args.use_cpu:
                 points, target = points.cuda(), target.cuda()
 
             pred, trans_feat = classifier(points)
-            
-            # Apply class weights to loss
-            if class_weights is not None:
-                loss = torch.nn.functional.nll_loss(pred, target.long(), weight=class_weights)
-            else:
-                loss = criterion(pred, target.long(), trans_feat)
-            
-            total_loss += loss.item() * points.size(0)
-                
-            pred_choice = pred.data.max(1)[1]
-
-            # Overall accuracy
-            correct = pred_choice.eq(target.long().data).cpu().sum()
-            mean_correct.append(correct.item() / float(points.size()[0]))
-            
-            # Per-class accuracy
-            for i in range(len(target)):
-                if target[i] == 1:  # Table
-                    if pred_choice[i] == 1:
-                        table_correct.append(1.0)
-                    else:
-                        table_correct.append(0.0)
-                    total_tables += 1
-                else:  # Non-table
-                    if pred_choice[i] == 0:
-                        non_table_correct.append(1.0)
-                    else:
-                        non_table_correct.append(0.0)
-                    total_non_tables += 1
+            loss = criterion(pred, target.long())
             
             loss.backward()
             optimizer.step()
-            global_step += 1
+            
+            train_total_loss += loss.item()
+            
+        # Calculate training metrics
+        train_loss = train_total_loss / len(trainDataLoader)
+        log_string(f'Train Loss: {train_loss:.4f}')
         
-        # Calculate average training loss and accuracies
-        train_loss = total_loss / (total_tables + total_non_tables) if (total_tables + total_non_tables) > 0 else 0.0
-        train_instance_acc = np.mean(mean_correct)
-        train_table_acc = np.mean(table_correct) if total_tables > 0 else 0.0
-        train_non_table_acc = np.mean(non_table_correct) if total_non_tables > 0 else 0.0
+        # Validation
+        classifier = classifier.eval()
+        val_total_loss = 0.0
+        val_correct = 0
+        val_total = 0
+        val_table_correct = []
+        val_non_table_correct = []
         
-        log_string('Train Loss: %f' % train_loss)
-        log_string('Train Instance Accuracy: %f' % train_instance_acc)
-        log_string(f'Train Table Accuracy: {train_table_acc:.4f} ({total_tables} samples)')
-        log_string(f'Train Non-Table Accuracy: {train_non_table_acc:.4f} ({total_non_tables} samples)')
-
-        # Validate the model for this epoch
         with torch.no_grad():
-            instance_acc, table_acc, non_table_acc, val_tables, val_non_tables, val_loss = test(classifier.eval(), valDataLoader)
-
-            log_string('Validation Loss: %f' % val_loss)
-            log_string('Validation Instance Accuracy: %f' % instance_acc)
-            log_string(f'Validation Table Accuracy: {table_acc:.4f} ({val_tables} samples)')
-            log_string(f'Validation Non-Table Accuracy: {non_table_acc:.4f} ({val_non_tables} samples)')
-            
-            # Step the scheduler if using ReduceLROnPlateau
-            if args.scheduler == 'plateau':
-                scheduler.step(val_loss)
-            
-            # Store metrics for plotting
-            epoch_list.append(epoch + 1)
-            train_loss_list.append(train_loss)
-            test_loss_list.append(val_loss)
-            train_acc_list.append(train_instance_acc)
-            test_acc_list.append(instance_acc)
-            train_table_acc_list.append(train_table_acc)
-            test_table_acc_list.append(table_acc)
-            train_non_table_acc_list.append(train_non_table_acc)
-            test_non_table_acc_list.append(non_table_acc)
-            
-            # Save best model based on table accuracy if there are table samples
-            if val_tables > 0 and (table_acc >= best_table_acc):
-                best_table_acc = table_acc
-                best_instance_acc = instance_acc
-                best_epoch = epoch + 1
+            for points, target in valDataLoader:
+                if not args.use_cpu:
+                    points, target = points.cuda(), target.cuda()
                 
-                logger.info('Save model...')
-                savepath = str(checkpoints_dir) + '/best_model.pth'
-                log_string('Saving at %s' % savepath)
-                state = {
-                    'epoch': best_epoch,
-                    'instance_acc': instance_acc,
-                    'table_acc': table_acc,
-                    'non_table_acc': non_table_acc,
-                    'model_state_dict': classifier.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                }
-                torch.save(state, savepath)
-            # If no table samples in validation, save based on instance accuracy
-            elif val_tables == 0 and (instance_acc >= best_instance_acc):
-                best_instance_acc = instance_acc
-                best_epoch = epoch + 1
+                points = points.transpose(2, 1)
+                pred, _ = classifier(points)
+                loss = criterion(pred, target.long())
                 
-                logger.info('Save model...')
-                savepath = str(checkpoints_dir) + '/best_model.pth'
-                log_string('Saving at %s' % savepath)
-                state = {
-                    'epoch': best_epoch,
-                    'instance_acc': instance_acc,
-                    'table_acc': table_acc,
-                    'non_table_acc': non_table_acc,
-                    'model_state_dict': classifier.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                }
-                torch.save(state, savepath)
+                val_total_loss += loss.item()
+                correct, table_acc, non_table_acc, f1_score = calculate_metrics(pred, target)
                 
-            log_string('Best Instance Accuracy: %f' % best_instance_acc)
-            log_string('Best Table Accuracy: %f' % best_table_acc)
+                val_correct += correct
+                val_total += points.size(0)
+                val_table_correct.append(table_acc)
+                val_non_table_correct.append(non_table_acc)
+        
+        val_loss = val_total_loss / len(valDataLoader)
+        val_acc = val_correct / float(val_total)
+        val_table_acc = np.mean(val_table_correct)
+        val_non_table_acc = np.mean(val_non_table_correct)
+        
+        log_string(f'Validation Loss: {val_loss:.4f}')
+        log_string(f'Validation Accuracy: {val_acc:.4f}')
+        log_string(f'Table Accuracy: {val_table_acc:.4f}')
+        log_string(f'Non-Table Accuracy: {val_non_table_acc:.4f}')
+        log_string(f'F1 Score: {f1_score:.4f}')
+        
+        # Early stopping check
+        if f1_score > best_val_f1:
+            best_val_f1 = f1_score
+            best_epoch = epoch
+            patience_counter = 0
             
-            global_epoch += 1
+            # Save the best model
+            save_dict = {
+                'epoch': epoch + 1,
+                'model_state_dict': classifier.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': val_loss,
+                'f1_score': f1_score,
+            }
+            torch.save(save_dict, str(checkpoints_dir) + '/best_model.pth')
+            log_string('Saved new best model')
+        else:
+            patience_counter += 1
+            if patience_counter >= patience:
+                log_string(f'Early stopping triggered. Best F1: {best_val_f1:.4f} at epoch {best_epoch}')
+                break
+        
+        # Step the scheduler
+        if args.scheduler == 'plateau':
+            scheduler.step(val_loss)
+        else:
+            scheduler.step()
+        
+        # Update learning rate lists for plotting
+        current_lr = optimizer.param_groups[0]['lr']
+        lr_list.append(current_lr)
+        
+        global_epoch += 1
     
     # Plot the training curves at the end of training
     log_string('Generating training curves plot...')

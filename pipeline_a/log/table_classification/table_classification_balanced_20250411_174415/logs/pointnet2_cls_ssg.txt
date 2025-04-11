@@ -1,0 +1,6 @@
+2025-04-11 17:44:35,788 - Model - INFO - PARAMETER ...
+2025-04-11 17:44:35,789 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, model='pointnet2_cls_ssg', epoch=200, learning_rate=0.0001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_balanced_20250411_174415', decay_rate=0.0001, train_file='../dataset/sun3d_train.h5', test_file='../dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, val_split=0.2)
+2025-04-11 17:44:35,790 - Model - INFO - Load dataset ...
+2025-04-11 17:44:36,278 - Model - INFO - Dataset split: 166 training samples, 41 validation samples
+2025-04-11 17:44:36,284 - Model - INFO - Training set composition: 127 tables, 39 non-tables
+2025-04-11 17:44:36,287 - Model - INFO - Using balanced BCE loss with pos_weight: 0.3071

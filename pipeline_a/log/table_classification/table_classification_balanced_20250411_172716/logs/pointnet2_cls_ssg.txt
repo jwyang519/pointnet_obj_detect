@@ -1,0 +1,220 @@
+2025-04-11 17:27:23,692 - Model - INFO - PARAMETER ...
+2025-04-11 17:27:23,693 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, model='pointnet2_cls_ssg', epoch=200, learning_rate=0.0001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_balanced_20250411_172716', decay_rate=0.0001, train_file='../dataset/sun3d_train.h5', test_file='../dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=15.0, use_weights=True, val_split=0.2)
+2025-04-11 17:27:23,694 - Model - INFO - Load dataset ...
+2025-04-11 17:27:24,486 - Model - INFO - Dataset split: 166 training samples, 41 validation samples
+2025-04-11 17:27:24,489 - Model - INFO - Training set composition: 127 tables, 39 non-tables
+2025-04-11 17:27:25,002 - Model - INFO - Using focal loss with class weights: [non-table: 20.0, table: 1.0]
+2025-04-11 17:27:25,242 - Model - INFO - No existing model, starting training from scratch...
+2025-04-11 17:27:29,382 - Model - INFO - Using learning rate scheduler: cosine
+2025-04-11 17:27:29,383 - Model - INFO - Initial learning rate: 0.0001
+2025-04-11 17:27:29,384 - Model - INFO - Start training...
+2025-04-11 17:27:29,384 - Model - INFO - Epoch 1 (1/200):
+2025-04-11 17:27:29,386 - Model - INFO - Current learning rate: 9.99938933078422e-05
+2025-04-11 17:27:55,785 - Model - INFO - Train Loss: 4.016604
+2025-04-11 17:27:55,786 - Model - INFO - Train Instance Accuracy: 0.526515
+2025-04-11 17:27:55,786 - Model - INFO - Train Table Accuracy: 0.5512 (127 samples)
+2025-04-11 17:27:55,786 - Model - INFO - Train Non-Table Accuracy: 0.4103 (39 samples)
+2025-04-11 17:28:02,624 - Model - INFO - Validation Loss: 3.994481
+2025-04-11 17:28:02,625 - Model - INFO - Validation Instance Accuracy: 0.784722
+2025-04-11 17:28:02,625 - Model - INFO - Validation Table Accuracy: 1.0000 (33 samples)
+2025-04-11 17:28:02,625 - Model - INFO - Validation Non-Table Accuracy: 0.0000 (8 samples)
+2025-04-11 17:28:02,625 - Model - INFO - Save model...
+2025-04-11 17:28:02,625 - Model - INFO - Saving at log/table_classification/table_classification_balanced_20250411_172716/checkpoints/best_model.pth
+2025-04-11 17:28:03,108 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:28:03,109 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:28:03,110 - Model - INFO - Epoch 2 (2/200):
+2025-04-11 17:28:03,113 - Model - INFO - Current learning rate: 9.997557473810371e-05
+2025-04-11 17:28:27,601 - Model - INFO - Train Loss: 3.019976
+2025-04-11 17:28:27,603 - Model - INFO - Train Instance Accuracy: 0.566288
+2025-04-11 17:28:27,603 - Model - INFO - Train Table Accuracy: 0.5354 (127 samples)
+2025-04-11 17:28:27,603 - Model - INFO - Train Non-Table Accuracy: 0.6410 (39 samples)
+2025-04-11 17:28:35,109 - Model - INFO - Validation Loss: 3.319521
+2025-04-11 17:28:35,111 - Model - INFO - Validation Instance Accuracy: 0.784722
+2025-04-11 17:28:35,112 - Model - INFO - Validation Table Accuracy: 1.0000 (33 samples)
+2025-04-11 17:28:35,113 - Model - INFO - Validation Non-Table Accuracy: 0.0000 (8 samples)
+2025-04-11 17:28:35,114 - Model - INFO - Save model...
+2025-04-11 17:28:35,114 - Model - INFO - Saving at log/table_classification/table_classification_balanced_20250411_172716/checkpoints/best_model.pth
+2025-04-11 17:28:35,455 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:28:35,456 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:28:35,457 - Model - INFO - Epoch 3 (3/200):
+2025-04-11 17:28:35,458 - Model - INFO - Current learning rate: 9.994504881061753e-05
+2025-04-11 17:28:59,634 - Model - INFO - Train Loss: 2.425880
+2025-04-11 17:28:59,638 - Model - INFO - Train Instance Accuracy: 0.606061
+2025-04-11 17:28:59,643 - Model - INFO - Train Table Accuracy: 0.5748 (127 samples)
+2025-04-11 17:28:59,643 - Model - INFO - Train Non-Table Accuracy: 0.8205 (39 samples)
+2025-04-11 17:29:05,977 - Model - INFO - Validation Loss: 1.792541
+2025-04-11 17:29:05,978 - Model - INFO - Validation Instance Accuracy: 0.215278
+2025-04-11 17:29:05,978 - Model - INFO - Validation Table Accuracy: 0.0000 (33 samples)
+2025-04-11 17:29:05,978 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:29:05,978 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:29:05,978 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:29:05,978 - Model - INFO - Epoch 4 (4/200):
+2025-04-11 17:29:05,979 - Model - INFO - Current learning rate: 9.990232305719945e-05
+2025-04-11 17:29:29,849 - Model - INFO - Train Loss: 2.640765
+2025-04-11 17:29:29,850 - Model - INFO - Train Instance Accuracy: 0.530303
+2025-04-11 17:29:29,850 - Model - INFO - Train Table Accuracy: 0.4882 (127 samples)
+2025-04-11 17:29:29,850 - Model - INFO - Train Non-Table Accuracy: 0.7179 (39 samples)
+2025-04-11 17:29:36,338 - Model - INFO - Validation Loss: 1.618498
+2025-04-11 17:29:36,340 - Model - INFO - Validation Instance Accuracy: 0.215278
+2025-04-11 17:29:36,340 - Model - INFO - Validation Table Accuracy: 0.0000 (33 samples)
+2025-04-11 17:29:36,340 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:29:36,340 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:29:36,340 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:29:36,341 - Model - INFO - Epoch 5 (5/200):
+2025-04-11 17:29:36,342 - Model - INFO - Current learning rate: 9.984740801978984e-05
+2025-04-11 17:30:00,856 - Model - INFO - Train Loss: 2.073879
+2025-04-11 17:30:00,857 - Model - INFO - Train Instance Accuracy: 0.545455
+2025-04-11 17:30:00,857 - Model - INFO - Train Table Accuracy: 0.4567 (127 samples)
+2025-04-11 17:30:00,857 - Model - INFO - Train Non-Table Accuracy: 0.8462 (39 samples)
+2025-04-11 17:30:07,754 - Model - INFO - Validation Loss: 1.970706
+2025-04-11 17:30:07,755 - Model - INFO - Validation Instance Accuracy: 0.293981
+2025-04-11 17:30:07,759 - Model - INFO - Validation Table Accuracy: 0.0909 (33 samples)
+2025-04-11 17:30:07,762 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:30:07,765 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:30:07,767 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:30:07,770 - Model - INFO - Epoch 6 (6/200):
+2025-04-11 17:30:07,774 - Model - INFO - Current learning rate: 9.978031724785246e-05
+2025-04-11 17:30:32,851 - Model - INFO - Train Loss: 1.923332
+2025-04-11 17:30:32,852 - Model - INFO - Train Instance Accuracy: 0.482955
+2025-04-11 17:30:32,852 - Model - INFO - Train Table Accuracy: 0.3465 (127 samples)
+2025-04-11 17:30:32,852 - Model - INFO - Train Non-Table Accuracy: 0.9231 (39 samples)
+2025-04-11 17:30:39,050 - Model - INFO - Validation Loss: 2.193019
+2025-04-11 17:30:39,051 - Model - INFO - Validation Instance Accuracy: 0.476852
+2025-04-11 17:30:39,052 - Model - INFO - Validation Table Accuracy: 0.3333 (33 samples)
+2025-04-11 17:30:39,052 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:30:39,052 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:30:39,052 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:30:39,052 - Model - INFO - Epoch 7 (7/200):
+2025-04-11 17:30:39,066 - Model - INFO - Current learning rate: 9.97010672950314e-05
+2025-04-11 17:31:02,339 - Model - INFO - Train Loss: 1.719901
+2025-04-11 17:31:02,341 - Model - INFO - Train Instance Accuracy: 0.452652
+2025-04-11 17:31:02,342 - Model - INFO - Train Table Accuracy: 0.3307 (127 samples)
+2025-04-11 17:31:02,342 - Model - INFO - Train Non-Table Accuracy: 0.9231 (39 samples)
+2025-04-11 17:31:09,239 - Model - INFO - Validation Loss: 1.710346
+2025-04-11 17:31:09,240 - Model - INFO - Validation Instance Accuracy: 0.456019
+2025-04-11 17:31:09,240 - Model - INFO - Validation Table Accuracy: 0.3030 (33 samples)
+2025-04-11 17:31:09,240 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:31:09,240 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:31:09,244 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:31:09,247 - Model - INFO - Epoch 8 (8/200):
+2025-04-11 17:31:09,251 - Model - INFO - Current learning rate: 9.960967771506666e-05
+2025-04-11 17:31:33,618 - Model - INFO - Train Loss: 1.654976
+2025-04-11 17:31:33,619 - Model - INFO - Train Instance Accuracy: 0.418561
+2025-04-11 17:31:33,619 - Model - INFO - Train Table Accuracy: 0.2756 (127 samples)
+2025-04-11 17:31:33,619 - Model - INFO - Train Non-Table Accuracy: 0.9487 (39 samples)
+2025-04-11 17:31:39,973 - Model - INFO - Validation Loss: 1.523135
+2025-04-11 17:31:39,974 - Model - INFO - Validation Instance Accuracy: 0.539352
+2025-04-11 17:31:39,974 - Model - INFO - Validation Table Accuracy: 0.4242 (33 samples)
+2025-04-11 17:31:39,974 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:31:39,974 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:31:39,974 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:31:39,974 - Model - INFO - Epoch 9 (9/200):
+2025-04-11 17:31:39,975 - Model - INFO - Current learning rate: 9.950617105696959e-05
+2025-04-11 17:32:03,943 - Model - INFO - Train Loss: 1.319665
+2025-04-11 17:32:03,944 - Model - INFO - Train Instance Accuracy: 0.477273
+2025-04-11 17:32:03,944 - Model - INFO - Train Table Accuracy: 0.3150 (127 samples)
+2025-04-11 17:32:03,944 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:32:11,093 - Model - INFO - Validation Loss: 1.577773
+2025-04-11 17:32:11,094 - Model - INFO - Validation Instance Accuracy: 0.659722
+2025-04-11 17:32:11,094 - Model - INFO - Validation Table Accuracy: 0.5758 (33 samples)
+2025-04-11 17:32:11,094 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:32:11,094 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:32:11,094 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:32:11,095 - Model - INFO - Epoch 10 (10/200):
+2025-04-11 17:32:11,098 - Model - INFO - Current learning rate: 9.939057285945931e-05
+2025-04-11 17:32:35,696 - Model - INFO - Train Loss: 1.290849
+2025-04-11 17:32:35,697 - Model - INFO - Train Instance Accuracy: 0.471591
+2025-04-11 17:32:35,697 - Model - INFO - Train Table Accuracy: 0.3150 (127 samples)
+2025-04-11 17:32:35,697 - Model - INFO - Train Non-Table Accuracy: 0.9744 (39 samples)
+2025-04-11 17:32:42,408 - Model - INFO - Validation Loss: 1.472124
+2025-04-11 17:32:42,410 - Model - INFO - Validation Instance Accuracy: 0.601852
+2025-04-11 17:32:42,551 - Model - INFO - Validation Table Accuracy: 0.5152 (33 samples)
+2025-04-11 17:32:42,552 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:32:42,552 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:32:42,552 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:32:42,552 - Model - INFO - Epoch 11 (11/200):
+2025-04-11 17:32:42,554 - Model - INFO - Current learning rate: 9.92629116446613e-05
+2025-04-11 17:33:01,676 - Model - INFO - Train Loss: 1.319043
+2025-04-11 17:33:01,681 - Model - INFO - Train Instance Accuracy: 0.441288
+2025-04-11 17:33:01,687 - Model - INFO - Train Table Accuracy: 0.2756 (127 samples)
+2025-04-11 17:33:01,690 - Model - INFO - Train Non-Table Accuracy: 0.9231 (39 samples)
+2025-04-11 17:33:03,422 - Model - INFO - Validation Loss: 1.310651
+2025-04-11 17:33:03,423 - Model - INFO - Validation Instance Accuracy: 0.581019
+2025-04-11 17:33:03,425 - Model - INFO - Validation Table Accuracy: 0.4848 (33 samples)
+2025-04-11 17:33:03,425 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:33:03,426 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:33:03,427 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:33:03,428 - Model - INFO - Epoch 12 (12/200):
+2025-04-11 17:33:03,434 - Model - INFO - Current learning rate: 9.912321891107009e-05
+2025-04-11 17:33:28,966 - Model - INFO - Train Loss: 1.000459
+2025-04-11 17:33:28,967 - Model - INFO - Train Instance Accuracy: 0.477273
+2025-04-11 17:33:28,967 - Model - INFO - Train Table Accuracy: 0.3150 (127 samples)
+2025-04-11 17:33:28,967 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:33:35,448 - Model - INFO - Validation Loss: 1.155697
+2025-04-11 17:33:35,449 - Model - INFO - Validation Instance Accuracy: 0.601852
+2025-04-11 17:33:35,449 - Model - INFO - Validation Table Accuracy: 0.5455 (33 samples)
+2025-04-11 17:33:35,449 - Model - INFO - Validation Non-Table Accuracy: 0.8750 (8 samples)
+2025-04-11 17:33:35,449 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:33:35,449 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:33:35,449 - Model - INFO - Epoch 13 (13/200):
+2025-04-11 17:33:35,452 - Model - INFO - Current learning rate: 9.89715291257774e-05
+2025-04-11 17:34:00,710 - Model - INFO - Train Loss: 1.164595
+2025-04-11 17:34:00,712 - Model - INFO - Train Instance Accuracy: 0.524621
+2025-04-11 17:34:00,712 - Model - INFO - Train Table Accuracy: 0.3543 (127 samples)
+2025-04-11 17:34:00,712 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:34:07,187 - Model - INFO - Validation Loss: 1.142858
+2025-04-11 17:34:07,188 - Model - INFO - Validation Instance Accuracy: 0.555556
+2025-04-11 17:34:07,190 - Model - INFO - Validation Table Accuracy: 0.4545 (33 samples)
+2025-04-11 17:34:07,191 - Model - INFO - Validation Non-Table Accuracy: 0.8750 (8 samples)
+2025-04-11 17:34:07,191 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:34:07,192 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:34:07,192 - Model - INFO - Epoch 14 (14/200):
+2025-04-11 17:34:07,194 - Model - INFO - Current learning rate: 9.880787971596799e-05
+2025-04-11 17:34:32,596 - Model - INFO - Train Loss: 0.844490
+2025-04-11 17:34:32,596 - Model - INFO - Train Instance Accuracy: 0.564394
+2025-04-11 17:34:32,596 - Model - INFO - Train Table Accuracy: 0.4094 (127 samples)
+2025-04-11 17:34:32,596 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:34:39,792 - Model - INFO - Validation Loss: 1.034253
+2025-04-11 17:34:39,792 - Model - INFO - Validation Instance Accuracy: 0.497685
+2025-04-11 17:34:39,792 - Model - INFO - Validation Table Accuracy: 0.3636 (33 samples)
+2025-04-11 17:34:39,792 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:34:39,792 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:34:39,792 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:34:39,792 - Model - INFO - Epoch 15 (15/200):
+2025-04-11 17:34:39,792 - Model - INFO - Current learning rate: 9.863231105968498e-05
+2025-04-11 17:35:05,221 - Model - INFO - Train Loss: 0.830989
+2025-04-11 17:35:05,221 - Model - INFO - Train Instance Accuracy: 0.498106
+2025-04-11 17:35:05,221 - Model - INFO - Train Table Accuracy: 0.3307 (127 samples)
+2025-04-11 17:35:05,221 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:35:11,631 - Model - INFO - Validation Loss: 0.930376
+2025-04-11 17:35:11,631 - Model - INFO - Validation Instance Accuracy: 0.539352
+2025-04-11 17:35:11,631 - Model - INFO - Validation Table Accuracy: 0.4242 (33 samples)
+2025-04-11 17:35:11,631 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:35:11,631 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:35:11,631 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:35:11,631 - Model - INFO - Epoch 16 (16/200):
+2025-04-11 17:35:11,631 - Model - INFO - Current learning rate: 9.844486647586723e-05
+2025-04-11 17:35:36,982 - Model - INFO - Train Loss: 1.101939
+2025-04-11 17:35:36,982 - Model - INFO - Train Instance Accuracy: 0.482955
+2025-04-11 17:35:36,982 - Model - INFO - Train Table Accuracy: 0.3307 (127 samples)
+2025-04-11 17:35:36,982 - Model - INFO - Train Non-Table Accuracy: 0.9744 (39 samples)
+2025-04-11 17:35:43,758 - Model - INFO - Validation Loss: 1.058390
+2025-04-11 17:35:43,759 - Model - INFO - Validation Instance Accuracy: 0.717593
+2025-04-11 17:35:43,760 - Model - INFO - Validation Table Accuracy: 0.6364 (33 samples)
+2025-04-11 17:35:43,760 - Model - INFO - Validation Non-Table Accuracy: 1.0000 (8 samples)
+2025-04-11 17:35:43,760 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:35:43,760 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:35:43,760 - Model - INFO - Epoch 17 (17/200):
+2025-04-11 17:35:43,761 - Model - INFO - Current learning rate: 9.824559221366101e-05
+2025-04-11 17:36:08,711 - Model - INFO - Train Loss: 0.962253
+2025-04-11 17:36:08,712 - Model - INFO - Train Instance Accuracy: 0.503788
+2025-04-11 17:36:08,712 - Model - INFO - Train Table Accuracy: 0.3386 (127 samples)
+2025-04-11 17:36:08,712 - Model - INFO - Train Non-Table Accuracy: 1.0000 (39 samples)
+2025-04-11 17:36:15,452 - Model - INFO - Validation Loss: 1.335338
+2025-04-11 17:36:15,458 - Model - INFO - Validation Instance Accuracy: 0.717593
+2025-04-11 17:36:15,458 - Model - INFO - Validation Table Accuracy: 0.6667 (33 samples)
+2025-04-11 17:36:15,458 - Model - INFO - Validation Non-Table Accuracy: 0.8750 (8 samples)
+2025-04-11 17:36:15,459 - Model - INFO - Best Instance Accuracy: 0.784722
+2025-04-11 17:36:15,459 - Model - INFO - Best Table Accuracy: 1.000000
+2025-04-11 17:36:15,461 - Model - INFO - Epoch 18 (18/200):
+2025-04-11 17:36:15,463 - Model - INFO - Current learning rate: 9.803453744100869e-05

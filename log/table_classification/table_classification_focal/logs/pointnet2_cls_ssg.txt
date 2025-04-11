@@ -1,0 +1,131 @@
+2025-04-11 18:35:27,691 - Model - INFO - PARAMETER ...
+2025-04-11 18:35:27,692 - Model - INFO - Namespace(use_cpu=False, gpu='1', batch_size=24, model='pointnet2_cls_ssg', epoch=50, learning_rate=0.001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_focal', decay_rate=0.0001, train_file='../dataset/sun3d_train.h5', test_file='../dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, val_split=0.2)
+2025-04-11 18:35:27,692 - Model - INFO - Load dataset ...
+2025-04-11 18:36:28,225 - Model - INFO - PARAMETER ...
+2025-04-11 18:36:28,226 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, model='pointnet2_cls_ssg', epoch=50, learning_rate=0.001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_focal', decay_rate=0.0001, train_file='../dataset/sun3d_train.h5', test_file='../dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, val_split=0.2)
+2025-04-11 18:36:28,230 - Model - INFO - Load dataset ...
+2025-04-11 18:38:05,678 - Model - INFO - PARAMETER ...
+2025-04-11 18:38:05,679 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=24, model='pointnet2_cls_ssg', epoch=200, learning_rate=0.001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_focal', decay_rate=0.0001, train_file='dataset/sun3d_train.h5', test_file='dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, val_split=0.2)
+2025-04-11 18:38:05,679 - Model - INFO - Load dataset ...
+2025-04-11 18:38:06,039 - Model - INFO - Dataset split: 166 training samples, 41 validation samples
+2025-04-11 18:38:06,045 - Model - INFO - Calculated class weights: [2.1282050609588623, 0.6535432934761047]
+2025-04-11 18:38:06,574 - Model - INFO - Using calculated class weights for loss function
+2025-04-11 18:38:07,630 - Model - INFO - No existing model, starting training from scratch...
+2025-04-11 18:38:13,915 - Model - INFO - Using learning rate scheduler: cosine
+2025-04-11 18:38:13,915 - Model - INFO - Initial learning rate: 0.001
+2025-04-11 18:38:13,916 - Model - INFO - Start training...
+2025-04-11 18:38:13,917 - Model - INFO - Epoch 1 (1/200):
+2025-04-11 18:38:33,124 - Model - INFO - Train Loss: 0.2780
+2025-04-11 18:38:39,800 - Model - INFO - Validation Loss: 0.2005
+2025-04-11 18:38:39,801 - Model - INFO - Validation Accuracy: 0.8049
+2025-04-11 18:38:39,801 - Model - INFO - Table Accuracy: 1.0000
+2025-04-11 18:38:39,803 - Model - INFO - Non-Table Accuracy: 0.0000
+2025-04-11 18:38:39,803 - Model - INFO - F1 Score: 0.9032
+2025-04-11 18:38:40,163 - Model - INFO - Saved new best model
+2025-04-11 18:38:40,165 - Model - INFO - Epoch 2 (2/200):
+2025-04-11 18:38:54,849 - Model - INFO - Train Loss: 0.2055
+2025-04-11 18:39:00,211 - Model - INFO - Validation Loss: 0.1714
+2025-04-11 18:39:00,212 - Model - INFO - Validation Accuracy: 0.8049
+2025-04-11 18:39:00,212 - Model - INFO - Table Accuracy: 1.0000
+2025-04-11 18:39:00,213 - Model - INFO - Non-Table Accuracy: 0.0000
+2025-04-11 18:39:00,214 - Model - INFO - F1 Score: 0.9032
+2025-04-11 18:39:00,215 - Model - INFO - Epoch 3 (3/200):
+2025-04-11 18:39:13,932 - Model - INFO - Train Loss: 0.2283
+2025-04-11 18:39:17,717 - Model - INFO - Validation Loss: 0.1760
+2025-04-11 18:39:17,719 - Model - INFO - Validation Accuracy: 0.1951
+2025-04-11 18:39:17,721 - Model - INFO - Table Accuracy: 0.0000
+2025-04-11 18:39:17,723 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:39:17,724 - Model - INFO - F1 Score: 0.0000
+2025-04-11 18:39:17,726 - Model - INFO - Epoch 4 (4/200):
+2025-04-11 18:39:32,982 - Model - INFO - Train Loss: 0.1521
+2025-04-11 18:39:38,415 - Model - INFO - Validation Loss: 0.1878
+2025-04-11 18:39:38,417 - Model - INFO - Validation Accuracy: 0.1951
+2025-04-11 18:39:38,419 - Model - INFO - Table Accuracy: 0.0000
+2025-04-11 18:39:38,420 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:39:38,422 - Model - INFO - F1 Score: 0.0000
+2025-04-11 18:39:38,424 - Model - INFO - Epoch 5 (5/200):
+2025-04-11 18:39:48,155 - Model - INFO - Train Loss: 0.1720
+2025-04-11 18:39:49,483 - Model - INFO - Validation Loss: 0.1662
+2025-04-11 18:39:49,485 - Model - INFO - Validation Accuracy: 0.8049
+2025-04-11 18:39:49,617 - Model - INFO - Table Accuracy: 1.0000
+2025-04-11 18:39:49,621 - Model - INFO - Non-Table Accuracy: 0.0000
+2025-04-11 18:39:49,622 - Model - INFO - F1 Score: 0.9032
+2025-04-11 18:39:49,622 - Model - INFO - Epoch 6 (6/200):
+2025-04-11 18:39:58,979 - Model - INFO - Train Loss: 0.1541
+2025-04-11 18:40:04,154 - Model - INFO - Validation Loss: 0.1974
+2025-04-11 18:40:04,155 - Model - INFO - Validation Accuracy: 0.1951
+2025-04-11 18:40:04,155 - Model - INFO - Table Accuracy: 0.0000
+2025-04-11 18:40:04,156 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:40:04,156 - Model - INFO - F1 Score: 0.0000
+2025-04-11 18:40:04,156 - Model - INFO - Epoch 7 (7/200):
+2025-04-11 18:40:18,278 - Model - INFO - Train Loss: 0.1375
+2025-04-11 18:40:22,438 - Model - INFO - Validation Loss: 0.7833
+2025-04-11 18:40:22,439 - Model - INFO - Validation Accuracy: 0.1951
+2025-04-11 18:40:22,439 - Model - INFO - Table Accuracy: 0.0000
+2025-04-11 18:40:22,439 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:40:22,439 - Model - INFO - F1 Score: 0.0000
+2025-04-11 18:40:22,440 - Model - INFO - Epoch 8 (8/200):
+2025-04-11 18:40:37,399 - Model - INFO - Train Loss: 0.1040
+2025-04-11 18:40:42,044 - Model - INFO - Validation Loss: 0.1774
+2025-04-11 18:40:42,045 - Model - INFO - Validation Accuracy: 0.2683
+2025-04-11 18:40:42,049 - Model - INFO - Table Accuracy: 0.0883
+2025-04-11 18:40:42,051 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:40:42,054 - Model - INFO - F1 Score: 0.1333
+2025-04-11 18:40:42,058 - Model - INFO - Epoch 9 (9/200):
+2025-04-11 18:40:56,527 - Model - INFO - Train Loss: 0.0825
+2025-04-11 18:41:01,740 - Model - INFO - Validation Loss: 0.1890
+2025-04-11 18:41:01,742 - Model - INFO - Validation Accuracy: 0.8049
+2025-04-11 18:41:01,793 - Model - INFO - Table Accuracy: 1.0000
+2025-04-11 18:41:01,794 - Model - INFO - Non-Table Accuracy: 0.0000
+2025-04-11 18:41:01,795 - Model - INFO - F1 Score: 0.9032
+2025-04-11 18:41:01,796 - Model - INFO - Epoch 10 (10/200):
+2025-04-11 18:41:16,573 - Model - INFO - Train Loss: 0.0941
+2025-04-11 18:41:20,528 - Model - INFO - Validation Loss: 0.1836
+2025-04-11 18:41:20,529 - Model - INFO - Validation Accuracy: 0.8293
+2025-04-11 18:41:20,532 - Model - INFO - Table Accuracy: 1.0000
+2025-04-11 18:41:20,535 - Model - INFO - Non-Table Accuracy: 0.1000
+2025-04-11 18:41:20,537 - Model - INFO - F1 Score: 0.9032
+2025-04-11 18:41:20,540 - Model - INFO - Epoch 11 (11/200):
+2025-04-11 18:41:35,371 - Model - INFO - Train Loss: 0.0576
+2025-04-11 18:41:39,651 - Model - INFO - Validation Loss: 0.1333
+2025-04-11 18:41:39,653 - Model - INFO - Validation Accuracy: 0.8537
+2025-04-11 18:41:39,655 - Model - INFO - Table Accuracy: 0.9286
+2025-04-11 18:41:39,656 - Model - INFO - Non-Table Accuracy: 0.5333
+2025-04-11 18:41:39,658 - Model - INFO - F1 Score: 0.8889
+2025-04-11 18:41:39,660 - Model - INFO - Epoch 12 (12/200):
+2025-04-11 18:41:54,140 - Model - INFO - Train Loss: 0.0855
+2025-04-11 18:41:59,205 - Model - INFO - Validation Loss: 0.1678
+2025-04-11 18:41:59,206 - Model - INFO - Validation Accuracy: 0.7073
+2025-04-11 18:41:59,210 - Model - INFO - Table Accuracy: 0.6278
+2025-04-11 18:41:59,212 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:41:59,217 - Model - INFO - F1 Score: 0.7273
+2025-04-11 18:41:59,220 - Model - INFO - Epoch 13 (13/200):
+2025-04-11 18:42:13,766 - Model - INFO - Train Loss: 0.0812
+2025-04-11 18:42:17,774 - Model - INFO - Validation Loss: 0.1389
+2025-04-11 18:42:17,775 - Model - INFO - Validation Accuracy: 0.7317
+2025-04-11 18:42:17,778 - Model - INFO - Table Accuracy: 0.6541
+2025-04-11 18:42:17,780 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:42:17,782 - Model - INFO - F1 Score: 0.7273
+2025-04-11 18:42:17,785 - Model - INFO - Epoch 14 (14/200):
+2025-04-11 18:42:32,502 - Model - INFO - Train Loss: 0.0835
+2025-04-11 18:42:37,047 - Model - INFO - Validation Loss: 0.1996
+2025-04-11 18:42:37,048 - Model - INFO - Validation Accuracy: 0.8049
+2025-04-11 18:42:37,051 - Model - INFO - Table Accuracy: 0.9643
+2025-04-11 18:42:37,053 - Model - INFO - Non-Table Accuracy: 0.1667
+2025-04-11 18:42:37,056 - Model - INFO - F1 Score: 0.8966
+2025-04-11 18:42:37,058 - Model - INFO - Epoch 15 (15/200):
+2025-04-11 18:42:52,388 - Model - INFO - Train Loss: 0.0776
+2025-04-11 18:42:57,835 - Model - INFO - Validation Loss: 0.1991
+2025-04-11 18:42:57,837 - Model - INFO - Validation Accuracy: 0.6098
+2025-04-11 18:42:57,840 - Model - INFO - Table Accuracy: 0.6541
+2025-04-11 18:42:57,842 - Model - INFO - Non-Table Accuracy: 0.4333
+2025-04-11 18:42:57,843 - Model - INFO - F1 Score: 0.6957
+2025-04-11 18:42:57,847 - Model - INFO - Epoch 16 (16/200):
+2025-04-11 18:43:12,943 - Model - INFO - Train Loss: 0.0715
+2025-04-11 18:43:18,075 - Model - INFO - Validation Loss: 0.1653
+2025-04-11 18:43:18,076 - Model - INFO - Validation Accuracy: 0.5610
+2025-04-11 18:43:18,076 - Model - INFO - Table Accuracy: 0.4511
+2025-04-11 18:43:18,076 - Model - INFO - Non-Table Accuracy: 1.0000
+2025-04-11 18:43:18,076 - Model - INFO - F1 Score: 0.6000
+2025-04-11 18:43:18,076 - Model - INFO - Early stopping triggered. Best F1: 0.9032 at epoch 0
+2025-04-11 18:43:18,076 - Model - INFO - Generating training curves plot...

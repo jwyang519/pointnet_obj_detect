@@ -1,0 +1,28 @@
+2025-04-11 17:41:48,642 - Model - INFO - PARAMETER ...
+2025-04-11 17:41:48,643 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, model='pointnet2_cls_ssg', epoch=200, learning_rate=0.0001, scheduler='cosine', lr_decay=0.7, step_size=20, min_lr=1e-06, num_point=1024, optimizer='Adam', log_dir='table_classification_balanced_20250411_174132', decay_rate=0.0001, train_file='../dataset/sun3d_train.h5', test_file='../dataset/sun3d_test.h5', table_weight=1.0, non_table_weight=1.0, use_weights=True, val_split=0.2)
+2025-04-11 17:41:48,645 - Model - INFO - Load dataset ...
+2025-04-11 17:41:49,213 - Model - INFO - Dataset split: 166 training samples, 41 validation samples
+2025-04-11 17:41:49,215 - Model - INFO - Training set composition: 127 tables, 39 non-tables
+2025-04-11 17:41:49,916 - Model - INFO - Using focal loss (gamma=4.0) with class weights: [non-table: 2.0, table: 1.0]
+2025-04-11 17:41:49,917 - Model - INFO - Using balanced batch sampling
+2025-04-11 17:41:50,130 - Model - INFO - No existing model, starting training from scratch...
+2025-04-11 17:41:59,884 - Model - INFO - Using learning rate scheduler: cosine
+2025-04-11 17:41:59,886 - Model - INFO - Initial learning rate: 0.0001
+2025-04-11 17:41:59,887 - Model - INFO - Start training...
+2025-04-11 17:41:59,887 - Model - INFO - Epoch 1 (1/200):
+2025-04-11 17:41:59,892 - Model - INFO - Current learning rate: 9.99938933078422e-05
+2025-04-11 17:42:24,943 - Model - INFO - Train Loss: 0.426873
+2025-04-11 17:42:24,946 - Model - INFO - Train Instance Accuracy: 0.509470
+2025-04-11 17:42:24,948 - Model - INFO - Train Table Accuracy: 0.5978 (92 samples)
+2025-04-11 17:42:24,950 - Model - INFO - Train Non-Table Accuracy: 0.3784 (74 samples)
+2025-04-11 17:42:31,980 - Model - INFO - Validation Loss: 0.150954
+2025-04-11 17:42:31,981 - Model - INFO - Validation Instance Accuracy: 0.784722
+2025-04-11 17:42:31,985 - Model - INFO - Validation Table Accuracy: 1.0000 (33 samples)
+2025-04-11 17:42:31,989 - Model - INFO - Validation Non-Table Accuracy: 0.0000 (8 samples)
+2025-04-11 17:42:31,992 - Model - INFO - Validation F1 Score: 0.4459
+2025-04-11 17:42:31,996 - Model - INFO - Saving at log/table_classification/table_classification_balanced_20250411_174132/checkpoints/best_model.pth
+2025-04-11 17:42:32,489 - Model - INFO - Best Instance Accuracy: 0.000000
+2025-04-11 17:42:32,490 - Model - INFO - Best Table Accuracy: 0.000000
+2025-04-11 17:42:32,491 - Model - INFO - Best F1 Score: 0.445946
+2025-04-11 17:42:32,491 - Model - INFO - Epoch 2 (2/200):
+2025-04-11 17:42:32,493 - Model - INFO - Current learning rate: 9.997557473810371e-05
