@@ -1,0 +1,29 @@
+2025-04-13 15:25:02,475 - Model - INFO - PARAMETER ...
+2025-04-13 15:25:02,475 - Model - INFO - Namespace(use_cpu=False, gpu='0', batch_size=16, num_point=1024, log_dir='kfold_tune_final/fold_4', model='pointnet2_cls_ssg', test_file='CW2-Dataset/sun3d_test_fixed.h5', ucl_file='CW2-Dataset/ucl_data_fixed.h5')
+2025-04-13 15:25:02,475 - Model - INFO - Load dataset ...
+2025-04-13 15:25:02,797 - Model - INFO - Load UCL dataset ...
+2025-04-13 15:25:03,246 - Model - INFO - Model loaded from ./log/table_classification/kfold_tune_final/fold_4/checkpoints/best_model.pth
+2025-04-13 15:25:03,247 - Model - INFO - Test table accuracy reported during training: 1.0000
+2025-04-13 15:25:03,247 - Model - INFO - Test non-table accuracy reported during training: 0.9350
+2025-04-13 15:25:03,247 - Model - INFO - F1 score reported during training: 0.9814
+2025-04-13 15:25:03,247 - Model - INFO - Model from epoch: 21
+2025-04-13 15:25:03,247 - Model - INFO - 
+==== TESTING ON STANDARD TEST SET ====
+2025-04-13 15:25:03,247 - Model - INFO - Testing on sun3d_test...
+2025-04-13 15:25:03,930 - Model - INFO - Test Instance Accuracy on sun3d_test: 0.8571
+2025-04-13 15:25:03,930 - Model - INFO - Table Accuracy on sun3d_test: 0.9714 (70 samples)
+2025-04-13 15:25:03,930 - Model - INFO - Non-Table Accuracy on sun3d_test: 0.5000 (28 samples)
+2025-04-13 15:25:03,930 - Model - INFO - Confusion Matrix:
+2025-04-13 15:25:03,930 - Model - INFO - Pred\True | No Table | Table
+2025-04-13 15:25:03,930 - Model - INFO - No Table  |       14 |     2
+2025-04-13 15:25:03,930 - Model - INFO - Table     |       14 |    68
+2025-04-13 15:25:03,930 - Model - INFO - 
+==== TESTING ON UCL DATASET ====
+2025-04-13 15:25:03,931 - Model - INFO - Testing on ucl_data...
+2025-04-13 15:25:08,477 - Model - INFO - Test Instance Accuracy on ucl_data: 0.9792
+2025-04-13 15:25:08,477 - Model - INFO - Table Accuracy on ucl_data: 0.9697 (33 samples)
+2025-04-13 15:25:08,477 - Model - INFO - Non-Table Accuracy on ucl_data: nan (0 samples)
+2025-04-13 15:25:08,477 - Model - INFO - Confusion Matrix:
+2025-04-13 15:25:08,478 - Model - INFO - Pred\True | No Table | Table
+2025-04-13 15:25:08,478 - Model - INFO - No Table  |        0 |     1
+2025-04-13 15:25:08,479 - Model - INFO - Table     |        0 |    32

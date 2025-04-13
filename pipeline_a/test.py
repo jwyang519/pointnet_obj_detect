@@ -124,6 +124,12 @@ def main(args):
     test_dataset = TableClassificationDataset(args.test_file, args.num_point)
     testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, 
                                                  shuffle=False, num_workers=4)
+    
+    # Load the UCL dataset (which should all contain tables)
+    log_string('Load UCL dataset ...')
+    ucl_dataset = TableClassificationDataset(args.ucl_file, args.num_point)
+    uclDataLoader = torch.utils.data.DataLoader(ucl_dataset, batch_size=args.batch_size, 
+                                              shuffle=False, num_workers=4)
 
     '''MODEL LOADING'''
     num_class = 2  # Binary classification: table or no table
@@ -143,11 +149,20 @@ def main(args):
         log_string(f"Test instance accuracy reported during training: {checkpoint['instance_acc']:.4f}")
     if 'table_acc' in checkpoint:
         log_string(f"Test table accuracy reported during training: {checkpoint['table_acc']:.4f}")
+    if 'non_table_acc' in checkpoint:
+        log_string(f"Test non-table accuracy reported during training: {checkpoint['non_table_acc']:.4f}")
+    if 'f1_score' in checkpoint:
+        log_string(f"F1 score reported during training: {checkpoint['f1_score']:.4f}")
     if 'epoch' in checkpoint:
         log_string(f"Model from epoch: {checkpoint['epoch']}")
     
     # Test on standard dataset
+    log_string('\n==== TESTING ON STANDARD TEST SET ====')
     test(classifier, testDataLoader, label_name='sun3d_test', log_func=log_string)
+    
+    # Test on UCL dataset
+    log_string('\n==== TESTING ON UCL DATASET ====')
+    test(classifier, uclDataLoader, label_name='ucl_data', log_func=log_string)
 
 if __name__ == '__main__':
     args = parse_args()

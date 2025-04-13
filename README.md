@@ -1,361 +1,240 @@
-# Pytorch Implementation of PointNet and PointNet++ 
+# PointNet++ for Table Detection and Segmentation
 
-This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++](http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf) in pytorch.
+This repository implements two distinct pipelines for 3D point cloud analysis focused on tables:
 
-## Update
-**2021/03/27:** 
+1. **Pipeline A**: Binary classification of entire point clouds (table present vs. not present)
+2. **Pipeline C**: Binary semantic segmentation of point clouds (labeling individual points as table or background)
 
-(1) Release pre-trained models for semantic segmentation, where PointNet++ can achieve **53.5\%** mIoU.
+Both pipelines use PointNet++ architectures and are trained on the SUN3D dataset.
 
-(2) Release pre-trained models for classification and part segmentation in `log/`.
+## 🏠 Project Structure
 
-**2021/03/20:** Update codes for classification, including:
+- **pipeline_a/**: Binary classification models and tools
+- **pipeline_c/**: Semantic segmentation models and tools
+- **data_utils/**: Data preparation and processing utilities
+- **models/**: PointNet++ model implementations
+- **visualizer/**: Point cloud visualization tools
+- **weights/**: Saved model weights
+- **log/**: Training logs and checkpoints
 
-(1) Add codes for training **ModelNet10** dataset. Using setting of ``--num_category 10``. 
+## 📦 Dataset
 
-(2) Add codes for running on CPU only. Using setting of ``--use_cpu``. 
+The project uses the SUN3D dataset, processed into HDF5 (.h5) files. The dataset is prepared using scripts in the `data_utils/` directory:
 
-(3) Add codes for offline data preprocessing to accelerate training. Using setting of ``--process_data``. 
+```
+CW2-Dataset/
+  ├── sun3d_train_fixed.h5  # Training dataset (MIT scenes)
+  ├── sun3d_test_fixed.h5   # Testing dataset (Harvard scenes)
+  └── ucl_data_fixed.h5     # Additional UCL dataset
+```
 
-(4) Add codes for training with uniform sampling. Using setting of ``--use_uniform_sample``. 
+## 🧠 Models
 
-**2019/11/26:**
+Both pipelines use variants of the PointNet++ architecture:
 
-(1) Fixed some errors in previous codes and added data augmentation tricks. Now classification by only 1024 points can achieve **92.8\%**! 
+- **Pipeline A**: Uses PointNet++ SSG (Single Scale Grouping) for classification (`pointnet2_cls_ssg.py`)
+- **Pipeline C**: Uses PointNet++ for semantic segmentation (`pointnet2_sem_seg.py`)
 
-(2) Added testing codes, including classification and segmentation, and semantic segmentation with visualization. 
+Other available models include:
+- PointNet++ MSG (Multi-Scale Grouping) variants
+- PointNet models for classification and segmentation
 
-(3) Organized all models into `./models` files for easy using.
+## 🔍 Pipeline A: Table Classification
 
-## Table Classification Pipeline
+Pipeline A focuses on classifying entire point clouds as either containing a table (1) or not (0).
 
-This section describes the updated table classification pipeline for point cloud binary classification using the SUN3D and UCL datasets.
+### Training
 
-### Dataset Generation and Processing
+Basic usage:
+```bash
+python pipeline_a/train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir table_classification
+```
 
-The pipeline includes tools for generating and inspecting table classification datasets:
+For K-fold cross-validation:
+```bash
+python pipeline_a/kfold_train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir kfold_experiment
+```
+
+Advanced parameters:
+```bash
+python pipeline_a/kfold_train.py \
+  --train_file CW2-Dataset/sun3d_train_fixed.h5 \
+  --log_dir kfold_experiment \
+  --n_folds 5 \
+  --epoch 100 \
+  --batch_size 24 \
+  --learning_rate 0.0001 \
+  --scheduler cosine \
+  --lr_decay 0.7 \
+  --step_size 20 \
+  --num_point 1024 \
+  --use_weights
+```
+
+### Testing
 
 ```bash
-# Generate fixed datasets with improved point cloud processing
-python regenerate_datasets.py
-
-# Check dataset statistics without regenerating
-python regenerate_datasets.py --check_only
-
-# Only regenerate SUN3D datasets
-python regenerate_datasets.py --sun3d_only
-
-# Only regenerate UCL dataset
-python regenerate_datasets.py --ucl_only
+python pipeline_a/test.py --log_dir table_classification --test_file CW2-Dataset/sun3d_test_fixed.h5 --ucl_file CW2-Dataset/ucl_data_fixed.h5
 ```
 
-### Training the Table Classifier
+### Key Parameters
 
-The `pipeline_a/train.py` script provides a comprehensive set of options for training a binary table classifier:
+- `--train_file`: Path to training H5 file
+- `--test_file`: Path to testing H5 file
+- `--log_dir`: Directory name for saving logs and models
+- `--batch_size`: Batch size for training (default: 24)
+- `--learning_rate`: Initial learning rate
+- `--num_point`: Number of points per point cloud (default: 1024)
+- `--use_weights`: Whether to use class weights (helps with imbalanced datasets)
+
+### Output
+
+- Model weights and checkpoints in `log/table_classification/<log_dir>/checkpoints/`
+- Training curves and metrics in `log/table_classification/<log_dir>/`
+- K-fold cross-validation summaries in `log/table_classification/kfold_<log_dir>/`
+
+## 🧩 Pipeline C: Semantic Segmentation
+
+Pipeline C performs point-level semantic segmentation to identify which points in a point cloud belong to tables.
+
+### Training
 
 ```bash
-# Basic training with fixed datasets
-python pipeline_a/train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir table_classifier_fixed --epoch 15
-
-# Training with lower learning rate and class weighting
-python pipeline_a/train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir table_classifier_weighted \
-    --learning_rate 0.0001 --non_table_weight 10.0 --table_weight 1.0 --epoch 20
-
-# Training with cosine annealing learning rate schedule
-python pipeline_a/train.py --train_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir table_classifier_cosine \
-    --learning_rate 0.0001 --scheduler cosine --epoch 30 --non_table_weight 5.0
+python pipeline_c/train_sun3d.py --h5_file CW2-Dataset/sun3d_train_fixed.h5 --log_dir semantic_segmentation --batch_size 16 --epoch 50 --learning_rate 0.001 --use_augmentation
 ```
 
-### Key Training Parameters
-
-| Parameter | Description | Default |
-|-----------|-------------|---------|
-| `--train_file` | Path to the training dataset | `../dataset/sun3d_train.h5` |
-| `--test_file` | Path to separate test file (not used in training) | `../dataset/sun3d_test.h5` |
-| `--val_split` | Fraction of training data to use for validation | `0.2` |
-| `--epoch` | Number of epochs to train | `100` |
-| `--batch_size` | Batch size | `24` |
-| `--num_point` | Number of points per point cloud | `1024` |
-| `--learning_rate` | Initial learning rate | `0.0001` |
-| `--scheduler` | Learning rate scheduler type (step, cosine, plateau, none) | `step` |
-| `--lr_decay` | Decay rate for scheduler | `0.7` |
-| `--step_size` | Step size for StepLR scheduler | `20` |
-| `--min_lr` | Minimum learning rate | `1e-6` |
-| `--non_table_weight` | Weight for non-table class (class 0) | `1.0` |
-| `--table_weight` | Weight for table class (class 1) | `1.0` |
-| `--use_weights` | Use class weights | `True` |
-| `--log_dir` | Experiment directory | `None` (auto-generated timestamp) |
-
-### Learning Rate Schedulers
-
-The training script supports multiple learning rate schedulers:
-
-1. **Step Scheduler** (`--scheduler step`): Reduces the learning rate by a gamma factor every `step_size` epochs
-2. **Cosine Annealing** (`--scheduler cosine`): Gradually reduces learning rate following a cosine curve
-3. **Reduce on Plateau** (`--scheduler plateau`): Reduces learning rate when validation loss stops improving
-4. **None** (`--scheduler none`): Uses constant learning rate throughout training
-
-### Performance Visualization
-
-After training, the script automatically generates visualization plots:
-
-1. **Training Curves**: A comprehensive plot showing training and validation metrics:
-   - Loss vs. Epochs
-   - Overall Accuracy vs. Epochs
-   - Table Class Accuracy vs. Epochs
-   - Non-Table Class Accuracy vs. Epochs
-
-2. **Learning Rate Curve**: Shows how the learning rate changed over training epochs
-
-These plots are saved in the experiment directory specified by `--log_dir`.
-
-## Install
-The latest codes are tested on Ubuntu 16.04, CUDA10.1, PyTorch 1.6 and Python 3.7:
-```shell
-conda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch
-```
-
-## Classification (ModelNet10/40)
-### Data Preparation
-Download alignment **ModelNet** [here](https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip) and save in `data/modelnet40_normal_resampled/`.
-
-### Run
-You can run different modes with following codes. 
-* If you want to use offline processing of data, you can use `--process_data` in the first run. You can download pre-processd data [here](https://drive.google.com/drive/folders/1_fBYbDO3XSdRt3DSbEBe41r5l9YpIGWF?usp=sharing) and save it in `data/modelnet40_normal_resampled/`.
-* If you want to train on ModelNet10, you can use `--num_category 10`.
-```shell
-# ModelNet40
-## Select different models in ./models 
-
-## e.g., pointnet2_ssg without normal features
-python train_classification.py --model pointnet2_cls_ssg --log_dir pointnet2_cls_ssg
-python test_classification.py --log_dir pointnet2_cls_ssg
-
-## e.g., pointnet2_ssg with normal features
-python train_classification.py --model pointnet2_cls_ssg --use_normals --log_dir pointnet2_cls_ssg_normal
-python test_classification.py --use_normals --log_dir pointnet2_cls_ssg_normal
-
-## e.g., pointnet2_ssg with uniform sampling
-python train_classification.py --model pointnet2_cls_ssg --use_uniform_sample --log_dir pointnet2_cls_ssg_fps
-python test_classification.py --use_uniform_sample --log_dir pointnet2_cls_ssg_fps
-
-# ModelNet10
-## Similar setting like ModelNet40, just using --num_category 10
-
-## e.g., pointnet2_ssg without normal features
-python train_classification.py --model pointnet2_cls_ssg --log_dir pointnet2_cls_ssg --num_category 10
-python test_classification.py --log_dir pointnet2_cls_ssg --num_category 10
-```
-
-### Performance
-| Model | Accuracy |
-|--|--|
-| PointNet (Official) |  89.2|
-| PointNet2 (Official) | 91.9 |
-| PointNet (Pytorch without normal) |  90.6|
-| PointNet (Pytorch with normal) |  91.4|
-| PointNet2_SSG (Pytorch without normal) |  92.2|
-| PointNet2_SSG (Pytorch with normal) |  92.4|
-| PointNet2_MSG (Pytorch with normal) |  **92.8**|
-
-## Part Segmentation (ShapeNet)
-### Data Preparation
-Download alignment **ShapeNet** [here](https://shapenet.cs.stanford.edu/media/shapenetcore_partanno_segmentation_benchmark_v0_normal.zip)  and save in `data/shapenetcore_partanno_segmentation_benchmark_v0_normal/`.
-### Run
-```
-## Check model in ./models 
-## e.g., pointnet2_msg
-python train_partseg.py --model pointnet2_part_seg_msg --normal --log_dir pointnet2_part_seg_msg
-python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
-```
-### Performance
-| Model | Inctance avg IoU| Class avg IoU 
-|--|--|--|
-|PointNet (Official)	|83.7|80.4	
-|PointNet2 (Official)|85.1	|81.9	
-|PointNet (Pytorch)|	84.3	|81.1|	
-|PointNet2_SSG (Pytorch)|	84.9|	81.8	
-|PointNet2_MSG (Pytorch)|	**85.4**|	**82.5**	
-
-
-## Semantic Segmentation (S3DIS)
-### Data Preparation
-Download 3D indoor parsing dataset (**S3DIS**) [here](http://buildingparser.stanford.edu/dataset.html)  and save in `data/s3dis/Stanford3dDataset_v1.2_Aligned_Version/`.
-```
-cd data_utils
-python collect_indoor3d_data.py
-```
-Processed data will save in `data/stanford_indoor3d/`.
-### Run
-```
-## Check model in ./models 
-## e.g., pointnet2_ssg
-python train_semseg.py --model pointnet2_sem_seg --test_area 5 --log_dir pointnet2_sem_seg
-python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5 --visual
-```
-Visualization results will save in `log/sem_seg/pointnet2_sem_seg/visual/` and you can visualize these .obj file by [MeshLab](http://www.meshlab.net/).
-
-### Performance
-|Model  | Overall Acc |Class avg IoU | Checkpoint 
-|--|--|--|--|
-| PointNet (Pytorch) | 78.9 | 43.7| [40.7MB](log/sem_seg/pointnet_sem_seg) |
-| PointNet2_ssg (Pytorch) | **83.0** | **53.5**| [11.2MB](log/sem_seg/pointnet2_sem_seg) |
-
-## Visualization
-### Using show3d_balls.py
-```
-## build C++ code for visualization
-cd visualizer
-bash build.sh 
-## run one example 
-python show3d_balls.py
-```
-![](/visualizer/pic.png)
-### Using MeshLab
-![](/visualizer/pic2.png)
-
-
-## Reference By
-[halimacc/pointnet3](https://github.com/halimacc/pointnet3)<br>
-[fxia22/pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)<br>
-[charlesq34/PointNet](https://github.com/charlesq34/pointnet) <br>
-[charlesq34/PointNet++](https://github.com/charlesq34/pointnet2)
-
-
-## Citation
-If you find this repo useful in your research, please consider citing it and our other works:
-```
-@article{Pytorch_Pointnet_Pointnet2,
-      Author = {Xu Yan},
-      Title = {Pointnet/Pointnet++ Pytorch},
-      Journal = {https://github.com/yanx27/Pointnet_Pointnet2_pytorch},
-      Year = {2019}
-}
-```
-```
-@InProceedings{yan2020pointasnl,
-  title={PointASNL: Robust Point Clouds Processing using Nonlocal Neural Networks with Adaptive Sampling},
-  author={Yan, Xu and Zheng, Chaoda and Li, Zhen and Wang, Sheng and Cui, Shuguang},
-  journal={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2020}
-}
-```
-```
-@InProceedings{yan2021sparse,
-  title={Sparse Single Sweep LiDAR Point Cloud Segmentation via Learning Contextual Shape Priors from Scene Completion},
-  author={Yan, Xu and Gao, Jiantao and Li, Jie and Zhang, Ruimao, and Li, Zhen and Huang, Rui and Cui, Shuguang},
-  journal={AAAI Conference on Artificial Intelligence ({AAAI})},
-  year={2021}
-}
-```
-```
-@InProceedings{yan20222dpass,
-      title={2DPASS: 2D Priors Assisted Semantic Segmentation on LiDAR Point Clouds}, 
-      author={Xu Yan and Jiantao Gao and Chaoda Zheng and Chao Zheng and Ruimao Zhang and Shuguang Cui and Zhen Li},
-      year={2022},
-      journal={ECCV}
-}
-```
-## Selected Projects using This Codebase
-* [PointConv: Deep Convolutional Networks on 3D Point Clouds, CVPR'19](https://github.com/Young98CN/pointconv_pytorch)
-* [On Isometry Robustness of Deep 3D Point Cloud Models under Adversarial Attacks, CVPR'20](https://github.com/skywalker6174/3d-isometry-robust)
-* [Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions, ECCV'20](https://github.com/matheusgadelha/PointCloudLearningACD)
-* [PCT: Point Cloud Transformer](https://github.com/MenghaoGuo/PCT)
-* [PSNet: Fast Data Structuring for Hierarchical Deep Learning on Point Cloud](https://github.com/lly007/PointStructuringNet)
-* [Stratified Transformer for 3D Point Cloud Segmentation, CVPR'22](https://github.com/dvlab-research/stratified-transformer)
-
-# PointNet++ for Binary Segmentation using SUN3D Dataset
-
-This repository contains an implementation of PointNet++ for binary segmentation on the SUN3D dataset. The goal is to classify each point in a 3D point cloud as either "table" (label 1) or "background" (label 0).
-
-## Overview
-
-We've implemented a binary point cloud segmentation pipeline using the [PointNet++](https://arxiv.org/abs/1706.02413) architecture. The pipeline includes:
-
-1. **Dataset preparation** script that converts SUN3D RGB-D images and polygon annotations into labeled point clouds
-2. **Custom PyTorch dataset loader** for the SUN3D dataset that handles point clouds with binary labels
-3. **PointNet++ segmentation model** adapted for binary segmentation
-4. **Training and testing scripts** for the binary segmentation task
-
-## Dataset Preparation
-
-The SUN3D dataset consists of RGB-D images with polygon annotations for tables. We provide a script to convert these into labeled point clouds with binary segmentation labels.
-
-Input data should have the following structure:
-
-```
-data_dir/
-├── building_name/           # e.g., mit_32_d507
-│   └── scene_name/         # e.g., d507_2
-│       ├── depthTSDF/      # Depth images
-│       │   └── *.png       # 16-bit depth images
-│       ├── image/          # RGB images (not used in processing)
-│       ├── labels/         # Table annotations
-│       │   └── tabletop_labels.dat  # Pickle file with polygon coordinates
-│       └── intrinsics.txt  # Camera parameters
-└── ...                     # Other buildings/scenes
-```
-
-To prepare the dataset:
+### Testing
 
 ```bash
-python data_utils/prepare_sun3d_dataset.py \
-    --data_dir CW2-Dataset/data \
-    --output_dir CW2-Dataset \
-    --max_points 1024
+python pipeline_c/test_sun3d.py --log_dir semantic_segmentation_TIMESTAMP --h5_file CW2-Dataset/sun3d_test_fixed.h5 --batch_size 16
 ```
 
-This will create HDF5 files containing point clouds with binary labels:
-- `sun3d_train.h5`: Training data from MIT scenes
-- `sun3d_test.h5`: Testing data from Harvard scenes
-
-## Training
-
-To train the model:
-
+For visualization:
 ```bash
-python train_sun3d.py \
-    --model pointnet2_sem_seg \
-    --h5_file CW2-Dataset/sun3d_train.h5 \
-    --log_dir sun3d_binary_seg \
-    --batch_size 16 \
-    --npoint 1024 \
-    --epoch 100
+python pipeline_c/test_sun3d.py --log_dir semantic_segmentation_TIMESTAMP --h5_file CW2-Dataset/sun3d_test_fixed.h5 --batch_size 16 --visual
 ```
 
-Training parameters:
-- `--model`: Model architecture to use (default: `pointnet2_sem_seg`)
-- `--h5_file`: Path to the training HDF5 file
-- `--log_dir`: Directory name for saving logs and checkpoints
+### Key Parameters
+
+- `--h5_file`: Path to H5 file with point clouds and labels
 - `--batch_size`: Batch size for training (default: 16)
-- `--npoint`: Number of points per point cloud (default: 1024)
-- `--epoch`: Number of training epochs (default: 32)
+- `--epoch`: Number of epochs (default: 32)
+- `--learning_rate`: Initial learning rate (default: 0.001)
+- `--npoint`: Number of points (default: 1024)
+- `--use_augmentation`: Enable data augmentation (recommended)
 
-## Testing
+### Output
 
-To evaluate the trained model:
+- Model weights and checkpoints in `log/sun3d_binary_seg/<log_dir>/checkpoints/`
+- Training curves and metrics in `log/sun3d_binary_seg/<log_dir>/`
+- Visualization data (if `--visual` is used) in `log/sun3d_binary_seg/<log_dir>/visual/`
+
+## 🧰 Data Utilities
+
+### Dataset Preparation
+
+The dataset is prepared from the SUN3D dataset using the following process:
+
+1. Process depth maps from SUN3D using DepthTSDF format
+2. Generate point clouds from the depth data
+3. Combine point clouds and labels into H5 files
+
+If raw depth maps need to be converted to DepthTSDF format:
 
 ```bash
-python test_sun3d.py \
-    --model pointnet2_sem_seg \
-    --h5_file CW2-Dataset/sun3d_test.h5 \
-    --log_dir sun3d_binary_seg \
-    --visual
+# Convert depth to TSDF format for specific building
+python data_utils/depth_to_tsdf.py --building harvard_tea_2
+
+# Generate the dataset
+python data_utils/prepare_sun3d_dataset.py --prefix mit --output CW2-Dataset/sun3d_train.h5
+python data_utils/prepare_sun3d_dataset.py --prefix harvard --output CW2-Dataset/sun3d_test.h5
 ```
 
-Testing parameters:
-- `--model`: Model architecture to use (should match training)
-- `--h5_file`: Path to the testing HDF5 file
-- `--log_dir`: Directory name where the trained model is saved
-- `--visual`: Enable visualization output (saves point clouds and predictions)
+## 🎨 Visualization
 
-## Results Visualization
+The repository includes tools for visualizing point clouds, ground truth, and predictions:
 
-When running testing with the `--visual` flag, the script will save point clouds and their predictions in the `log/sun3d_seg/[log_dir]/visual` directory. These files can be visualized using any 3D point cloud viewer.
+1. Run testing with visualization enabled:
+```bash
+python pipeline_c/test_sun3d.py --log_dir semantic_segmentation_TIMESTAMP --h5_file CW2-Dataset/sun3d_test_fixed.h5 --visual
+```
 
-## Acknowledgements
+2. Convert to interactive HTML visualizations:
+```bash
+python visualizer/convert_txt_to_html.py --log_dir semantic_segmentation_TIMESTAMP --output_dir point_cloud_visualizations
+```
 
-This repository is based on [Pointnet_Pointnet2_pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch) by yanx27. The original implementation has been adapted for binary segmentation on the SUN3D dataset.
+3. Package visualizations for download:
+```bash
+python visualizer/package_visualizations.py --log_dir semantic_segmentation_TIMESTAMP
+```
 
-## License
-MIT License
+## 🏆 Pretrained Models
+
+Pretrained models are available in the `weights/` directory:
+
+- `pipeline_a_best_model.pth`: Binary classification model (table vs. no-table)
+- `pipeline_c_best_model.pth`: Semantic segmentation model (table vs. background)
+
+To use these models:
+
+```bash
+# For pipeline A
+python pipeline_a/test.py --log_dir custom --test_file CW2-Dataset/sun3d_test_fixed.h5
+
+# For pipeline C
+python pipeline_c/test_sun3d.py --log_dir custom --h5_file CW2-Dataset/sun3d_test_fixed.h5
+```
+
+## 🛠️ Implementation Details
+
+### PointNet++ Architecture
+
+Both pipelines use variants of the PointNet++ architecture:
+
+- **PointNet++ SSG** (Single Scale Grouping): Used in pipeline A for classification
+- **PointNet++ Semantic Segmentation**: Used in pipeline C for point-level segmentation
+
+The models share a core architecture that uses:
+1. Set abstraction layers to hierarchically capture features
+2. Feature propagation layers to upsample features for segmentation
+3. MLP layers for final classification/segmentation
+
+### Loss Functions
+
+- **Pipeline A**: Uses Cross-Entropy loss with optional class weighting
+- **Pipeline C**: Uses Cross-Entropy loss with optional class weighting on point-level predictions
+
+### Data Augmentation
+
+Both pipelines support data augmentation during training:
+- Random scaling
+- Random translation
+- Random point dropout
+- Random jittering
+
+## 📊 Performance
+
+### Pipeline A (Classification)
+- **Accuracy**: ~85% overall accuracy on test dataset
+- **Table Class Accuracy**: ~97% (high recall for tables)
+- **Non-Table Class Accuracy**: ~50% (challenges with false positives)
+
+### Pipeline C (Segmentation)
+- **Overall Accuracy**: ~85% point-level accuracy
+- **Mean IoU**: ~0.85 across classes
+- **Table IoU**: ~0.74
+- **Background IoU**: ~0.97
+
+## 🔧 Requirements
+
+- Python 3.6+
+- PyTorch 1.7+
+- CUDA compatible GPU (recommended)
+- Additional requirements:
+  - numpy
+  - h5py
+  - matplotlib
+  - sklearn
+  - tqdm
+  - plotly (for visualization) 

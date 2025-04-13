@@ -5,7 +5,6 @@ Description: Training script for SUN3D binary segmentation (table vs background)
 """
 import argparse
 import os
-from data_utils.sun3d_dataset_pytorch import SUN3DDataset, get_data_loaders
 import torch
 import datetime
 import logging
@@ -14,14 +13,20 @@ import sys
 import importlib
 import shutil
 from tqdm import tqdm
-import provider
 import numpy as np
 import time
 import matplotlib.pyplot as plt
 
+# Fix import paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = BASE_DIR
+ROOT_DIR = os.path.dirname(BASE_DIR)  # Get the parent directory (project root)
+sys.path.append(ROOT_DIR)  # Add the project root to the path
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
+sys.path.append(os.path.join(ROOT_DIR, 'data_utils'))  # Add data_utils directly
+
+# Now import from data_utils
+from data_utils.sun3d_dataset_pytorch import SUN3DDataset, get_data_loaders
+import provider
 
 # Binary segmentation: 0 = background, 1 = table
 classes = ['background', 'table']
